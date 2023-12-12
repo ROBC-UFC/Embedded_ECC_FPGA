@@ -1,0 +1,2 @@
+@E: CS168 :"C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - TBEC_ RSC\hdl\Decoder_ip.v":21:31:21:31|Port data_in does not exist
+

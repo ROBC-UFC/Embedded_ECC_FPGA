@@ -1,0 +1,173 @@
+Resource Report
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+Date: Tue Dec 12 14:25:01 2023
+
+Device Selection
++--------------------------------+----------------+
+| Family                         | SmartFusion2   |
+| Device                         | M2S010         |
+| Package                        | 144 TQ         |
+| Speed Grade                    | STD            |
+| Temp                           | 0:25:85        |
+| Voltage                        | 1.26:1.20:1.14 |
+| Core Voltage                   | 1.2V           |
+| Ramp Rate                      | 100ms Minimum  |
+| System Controller Suspend Mode | No             |
+| PLL Supply Voltage             | 2.5V           |
+| Default I/O technology         | LVCMOS 2.5V    |
+| Restrict Probe Pins            | Yes            |
+| Restrict SPI Pins              | No             |
++--------------------------------+----------------+
+
+Source Files
++---------+-------------------------------------------------------------------------------------------------+
+| Topcell | prj_hamming_apb                                                                                 |
+| Format  | Verilog                                                                                         |
+| Source  | C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - TBEC_ RSC\synthesis\prj_hamming_apb.vm |
++---------+-------------------------------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+-------+
+| Enable Single Event Transient mitigation           | false |
+| Enable Design Separation Methodology               | false |
+| Limit the number of high fanout nets to display to | 10    |
++----------------------------------------------------+-------+
+
+Resource Usage
++---------------------------+------+-------+------------+
+| Type                      | Used | Total | Percentage |
++---------------------------+------+-------+------------+
+| 4LUT                      | 209  | 12084 | 1.73       |
+| DFF                       | 67   | 12084 | 0.55       |
+| I/O Register              | 0    | 252   | 0.00       |
+| User I/O                  | 1    | 84    | 1.19       |
+| -- Single-ended I/O       | 1    | 84    | 1.19       |
+| -- Differential I/O Pairs | 0    | 37    | 0.00       |
+| RAM64x18                  | 0    | 22    | 0.00       |
+| RAM1K18                   | 0    | 21    | 0.00       |
+| MACC                      | 0    | 22    | 0.00       |
+| Chip Globals              | 1    | 8     | 12.50      |
+| CCC                       | 1    | 2     | 50.00      |
+| RCOSC_25_50MHZ            | 1    | 1     | 100.00     |
+| RCOSC_1MHZ                | 0    | 1     | 0.00       |
+| XTLOSC                    | 0    | 1     | 0.00       |
+| MSS                       | 1    | 1     | 100.00     |
++---------------------------+------+-------+------------+
+
+Detailed Logic Resource Usage
++--------------------------+------+-----+
+| Type                     | 4LUT | DFF |
++--------------------------+------+-----+
+| Fabric Logic             | 209  | 67  |
+| RAM64x18 Interface Logic | 0    | 0   |
+| RAM1K18 Interface Logic  | 0    | 0   |
+| MACC Interface Logic     | 0    | 0   |
+| Total Used               | 209  | 67  |
++--------------------------+------+-----+
+
+MSS Resource Usage
++---------------+------+-------+
+| Type          | Used | Total |
++---------------+------+-------+
+| Cortex-M3*    | 1    | 1     |
+| eNVM (256KB)* | 1    | 1     |
+| eSRAM*        | 2    | 2     |
+| TIMER*        | 2    | 2     |
+| CAN           | 0    | 1     |
+| SPI           | 0    | 2     |
+| I2C           | 0    | 2     |
+| UART          | 0    | 2     |
+| USB           | 0    | 1     |
+| MAC           | 0    | 1     |
+| MDDR          | 0    | 1     |
+| HPDMA         | 1    | 1     |
+| PDMA          | 1    | 1     |
++---------------+------+-------+
+
+* These resources are always marked as used when you are using the MSS
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 0            | 0           | 0               |
+| Output I/O                    | 1            | 0           | 0               |
+| Bidirectional I/O             | 0            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+I/O Technology
++--------------+--------+------+-------+--------+---------------+
+| I/O Standard | Vddi   | Vref | Input | Output | Bidirectional |
++--------------+--------+------+-------+--------+---------------+
+| LVCMOS25     |  2.50v |  N/A |  0    |  1     |  0            |
++--------------+--------+------+-------+--------+---------------+
+
+Nets assigned to chip global resources
++--------+---------+-----------------------------------------------------+
+| Fanout | Type    | Name                                                |
++--------+---------+-----------------------------------------------------+
+| 68     | INT_NET | Net   : prj_hamming_apb_sb_0_FIC_0_CLK              |
+|        |         | Driver: prj_hamming_apb_sb_0/CCC_0/GL0_INST/U0_RGB1 |
+|        |         | Source: NETLIST                                     |
++--------+---------+-----------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+---------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                            |
++--------+---------+---------------------------------------------------------------------------------+
+| 53     | INT_NET | Net   : popfeedthru_unused                                                      |
+|        |         | Driver: prj_hamming_apb_sb_0/prj_hamming_apb_sb_MSS_0/MSS_ADLIB_INST            |
+| 38     | INT_NET | Net   : prj_hamming_apb_sb_0_POWER_ON_RESET_N                                   |
+|        |         | Driver: prj_hamming_apb_sb_0/SYSRESET_POR                                       |
+| 34     | INT_NET | Net   : prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx                                 |
+|        |         | Driver: prj_hamming_apb_sb_0/prj_hamming_apb_sb_MSS_0/MSS_ADLIB_INST_RNI7DTP1_0 |
+| 34     | INT_NET | Net   : prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1                                |
+|        |         | Driver: prj_hamming_apb_sb_0/prj_hamming_apb_sb_MSS_0/MSS_ADLIB_INST_RNI7DTP1   |
+| 32     | INT_NET | Net   : Decoder_ip_0/un1_code_in_1_sqmuxa_or_Z                                  |
+|        |         | Driver: Decoder_ip_0/un1_code_in_1_sqmuxa_or                                    |
+| 32     | INT_NET | Net   : Codificador/un1_code_in_1_sqmuxa_or_Z                                   |
+|        |         | Driver: Codificador/un1_code_in_1_sqmuxa_or                                     |
+| 16     | INT_NET | Net   : Decoder_ip_0/N_331_i                                                    |
+|        |         | Driver: Decoder_ip_0/code_in_96_fast                                            |
+| 16     | INT_NET | Net   : Decoder_ip_0/quad117                                                    |
+|        |         | Driver: Decoder_ip_0/TBEC_RSC_DECODER/quad117_m6_i_a3_3_RNI14NI7                |
+| 16     | INT_NET | Net   : Codificador/N_298_i                                                     |
+|        |         | Driver: Codificador/code_in_128_fast                                            |
+| 12     | INT_NET | Net   : Decoder_ip_0/un1_SDi_3_i                                                |
+|        |         | Driver: Decoder_ip_0/TBEC_RSC_DECODER/un1_SDi_3                                 |
++--------+---------+---------------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+---------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                            |
++--------+---------+---------------------------------------------------------------------------------+
+| 53     | INT_NET | Net   : popfeedthru_unused                                                      |
+|        |         | Driver: prj_hamming_apb_sb_0/prj_hamming_apb_sb_MSS_0/MSS_ADLIB_INST            |
+| 38     | INT_NET | Net   : prj_hamming_apb_sb_0_POWER_ON_RESET_N                                   |
+|        |         | Driver: prj_hamming_apb_sb_0/SYSRESET_POR                                       |
+| 34     | INT_NET | Net   : prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx                                 |
+|        |         | Driver: prj_hamming_apb_sb_0/prj_hamming_apb_sb_MSS_0/MSS_ADLIB_INST_RNI7DTP1_0 |
+| 34     | INT_NET | Net   : prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1                                |
+|        |         | Driver: prj_hamming_apb_sb_0/prj_hamming_apb_sb_MSS_0/MSS_ADLIB_INST_RNI7DTP1   |
+| 32     | INT_NET | Net   : Decoder_ip_0/un1_code_in_1_sqmuxa_or_Z                                  |
+|        |         | Driver: Decoder_ip_0/un1_code_in_1_sqmuxa_or                                    |
+| 32     | INT_NET | Net   : Codificador/un1_code_in_1_sqmuxa_or_Z                                   |
+|        |         | Driver: Codificador/un1_code_in_1_sqmuxa_or                                     |
+| 16     | INT_NET | Net   : Decoder_ip_0/N_331_i                                                    |
+|        |         | Driver: Decoder_ip_0/code_in_96_fast                                            |
+| 16     | INT_NET | Net   : Decoder_ip_0/quad117                                                    |
+|        |         | Driver: Decoder_ip_0/TBEC_RSC_DECODER/quad117_m6_i_a3_3_RNI14NI7                |
+| 16     | INT_NET | Net   : Codificador/N_298_i                                                     |
+|        |         | Driver: Codificador/code_in_128_fast                                            |
+| 12     | INT_NET | Net   : Decoder_ip_0/un1_SDi_3_i                                                |
+|        |         | Driver: Decoder_ip_0/TBEC_RSC_DECODER/un1_SDi_3                                 |
++--------+---------+---------------------------------------------------------------------------------+
+

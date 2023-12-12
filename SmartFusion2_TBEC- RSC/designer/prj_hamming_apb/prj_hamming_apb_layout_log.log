@@ -1,0 +1,71 @@
+Info: No timing constraint has been associated to the 'Place and Route' tool. 'Place and Route' will be run in non Timing Driven mode.
+INFO: The option "Abort flow if errors are found in PDC" is turned ON in Project Settings> Design flow page. The Place & Route tool will fail if errors are found in associated PDC files. Please uncheck the option to ignore the errors and continue running the tool
+***** Place and Route Configurations *****
+Timing-driven            : OFF
+Power-driven             : OFF
+I/O Register Combining   : OFF
+High-effort              : OFF
+Repair min-delay         : OFF
+Incremental              : OFF
+
+INFO: Reading User PDC file C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - TBEC_ RSC\constraint\io\test_sdc.pdc. 0 error(s) and 0 warning(s)
+
+Running the I/O Bank and Globals Assigner.
+Info:  I/O Bank and Globals Assigner identified 1 fixed I/O macros, 0 unfixed I/O macros
+
+I/O Bank and Globals Assigner completed successfully.
+Total time spent in I/O Bank and Globals Assigner: 0 seconds
+
+Placer V5.0 - 2023.2.0 
+Design: prj_hamming_apb                 Started: Tue Dec 12 14:25:05 2023
+
+Initializing Normal-Effort Standard Placement ...
+Clustering ...
+Placing ...
+Improving placement ...
+End of placement.
+
+Placer Runtime Summary   :
+Clustering (1 pass)      : 0 seconds
+Placement                : 0 seconds
+Improvement              : 0 seconds
+
+Placer completed successfully.
+
+Design: prj_hamming_apb                 
+Finished: Tue Dec 12 14:25:09 2023
+Total CPU Time:     00:00:04            Total Elapsed Time: 00:00:04
+Total Memory Usage: 110.1 Mbytes
+                        o - o - o - o - o - o
+
+
+Router 
+Design: C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - TBEC_ RSC\designer\prj_hamming_apb\prj_hamming_apbStarted: Tue Dec 12 14:25:12 2023
+
+
+Router completed successfully.
+
+Design: C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - TBEC_ RSC\designer\prj_hamming_apb\prj_hamming_apb
+Finished: Tue Dec 12 14:25:17 2023
+Total CPU Time:     00:00:04            Total Elapsed Time: 00:00:05
+Total Memory Usage: 445.3 Mbytes
+                        o - o - o - o - o - o
+
+Resource Usage
++---------------+------+-------+------------+
+| Type          | Used | Total | Percentage |
++---------------+------+-------+------------+
+| 4LUT          | 209  | 12084 | 1.73       |
+| DFF           | 67   | 12084 | 0.55       |
+| I/O Register  | 0    | 246   | 0.00       |
+| Logic Element | 210  | 12084 | 1.74       |
++---------------+------+-------+------------+
+
+I/O Placement
++--------+-------+------------+
+| Type   | Count | Percentage |
++--------+-------+------------+
+| Locked |  1    | 100.00%    |
+| Placed |  0    | 0.00%      |
++--------+-------+------------+
+

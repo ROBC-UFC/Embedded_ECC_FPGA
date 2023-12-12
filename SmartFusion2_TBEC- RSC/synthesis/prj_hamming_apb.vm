@@ -1,0 +1,4464 @@
+//
+// Written by Synplify Pro 
+// Product Version "T-2022.09M-SP2-1"
+// Program "Synplify Pro", Mapper "map202209actsp2, Build 145R"
+// Tue Dec 12 14:24:54 2023
+//
+// Source file index table:
+// Object locations will have the form <file>:<line>
+// file 0 "\c:\microchip\libero_soc_v2023.2\synplifypro\lib\generic\smartfusion2.v "
+// file 1 "\c:\microchip\libero_soc_v2023.2\synplifypro\lib\vlog\hypermods.v "
+// file 2 "\c:\microchip\libero_soc_v2023.2\synplifypro\lib\vlog\umr_capim.v "
+// file 3 "\c:\microchip\libero_soc_v2023.2\synplifypro\lib\vlog\scemi_objects.v "
+// file 4 "\c:\microchip\libero_soc_v2023.2\synplifypro\lib\vlog\scemi_pipes.svh "
+// file 5 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\hdl\decoder.v "
+// file 6 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\hdl\decoder_ip.v "
+// file 7 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\hdl\encoder.v "
+// file 8 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\hdl\adder_ip.v "
+// file 9 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\actel\directcore\coreresetp\7.1.100\rtl\vlog\core\coreresetp_pcie_hotreset.v "
+// file 10 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\actel\directcore\coreresetp\7.1.100\rtl\vlog\core\coreresetp.v "
+// file 11 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\work\prj_hamming_apb_sb\ccc_0\prj_hamming_apb_sb_ccc_0_fccc.v "
+// file 12 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\actel\sgcore\osc\2.0.101\osc_comps.v "
+// file 13 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\work\prj_hamming_apb_sb\fabosc_0\prj_hamming_apb_sb_fabosc_0_osc.v "
+// file 14 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\work\prj_hamming_apb_sb_mss\prj_hamming_apb_sb_mss_syn.v "
+// file 15 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\work\prj_hamming_apb_sb_mss\prj_hamming_apb_sb_mss.v "
+// file 16 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\actel\directcore\coreapb3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v "
+// file 17 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\actel\directcore\coreapb3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v "
+// file 18 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\actel\directcore\coreapb3\4.1.100\rtl\vlog\core\coreapb3.v "
+// file 19 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.v "
+// file 20 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\component\work\prj_hamming_apb\prj_hamming_apb.v "
+// file 21 "\c:\microchip\libero_soc_v2023.2\synplifypro\lib\nlconst.dat "
+// file 22 "\c:\users\lesc\documents\liberoprojects\prj_hamming_apb - tbec_ rsc\designer\prj_hamming_apb\synthesis.fdc "
+
+`timescale 100 ps/100 ps
+module encoder (
+  code_out_1_6,
+  code_out_1_0,
+  code_out_1_2,
+  code_out_1_1,
+  code_out_1_3,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA,
+  code_out_2_0,
+  code_out_2_3,
+  code_out_2_1
+)
+;
+output code_out_1_6 ;
+output code_out_1_0 ;
+output code_out_1_2 ;
+output code_out_1_1 ;
+output code_out_1_3 ;
+input [15:0] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA ;
+output code_out_2_0 ;
+output code_out_2_3 ;
+output code_out_2_1 ;
+wire code_out_1_6 ;
+wire code_out_1_0 ;
+wire code_out_1_2 ;
+wire code_out_1_1 ;
+wire code_out_1_3 ;
+wire code_out_2_0 ;
+wire code_out_2_3 ;
+wire code_out_2_1 ;
+wire GND ;
+wire VCC ;
+// @7:32
+  CFG2 \Di[3]_2  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[9]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[12]),
+	.Y(code_out_2_0)
+);
+defparam \Di[3]_2 .INIT=4'h6;
+// @7:32
+  CFG2 \Di[3]_1  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[1]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[4]),
+	.Y(code_out_1_6)
+);
+defparam \Di[3]_1 .INIT=4'h6;
+// @7:31
+  CFG2 \Di[2]_2  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[8]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[13]),
+	.Y(code_out_1_0)
+);
+defparam \Di[2]_2 .INIT=4'h6;
+// @7:31
+  CFG2 \Di[2]_1  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[0]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[5]),
+	.Y(code_out_1_2)
+);
+defparam \Di[2]_1 .INIT=4'h6;
+// @7:30
+  CFG2 \Di[1]_2  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[11]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[14]),
+	.Y(code_out_2_3)
+);
+defparam \Di[1]_2 .INIT=4'h6;
+// @7:30
+  CFG2 \Di[1]_1  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[3]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[6]),
+	.Y(code_out_2_1)
+);
+defparam \Di[1]_1 .INIT=4'h6;
+// @7:29
+  CFG2 \Di[0]_1  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[2]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[7]),
+	.Y(code_out_1_1)
+);
+defparam \Di[0]_1 .INIT=4'h6;
+// @7:29
+  CFG2 \Di[0]_2  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[10]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[15]),
+	.Y(code_out_1_3)
+);
+defparam \Di[0]_2 .INIT=4'h6;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* encoder */
+
+module adder_ip (
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA,
+  popfeedthru_unused_4,
+  popfeedthru_unused_0,
+  popfeedthru_unused_1,
+  popfeedthru_unused_2,
+  popfeedthru_unused_3,
+  popfeedthru_unused_5,
+  popfeedthru_unused_6,
+  popfeedthru_unused_7,
+  popfeedthru_unused_12,
+  popfeedthru_unused_9,
+  popfeedthru_unused_8,
+  popfeedthru_unused_15,
+  popfeedthru_unused_13,
+  popfeedthru_unused_10,
+  popfeedthru_unused_11,
+  popfeedthru_unused_14,
+  popfeedthru_unused,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx,
+  popfeedthru_unused_16,
+  POWER_ON_RESET_N,
+  prj_hamming_apb_sb_0_FIC_0_CLK
+)
+;
+output [31:0] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA ;
+input popfeedthru_unused_4 ;
+input popfeedthru_unused_0 ;
+input popfeedthru_unused_1 ;
+input popfeedthru_unused_2 ;
+input popfeedthru_unused_3 ;
+input popfeedthru_unused_5 ;
+input popfeedthru_unused_6 ;
+input popfeedthru_unused_7 ;
+input popfeedthru_unused_12 ;
+input popfeedthru_unused_9 ;
+input popfeedthru_unused_8 ;
+input popfeedthru_unused_15 ;
+input popfeedthru_unused_13 ;
+input popfeedthru_unused_10 ;
+input popfeedthru_unused_11 ;
+input popfeedthru_unused_14 ;
+input popfeedthru_unused ;
+input prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+input popfeedthru_unused_16 ;
+input POWER_ON_RESET_N ;
+input prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire popfeedthru_unused_4 ;
+wire popfeedthru_unused_0 ;
+wire popfeedthru_unused_1 ;
+wire popfeedthru_unused_2 ;
+wire popfeedthru_unused_3 ;
+wire popfeedthru_unused_5 ;
+wire popfeedthru_unused_6 ;
+wire popfeedthru_unused_7 ;
+wire popfeedthru_unused_12 ;
+wire popfeedthru_unused_9 ;
+wire popfeedthru_unused_8 ;
+wire popfeedthru_unused_15 ;
+wire popfeedthru_unused_13 ;
+wire popfeedthru_unused_10 ;
+wire popfeedthru_unused_11 ;
+wire popfeedthru_unused_14 ;
+wire popfeedthru_unused ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+wire popfeedthru_unused_16 ;
+wire POWER_ON_RESET_N ;
+wire prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire [15:0] code_in_6_Z;
+wire [11:8] code_out_2;
+wire [14:8] code_out_1;
+wire VCC ;
+wire un1_code_in_1_sqmuxa_or_Z ;
+wire GND ;
+wire N_298_i ;
+// @8:27
+  SLE \code_in[15]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[15]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[15]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[14]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[14]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[14]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[13]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[13]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[13]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[12]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[12]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[12]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[11]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[11]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[11]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[10]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[10]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[10]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[9]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[9]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[9]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[8]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[8]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[8]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[7]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[7]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[7]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[6]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[6]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[6]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[5]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[5]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[5]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[4]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[4]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[4]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[3]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[3]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[3]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[2]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[2]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[2]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[1]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[1]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[1]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[0]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[0]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[0]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @8:27
+  SLE \code_in[31]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[31]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[15]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[30]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[30]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[11]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[29]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[29]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[7]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[28]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[28]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[3]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[27]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[27]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[14]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[26]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[26]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[10]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[25]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[25]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[6]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[24]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[24]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[2]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[23]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[23]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[13]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[22]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[22]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[9]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[21]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[21]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[5]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[20]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[20]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[1]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[19]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[19]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[12]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[18]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[18]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[8]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[17]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[17]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[4]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+// @8:27
+  SLE \code_in[16]  (
+	.Q(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[16]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[0]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_298_i)
+);
+  CFG4 code_in_128_fast (
+	.A(popfeedthru_unused_16),
+	.B(POWER_ON_RESET_N),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.D(popfeedthru_unused),
+	.Y(N_298_i)
+);
+defparam code_in_128_fast.INIT=16'h4CCC;
+// @8:28
+  CFG4 \code_in_6[1]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[3]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[1]),
+	.C(popfeedthru_unused_14),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[1])
+);
+defparam \code_in_6[1] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[4]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[10]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[8]),
+	.C(popfeedthru_unused_11),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[4])
+);
+defparam \code_in_6[4] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[5]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[11]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[9]),
+	.C(popfeedthru_unused_10),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[5])
+);
+defparam \code_in_6[5] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[2]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[6]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[4]),
+	.C(popfeedthru_unused_13),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[2])
+);
+defparam \code_in_6[2] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[0]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[2]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[0]),
+	.C(popfeedthru_unused_15),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[0])
+);
+defparam \code_in_6[0] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[7]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[15]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[13]),
+	.C(popfeedthru_unused_8),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[7])
+);
+defparam \code_in_6[7] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[6]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[14]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[12]),
+	.C(popfeedthru_unused_9),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[6])
+);
+defparam \code_in_6[6] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[3]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[7]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[5]),
+	.C(popfeedthru_unused_12),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[3])
+);
+defparam \code_in_6[3] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[8]  (
+	.A(code_out_2[8]),
+	.B(code_out_1[8]),
+	.C(popfeedthru_unused_7),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[8])
+);
+defparam \code_in_6[8] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[9]  (
+	.A(code_out_2[9]),
+	.B(code_out_1[9]),
+	.C(popfeedthru_unused_6),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[9])
+);
+defparam \code_in_6[9] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[10]  (
+	.A(code_out_1[14]),
+	.B(code_out_1[10]),
+	.C(popfeedthru_unused_5),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[10])
+);
+defparam \code_in_6[10] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[12]  (
+	.A(code_out_1[10]),
+	.B(code_out_1[8]),
+	.C(popfeedthru_unused_3),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[12])
+);
+defparam \code_in_6[12] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[13]  (
+	.A(code_out_2[11]),
+	.B(code_out_2[9]),
+	.C(popfeedthru_unused_2),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[13])
+);
+defparam \code_in_6[13] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[14]  (
+	.A(code_out_2[8]),
+	.B(code_out_1[14]),
+	.C(popfeedthru_unused_1),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[14])
+);
+defparam \code_in_6[14] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[15]  (
+	.A(code_out_1[11]),
+	.B(code_out_1[9]),
+	.C(popfeedthru_unused_0),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[15])
+);
+defparam \code_in_6[15] .INIT=16'hF066;
+// @8:28
+  CFG4 \code_in_6[11]  (
+	.A(code_out_2[11]),
+	.B(code_out_1[11]),
+	.C(popfeedthru_unused_4),
+	.D(popfeedthru_unused),
+	.Y(code_in_6_Z[11])
+);
+defparam \code_in_6[11] .INIT=16'hF066;
+// @20:57
+  CFG4 un1_code_in_1_sqmuxa_or (
+	.A(popfeedthru_unused_16),
+	.B(POWER_ON_RESET_N),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.D(popfeedthru_unused),
+	.Y(un1_code_in_1_sqmuxa_or_Z)
+);
+defparam un1_code_in_1_sqmuxa_or.INIT=16'hB3F3;
+// @8:22
+  encoder TBEC_RSC_ENCODER (
+	.code_out_1_6(code_out_1[14]),
+	.code_out_1_0(code_out_1[8]),
+	.code_out_1_2(code_out_1[10]),
+	.code_out_1_1(code_out_1[9]),
+	.code_out_1_3(code_out_1[11]),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[15:0]),
+	.code_out_2_0(code_out_2[8]),
+	.code_out_2_3(code_out_2[11]),
+	.code_out_2_1(code_out_2[9])
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* adder_ip */
+
+module decoder (
+  code_in_RNI697J_0,
+  code_out_4,
+  code_out_1,
+  code_out_0,
+  signal_1__0_iv_0_0_0_0,
+  signal_2__0_iv_0_0_0_0,
+  signal_2__5_m_0,
+  signal_1__5_m_0,
+  Decoder_ip_0_PRDATA,
+  linsin_0__1_0,
+  quad1_0,
+  signal_0__1_sqmuxa_1z,
+  N_138,
+  signal_0__0_sqmuxa_1z,
+  un1_SDi_3_i,
+  un1_quad1_NE,
+  b33,
+  b32,
+  quad117
+)
+;
+input code_in_RNI697J_0 ;
+output code_out_4 ;
+output code_out_1 ;
+output code_out_0 ;
+output signal_1__0_iv_0_0_0_0 ;
+output signal_2__0_iv_0_0_0_0 ;
+output signal_2__5_m_0 ;
+output signal_1__5_m_0 ;
+input [31:0] Decoder_ip_0_PRDATA ;
+output linsin_0__1_0 ;
+output quad1_0 ;
+output signal_0__1_sqmuxa_1z ;
+output N_138 ;
+output signal_0__0_sqmuxa_1z ;
+output un1_SDi_3_i ;
+output un1_quad1_NE ;
+output b33 ;
+output b32 ;
+output quad117 ;
+wire code_in_RNI697J_0 ;
+wire code_out_4 ;
+wire code_out_1 ;
+wire code_out_0 ;
+wire signal_1__0_iv_0_0_0_0 ;
+wire signal_2__0_iv_0_0_0_0 ;
+wire signal_2__5_m_0 ;
+wire signal_1__5_m_0 ;
+wire linsin_0__1_0 ;
+wire quad1_0 ;
+wire signal_0__1_sqmuxa_1z ;
+wire N_138 ;
+wire signal_0__0_sqmuxa_1z ;
+wire un1_SDi_3_i ;
+wire un1_quad1_NE ;
+wire b33 ;
+wire b32 ;
+wire quad117 ;
+wire [0:0] quad2;
+wire [3:3] SP_0_a3_1;
+wire [2:2] SDi_4;
+wire [0:0] SP_2_0_a2_0;
+wire [1:1] SP_3;
+wire [3:3] SP;
+wire [0:0] SUM_0_a2_0_0;
+wire [0:0] SUM_0_a4_1;
+wire [1:1] SDi_3_0_a3_1;
+wire [1:1] SDi_3;
+wire [0:0] sumSP;
+wire [3:3] SDi;
+wire [3:3] SDi_0_a3_RNIUU6A2_Z;
+wire [1:1] linsin_2_;
+wire [2:2] signal_3__6;
+wire [0:0] linsin_1_;
+wire [0:0] SUM_0_a4_0;
+wire [2:2] signal_2__6;
+wire [1:1] signal_3__3;
+wire [0:0] SDi_2_0_a4_1_Z;
+wire [1:1] signal_1__5_m_1;
+wire [1:1] linsin_3_;
+wire [2:2] signal_0__0_iv_0_tz;
+wire [1:1] signal_3__0_iv_0_tz;
+wire N_60_i ;
+wire SUMtt_i1_mux ;
+wire N_61 ;
+wire SUM_N_4 ;
+wire g0_0_0_a2_1_Z ;
+wire g0_0_a2_1 ;
+wire N_141 ;
+wire N_22 ;
+wire g0_0_0_a2_2_Z ;
+wire N_25 ;
+wire N_137 ;
+wire un1_m2_0 ;
+wire un1_N_14_i_0 ;
+wire un1_N_12 ;
+wire un1_N_18 ;
+wire g0_i_x2_0_1 ;
+wire g0_1_1_Z ;
+wire g0_3_1_Z ;
+wire N_139 ;
+wire N_142 ;
+wire quad117_m6_i_o3_RNO_1_Z ;
+wire quad117_m6_i_o3_RNO_0_Z ;
+wire un1_SP_1 ;
+wire quad117_m6_i_a3_3_N_3L3_Z ;
+wire SUMtt_N_3_i ;
+wire N_64 ;
+wire quad117_m6_i_a3_3_1_Z ;
+wire quad117_m6_i_a3_3_Z ;
+wire quad117_m6_i_a3_3_1_1 ;
+wire quad117_m6_i_a3_3_N_4L5_Z ;
+wire CO0_0_Z ;
+wire CO2_1_0_N_2L1 ;
+wire N_102_2 ;
+wire CO2_1_0_N_3L3 ;
+wire CO2_1_0 ;
+wire sumSP_2_0_a3_4_0 ;
+wire sumSP_2_0_a3_4_Z ;
+wire quad117_N_4_i_N_5L9_1_Z ;
+wire quad117_N_4_i_N_5L9_Z ;
+wire quad117_N_4_i_N_3L3_1 ;
+wire un1_SDi_2_0_Z ;
+wire un1_SDi_2_0_RNI2J5B5_Z ;
+wire quad117_N_5 ;
+wire quad117_m6_i_a3_3_N_2L1_Z ;
+wire N_62_3 ;
+wire CO2_0 ;
+wire SUM_i4_mux_0 ;
+wire CO2_0_0 ;
+wire SUM_N_4_0 ;
+wire SUM_i4_mux_0_0 ;
+wire un1_quad118_a0_Z ;
+wire CO0_m2_0 ;
+wire N_145 ;
+wire sumSP_2_0_a3_1 ;
+wire N_74 ;
+wire N_75 ;
+wire un1_SDi_3_0 ;
+wire CO0_Z ;
+wire CO0_1 ;
+wire CO0_2 ;
+wire CO0_0_0 ;
+wire SUMtt_i1_mux_0 ;
+wire N_59 ;
+wire un1_m14_i_1_1_Z ;
+wire un1_m14_i_1_0_Z ;
+wire GND ;
+wire VCC ;
+// @5:49
+  CFG4 \b32_1.SUM_m3  (
+	.A(quad2[0]),
+	.B(N_60_i),
+	.C(SUMtt_i1_mux),
+	.D(N_61),
+	.Y(SUM_N_4)
+);
+defparam \b32_1.SUM_m3 .INIT=16'h0EEF;
+  CFG2 g0_0_0_a2_1 (
+	.A(Decoder_ip_0_PRDATA[27]),
+	.B(Decoder_ip_0_PRDATA[30]),
+	.Y(g0_0_0_a2_1_Z)
+);
+defparam g0_0_0_a2_1.INIT=4'h6;
+  CFG2 \N_6_1.g0_0_a2_1  (
+	.A(Decoder_ip_0_PRDATA[27]),
+	.B(Decoder_ip_0_PRDATA[30]),
+	.Y(g0_0_a2_1)
+);
+defparam \N_6_1.g0_0_a2_1 .INIT=4'h6;
+// @5:40
+  CFG2 g0_6 (
+	.A(Decoder_ip_0_PRDATA[20]),
+	.B(Decoder_ip_0_PRDATA[17]),
+	.Y(N_141)
+);
+defparam g0_6.INIT=4'h6;
+// @5:39
+  CFG2 g0_2_0_a2_0 (
+	.A(Decoder_ip_0_PRDATA[18]),
+	.B(Decoder_ip_0_PRDATA[23]),
+	.Y(N_22)
+);
+defparam g0_2_0_a2_0.INIT=4'h6;
+  CFG3 g0_0_0_a2_2 (
+	.A(Decoder_ip_0_PRDATA[31]),
+	.B(Decoder_ip_0_PRDATA[26]),
+	.C(Decoder_ip_0_PRDATA[8]),
+	.Y(g0_0_0_a2_2_Z)
+);
+defparam g0_0_0_a2_2.INIT=8'h96;
+// @6:21
+  CFG3 \N_6_1.g0_0_a2_0  (
+	.A(Decoder_ip_0_PRDATA[15]),
+	.B(Decoder_ip_0_PRDATA[13]),
+	.C(Decoder_ip_0_PRDATA[9]),
+	.Y(N_25)
+);
+defparam \N_6_1.g0_0_a2_0 .INIT=8'h96;
+// @6:21
+  CFG4 g0_0_9_0_a2 (
+	.A(Decoder_ip_0_PRDATA[19]),
+	.B(Decoder_ip_0_PRDATA[22]),
+	.C(Decoder_ip_0_PRDATA[23]),
+	.D(Decoder_ip_0_PRDATA[18]),
+	.Y(N_137)
+);
+defparam g0_0_9_0_a2.INIT=16'h6996;
+// @6:21
+  CFG3 g0_4_0_a2 (
+	.A(Decoder_ip_0_PRDATA[14]),
+	.B(Decoder_ip_0_PRDATA[19]),
+	.C(Decoder_ip_0_PRDATA[22]),
+	.Y(un1_m2_0)
+);
+defparam g0_4_0_a2.INIT=8'h96;
+// @5:35
+  CFG3 g0_3_0_a2 (
+	.A(Decoder_ip_0_PRDATA[10]),
+	.B(Decoder_ip_0_PRDATA[21]),
+	.C(Decoder_ip_0_PRDATA[16]),
+	.Y(SP_0_a3_1[3])
+);
+defparam g0_3_0_a2.INIT=8'h96;
+// @6:21
+  CFG4 g0_5_a2 (
+	.A(Decoder_ip_0_PRDATA[15]),
+	.B(Decoder_ip_0_PRDATA[11]),
+	.C(Decoder_ip_0_PRDATA[9]),
+	.D(Decoder_ip_0_PRDATA[13]),
+	.Y(quad1_0)
+);
+defparam g0_5_a2.INIT=16'h6996;
+// @5:39
+  CFG4 g0_2_0_a2 (
+	.A(Decoder_ip_0_PRDATA[12]),
+	.B(Decoder_ip_0_PRDATA[16]),
+	.C(Decoder_ip_0_PRDATA[21]),
+	.D(N_22),
+	.Y(SDi_4[2])
+);
+defparam g0_2_0_a2.INIT=16'h6996;
+  CFG4 \N_6_1.N_4_i  (
+	.A(g0_0_a2_1),
+	.B(N_25),
+	.C(Decoder_ip_0_PRDATA[31]),
+	.D(Decoder_ip_0_PRDATA[26]),
+	.Y(N_60_i)
+);
+defparam \N_6_1.N_4_i .INIT=16'h9669;
+// @6:21
+  CFG4 g0_0_0_a2 (
+	.A(g0_0_0_a2_1_Z),
+	.B(g0_0_0_a2_2_Z),
+	.C(N_25),
+	.D(N_137),
+	.Y(un1_N_14_i_0)
+);
+defparam g0_0_0_a2.INIT=16'h6996;
+// @6:21
+  CFG4 g0_5 (
+	.A(N_141),
+	.B(SP_0_a3_1[3]),
+	.C(SDi_4[2]),
+	.D(un1_m2_0),
+	.Y(un1_N_12)
+);
+defparam g0_5.INIT=16'h74E2;
+// @6:21
+  CFG4 g0_i (
+	.A(quad1_0),
+	.B(un1_N_14_i_0),
+	.C(N_61),
+	.D(un1_N_12),
+	.Y(un1_N_18)
+);
+defparam g0_i.INIT=16'hB00B;
+  CFG2 quad117_m6_i_o3_RNO_2 (
+	.A(Decoder_ip_0_PRDATA[8]),
+	.B(Decoder_ip_0_PRDATA[19]),
+	.Y(g0_i_x2_0_1)
+);
+defparam quad117_m6_i_o3_RNO_2.INIT=4'h6;
+  CFG2 g0_1_1 (
+	.A(Decoder_ip_0_PRDATA[16]),
+	.B(Decoder_ip_0_PRDATA[20]),
+	.Y(g0_1_1_Z)
+);
+defparam g0_1_1.INIT=4'h6;
+  CFG2 g0_3_1 (
+	.A(Decoder_ip_0_PRDATA[28]),
+	.B(Decoder_ip_0_PRDATA[29]),
+	.Y(g0_3_1_Z)
+);
+defparam g0_3_1.INIT=4'h6;
+// @5:37
+  CFG2 g0_4 (
+	.A(Decoder_ip_0_PRDATA[24]),
+	.B(Decoder_ip_0_PRDATA[29]),
+	.Y(N_139)
+);
+defparam g0_4.INIT=4'h6;
+// @5:32
+  CFG2 g0_0 (
+	.A(Decoder_ip_0_PRDATA[31]),
+	.B(Decoder_ip_0_PRDATA[11]),
+	.Y(SP_2_0_a2_0[0])
+);
+defparam g0_0.INIT=4'h6;
+// @5:45
+  CFG3 \un2_6_2.g0  (
+	.A(Decoder_ip_0_PRDATA[30]),
+	.B(Decoder_ip_0_PRDATA[27]),
+	.C(Decoder_ip_0_PRDATA[26]),
+	.Y(N_142)
+);
+defparam \un2_6_2.g0 .INIT=8'h96;
+// @5:33
+  CFG4 g0_3 (
+	.A(Decoder_ip_0_PRDATA[25]),
+	.B(g0_3_1_Z),
+	.C(Decoder_ip_0_PRDATA[24]),
+	.D(Decoder_ip_0_PRDATA[9]),
+	.Y(SP_3[1])
+);
+defparam g0_3.INIT=16'h6996;
+// @5:35
+  CFG4 g0_1 (
+	.A(Decoder_ip_0_PRDATA[21]),
+	.B(g0_1_1_Z),
+	.C(Decoder_ip_0_PRDATA[17]),
+	.D(Decoder_ip_0_PRDATA[10]),
+	.Y(SP[3])
+);
+defparam g0_1.INIT=16'h6996;
+// @5:45
+  CFG4 quad117_m6_i_o3_RNO_1 (
+	.A(Decoder_ip_0_PRDATA[23]),
+	.B(Decoder_ip_0_PRDATA[18]),
+	.C(Decoder_ip_0_PRDATA[22]),
+	.D(g0_i_x2_0_1),
+	.Y(quad117_m6_i_o3_RNO_1_Z)
+);
+defparam quad117_m6_i_o3_RNO_1.INIT=16'h6996;
+// @5:45
+  CFG4 quad117_m6_i_o3_RNO_0 (
+	.A(Decoder_ip_0_PRDATA[30]),
+	.B(Decoder_ip_0_PRDATA[27]),
+	.C(Decoder_ip_0_PRDATA[26]),
+	.D(SP_2_0_a2_0[0]),
+	.Y(quad117_m6_i_o3_RNO_0_Z)
+);
+defparam quad117_m6_i_o3_RNO_0.INIT=16'h6996;
+// @5:45
+  CFG4 quad117_m6_i_o3_RNO (
+	.A(SP_3[1]),
+	.B(quad117_m6_i_o3_RNO_0_Z),
+	.C(quad117_m6_i_o3_RNO_1_Z),
+	.D(SP[3]),
+	.Y(un1_SP_1)
+);
+defparam quad117_m6_i_o3_RNO.INIT=16'h0001;
+// @5:45
+  CFG4 quad117_m6_i_a3_3 (
+	.A(quad117_m6_i_a3_3_N_3L3_Z),
+	.B(SUMtt_N_3_i),
+	.C(N_64),
+	.D(quad117_m6_i_a3_3_1_Z),
+	.Y(quad117_m6_i_a3_3_Z)
+);
+defparam quad117_m6_i_a3_3.INIT=16'h8E00;
+// @5:45
+  CFG3 quad117_m6_i_a3_3_1 (
+	.A(quad117_m6_i_a3_3_1_1),
+	.B(quad117_m6_i_a3_3_N_4L5_Z),
+	.C(CO0_0_Z),
+	.Y(quad117_m6_i_a3_3_1_Z)
+);
+defparam quad117_m6_i_a3_3_1.INIT=8'h02;
+// @5:45
+  CFG2 \un2_1.CO2_1_0_N_2L1  (
+	.A(Decoder_ip_0_PRDATA[19]),
+	.B(Decoder_ip_0_PRDATA[6]),
+	.Y(CO2_1_0_N_2L1)
+);
+defparam \un2_1.CO2_1_0_N_2L1 .INIT=4'h6;
+// @5:45
+  CFG4 \un2_1.CO2_1_0_N_3L3  (
+	.A(CO2_1_0_N_2L1),
+	.B(SUM_0_a2_0_0[0]),
+	.C(N_102_2),
+	.D(N_142),
+	.Y(CO2_1_0_N_3L3)
+);
+defparam \un2_1.CO2_1_0_N_3L3 .INIT=16'h6996;
+// @5:45
+  CFG4 \un2_1.CO2_1_0  (
+	.A(linsin_0__1_0),
+	.B(Decoder_ip_0_PRDATA[31]),
+	.C(CO2_1_0_N_3L3),
+	.D(N_64),
+	.Y(CO2_1_0)
+);
+defparam \un2_1.CO2_1_0 .INIT=16'h0660;
+// @6:21
+  CFG4 sumSP_2_0_a3_4 (
+	.A(Decoder_ip_0_PRDATA[22]),
+	.B(Decoder_ip_0_PRDATA[19]),
+	.C(sumSP_2_0_a3_4_0),
+	.D(Decoder_ip_0_PRDATA[8]),
+	.Y(sumSP_2_0_a3_4_Z)
+);
+defparam sumSP_2_0_a3_4.INIT=16'h6996;
+// @6:21
+  CFG4 sumSP_2_0_a3_4_1 (
+	.A(Decoder_ip_0_PRDATA[10]),
+	.B(Decoder_ip_0_PRDATA[18]),
+	.C(Decoder_ip_0_PRDATA[9]),
+	.D(Decoder_ip_0_PRDATA[23]),
+	.Y(sumSP_2_0_a3_4_0)
+);
+defparam sumSP_2_0_a3_4_1.INIT=16'h6996;
+// @5:45
+  CFG4 quad117_N_4_i_N_5L9 (
+	.A(SP_2_0_a2_0[0]),
+	.B(SUM_0_a4_1[0]),
+	.C(N_142),
+	.D(quad117_N_4_i_N_5L9_1_Z),
+	.Y(quad117_N_4_i_N_5L9_Z)
+);
+defparam quad117_N_4_i_N_5L9.INIT=16'hB7ED;
+// @5:45
+  CFG3 quad117_N_4_i_N_5L9_1 (
+	.A(N_141),
+	.B(N_139),
+	.C(N_137),
+	.Y(quad117_N_4_i_N_5L9_1_Z)
+);
+defparam quad117_N_4_i_N_5L9_1.INIT=8'h69;
+// @5:38
+  CFG4 \SDi_3_0_a3[1]  (
+	.A(Decoder_ip_0_PRDATA[30]),
+	.B(Decoder_ip_0_PRDATA[25]),
+	.C(SDi_3_0_a3_1[1]),
+	.D(Decoder_ip_0_PRDATA[27]),
+	.Y(SDi_3[1])
+);
+defparam \SDi_3_0_a3[1] .INIT=16'h6996;
+// @5:38
+  CFG2 \SDi_3_0_a3_1_0[1]  (
+	.A(Decoder_ip_0_PRDATA[28]),
+	.B(Decoder_ip_0_PRDATA[13]),
+	.Y(SDi_3_0_a3_1[1])
+);
+defparam \SDi_3_0_a3_1_0[1] .INIT=4'h6;
+// @5:45
+  CFG3 \SDi_0_a3_RNIUU6A2[3]  (
+	.A(sumSP[0]),
+	.B(SDi[3]),
+	.C(SDi_3[1]),
+	.Y(SDi_0_a3_RNIUU6A2_Z[3])
+);
+defparam \SDi_0_a3_RNIUU6A2[3] .INIT=8'h02;
+// @5:45
+  CFG4 un1_SDi_2_0_RNI2J5B5 (
+	.A(quad117_N_4_i_N_3L3_1),
+	.B(un1_SDi_2_0_Z),
+	.C(SDi_0_a3_RNIUU6A2_Z[3]),
+	.D(quad117_N_4_i_N_5L9_Z),
+	.Y(un1_SDi_2_0_RNI2J5B5_Z)
+);
+defparam un1_SDi_2_0_RNI2J5B5.INIT=16'h7FBF;
+// @5:45
+  CFG4 quad117_m6_i_a3_3_RNI14NI7 (
+	.A(CO2_1_0),
+	.B(quad117_m6_i_a3_3_Z),
+	.C(quad117_N_5),
+	.D(un1_SDi_2_0_RNI2J5B5_Z),
+	.Y(quad117)
+);
+defparam quad117_m6_i_a3_3_RNI14NI7.INIT=16'hBF00;
+// @5:45
+  CFG3 quad117_m6_i_a3_3_N_2L1 (
+	.A(Decoder_ip_0_PRDATA[4]),
+	.B(Decoder_ip_0_PRDATA[18]),
+	.C(Decoder_ip_0_PRDATA[26]),
+	.Y(quad117_m6_i_a3_3_N_2L1_Z)
+);
+defparam quad117_m6_i_a3_3_N_2L1.INIT=8'h69;
+// @5:45
+  CFG3 quad117_m6_i_a3_3_N_3L3 (
+	.A(Decoder_ip_0_PRDATA[19]),
+	.B(Decoder_ip_0_PRDATA[6]),
+	.C(Decoder_ip_0_PRDATA[27]),
+	.Y(quad117_m6_i_a3_3_N_3L3_Z)
+);
+defparam quad117_m6_i_a3_3_N_3L3.INIT=8'h69;
+// @5:45
+  CFG3 quad117_m6_i_a3_3_N_4L5 (
+	.A(Decoder_ip_0_PRDATA[20]),
+	.B(linsin_2_[1]),
+	.C(signal_3__6[2]),
+	.Y(quad117_m6_i_a3_3_N_4L5_Z)
+);
+defparam quad117_m6_i_a3_3_N_4L5.INIT=8'h48;
+// @5:45
+  CFG3 quad117_m6_i_a3_3_N_5L7 (
+	.A(linsin_1_[0]),
+	.B(N_102_2),
+	.C(quad117_m6_i_a3_3_N_2L1_Z),
+	.Y(quad117_m6_i_a3_3_1_1)
+);
+defparam quad117_m6_i_a3_3_N_5L7.INIT=8'h71;
+// @6:21
+  CFG4 \N_11_1.SUM_0_a4_1[0]  (
+	.A(Decoder_ip_0_PRDATA[9]),
+	.B(Decoder_ip_0_PRDATA[25]),
+	.C(SUM_0_a4_0[0]),
+	.D(N_62_3),
+	.Y(SUM_0_a4_1[0])
+);
+defparam \N_11_1.SUM_0_a4_1[0] .INIT=16'h6996;
+// @5:45
+  CFG4 quad117_N_4_i_N_4L6 (
+	.A(Decoder_ip_0_PRDATA[8]),
+	.B(SP[3]),
+	.C(N_137),
+	.D(SP_3[1]),
+	.Y(quad117_N_4_i_N_3L3_1)
+);
+defparam quad117_N_4_i_N_4L6.INIT=16'h21B7;
+// @5:45
+  CFG3 \b32_1.SUM_i3_mux_i  (
+	.A(SUM_N_4),
+	.B(CO2_0),
+	.C(SUM_i4_mux_0),
+	.Y(b32)
+);
+defparam \b32_1.SUM_i3_mux_i .INIT=8'h4D;
+// @5:45
+  CFG3 \b33_1.SUM_i3_mux_i  (
+	.A(CO2_0_0),
+	.B(SUM_N_4_0),
+	.C(SUM_i4_mux_0_0),
+	.Y(b33)
+);
+defparam \b33_1.SUM_i3_mux_i .INIT=8'h2B;
+// @5:45
+  CFG2 un1_quad118_a0 (
+	.A(un1_quad1_NE),
+	.B(un1_SDi_3_i),
+	.Y(un1_quad118_a0_Z)
+);
+defparam un1_quad118_a0.INIT=4'h4;
+// @5:49
+  CFG2 \signal[0]_0_sqmuxa  (
+	.A(quad117),
+	.B(b32),
+	.Y(signal_0__0_sqmuxa_1z)
+);
+defparam \signal[0]_0_sqmuxa .INIT=4'h8;
+// @6:21
+  CFG2 \N_11_1.SUM_0_a4_3[0]  (
+	.A(Decoder_ip_0_PRDATA[16]),
+	.B(Decoder_ip_0_PRDATA[28]),
+	.Y(N_62_3)
+);
+defparam \N_11_1.SUM_0_a4_3[0] .INIT=4'h6;
+// @6:21
+  CFG2 \N_1_1.SUM_0_a2_0[0]  (
+	.A(Decoder_ip_0_PRDATA[14]),
+	.B(Decoder_ip_0_PRDATA[12]),
+	.Y(N_138)
+);
+defparam \N_1_1.SUM_0_a2_0[0] .INIT=4'h6;
+// @5:22
+  CFG2 \linsin[0]_i_1[0]  (
+	.A(Decoder_ip_0_PRDATA[23]),
+	.B(Decoder_ip_0_PRDATA[7]),
+	.Y(linsin_0__1_0)
+);
+defparam \linsin[0]_i_1[0] .INIT=4'h6;
+// @5:63
+  CFG2 \_l3.signal[3]_6_i_o3[2]  (
+	.A(Decoder_ip_0_PRDATA[28]),
+	.B(Decoder_ip_0_PRDATA[1]),
+	.Y(signal_3__6[2])
+);
+defparam \_l3.signal[3]_6_i_o3[2] .INIT=4'h6;
+// @5:63
+  CFG2 \_l2.signal[2]_6_i[2]  (
+	.A(Decoder_ip_0_PRDATA[29]),
+	.B(Decoder_ip_0_PRDATA[3]),
+	.Y(signal_2__6[2])
+);
+defparam \_l2.signal[2]_6_i[2] .INIT=4'h6;
+// @5:45
+  CFG2 \un2_6_1.SUM_7_i_o3[0]  (
+	.A(Decoder_ip_0_PRDATA[16]),
+	.B(Decoder_ip_0_PRDATA[0]),
+	.Y(signal_3__3[1])
+);
+defparam \un2_6_1.SUM_7_i_o3[0] .INIT=4'h6;
+// @5:49
+  CFG2 \signal[0]_1_sqmuxa  (
+	.A(quad117),
+	.B(b33),
+	.Y(signal_0__1_sqmuxa_1z)
+);
+defparam \signal[0]_1_sqmuxa .INIT=4'h8;
+// @6:21
+  CFG3 \N_11_1.SUM_0_a4_0[0]  (
+	.A(Decoder_ip_0_PRDATA[21]),
+	.B(Decoder_ip_0_PRDATA[8]),
+	.C(Decoder_ip_0_PRDATA[10]),
+	.Y(SUM_0_a4_0[0])
+);
+defparam \N_11_1.SUM_0_a4_0[0] .INIT=8'h96;
+// @6:21
+  CFG3 \N_6_1.CO0_m2_0  (
+	.A(Decoder_ip_0_PRDATA[25]),
+	.B(Decoder_ip_0_PRDATA[28]),
+	.C(Decoder_ip_0_PRDATA[9]),
+	.Y(CO0_m2_0)
+);
+defparam \N_6_1.CO0_m2_0 .INIT=8'h69;
+// @5:37
+  CFG3 \SDi_2_0_a4_1[0]  (
+	.A(Decoder_ip_0_PRDATA[26]),
+	.B(Decoder_ip_0_PRDATA[15]),
+	.C(Decoder_ip_0_PRDATA[31]),
+	.Y(SDi_2_0_a4_1_Z[0])
+);
+defparam \SDi_2_0_a4_1[0] .INIT=8'h96;
+// @6:21
+  CFG4 sumSP_2_0_a2_0 (
+	.A(Decoder_ip_0_PRDATA[17]),
+	.B(Decoder_ip_0_PRDATA[24]),
+	.C(Decoder_ip_0_PRDATA[25]),
+	.D(Decoder_ip_0_PRDATA[20]),
+	.Y(N_145)
+);
+defparam sumSP_2_0_a2_0.INIT=16'h6996;
+// @5:45
+  CFG3 \signal[1]_5_m_2[1]  (
+	.A(b32),
+	.B(un1_quad1_NE),
+	.C(un1_SDi_3_i),
+	.Y(signal_1__5_m_1[1])
+);
+defparam \signal[1]_5_m_2[1] .INIT=8'hAB;
+// @5:45
+  CFG4 \un2_6_2.SUM_0_a2_0_0[0]  (
+	.A(Decoder_ip_0_PRDATA[4]),
+	.B(Decoder_ip_0_PRDATA[5]),
+	.C(Decoder_ip_0_PRDATA[22]),
+	.D(Decoder_ip_0_PRDATA[18]),
+	.Y(SUM_0_a2_0_0[0])
+);
+defparam \un2_6_2.SUM_0_a2_0_0[0] .INIT=16'h6996;
+// @6:21
+  CFG4 \SUM_0_0_a2[0]  (
+	.A(Decoder_ip_0_PRDATA[14]),
+	.B(Decoder_ip_0_PRDATA[12]),
+	.C(Decoder_ip_0_PRDATA[8]),
+	.D(Decoder_ip_0_PRDATA[10]),
+	.Y(quad2[0])
+);
+defparam \SUM_0_0_a2[0] .INIT=16'h6996;
+// @5:24
+  CFG3 \linsin[1]_i[0]  (
+	.A(Decoder_ip_0_PRDATA[22]),
+	.B(Decoder_ip_0_PRDATA[5]),
+	.C(Decoder_ip_0_PRDATA[30]),
+	.Y(linsin_1_[0])
+);
+defparam \linsin[1]_i[0] .INIT=8'h96;
+// @5:45
+  CFG3 \un2_6_2.SUM_0_a2_0_2[0]  (
+	.A(Decoder_ip_0_PRDATA[21]),
+	.B(Decoder_ip_0_PRDATA[3]),
+	.C(Decoder_ip_0_PRDATA[29]),
+	.Y(N_102_2)
+);
+defparam \un2_6_2.SUM_0_a2_0_2[0] .INIT=8'h96;
+// @5:27
+  CFG3 \linsin[2]_i[1]  (
+	.A(Decoder_ip_0_PRDATA[2]),
+	.B(Decoder_ip_0_PRDATA[17]),
+	.C(Decoder_ip_0_PRDATA[25]),
+	.Y(linsin_2_[1])
+);
+defparam \linsin[2]_i[1] .INIT=8'h96;
+// @5:29
+  CFG3 \linsin[3]_i[1]  (
+	.A(Decoder_ip_0_PRDATA[16]),
+	.B(Decoder_ip_0_PRDATA[0]),
+	.C(Decoder_ip_0_PRDATA[24]),
+	.Y(linsin_3_[1])
+);
+defparam \linsin[3]_i[1] .INIT=8'h96;
+// @6:21
+  CFG4 sumSP_2_0_a3_5 (
+	.A(N_62_3),
+	.B(N_145),
+	.C(Decoder_ip_0_PRDATA[29]),
+	.D(Decoder_ip_0_PRDATA[21]),
+	.Y(sumSP_2_0_a3_1)
+);
+defparam sumSP_2_0_a3_5.INIT=16'h6996;
+// @5:45
+  CFG4 \signal[1]_5_m_0[1]  (
+	.A(Decoder_ip_0_PRDATA[4]),
+	.B(Decoder_ip_0_PRDATA[18]),
+	.C(quad117),
+	.D(signal_1__5_m_1[1]),
+	.Y(signal_1__5_m_0)
+);
+defparam \signal[1]_5_m_0[1] .INIT=16'h6000;
+// @5:45
+  CFG4 \signal[2]_5_m_0[1]  (
+	.A(Decoder_ip_0_PRDATA[2]),
+	.B(Decoder_ip_0_PRDATA[17]),
+	.C(quad117),
+	.D(signal_1__5_m_1[1]),
+	.Y(signal_2__5_m_0)
+);
+defparam \signal[2]_5_m_0[1] .INIT=16'h6000;
+// @5:40
+  CFG4 \SDi_0_a3[3]  (
+	.A(Decoder_ip_0_PRDATA[14]),
+	.B(Decoder_ip_0_PRDATA[19]),
+	.C(Decoder_ip_0_PRDATA[22]),
+	.D(N_141),
+	.Y(SDi[3])
+);
+defparam \SDi_0_a3[3] .INIT=16'h6996;
+// @5:45
+  CFG4 un1_SDi_3_RNIVQ4DN (
+	.A(b32),
+	.B(un1_SDi_3_i),
+	.C(un1_quad1_NE),
+	.D(quad117),
+	.Y(N_74)
+);
+defparam un1_SDi_3_RNIVQ4DN.INIT=16'hAEFF;
+// @5:45
+  CFG4 \signal[0]_0_iv_0_tz[2]  (
+	.A(b33),
+	.B(un1_SDi_3_i),
+	.C(un1_quad1_NE),
+	.D(quad117),
+	.Y(signal_0__0_iv_0_tz[2])
+);
+defparam \signal[0]_0_iv_0_tz[2] .INIT=16'hAB00;
+// @5:45
+  CFG4 \signal[3]_0_iv_0_tz[1]  (
+	.A(b33),
+	.B(un1_SDi_3_i),
+	.C(un1_quad1_NE),
+	.D(quad117),
+	.Y(signal_3__0_iv_0_tz[1])
+);
+defparam \signal[3]_0_iv_0_tz[1] .INIT=16'hAEFF;
+// @5:45
+  CFG4 \signal[0][1]  (
+	.A(b32),
+	.B(un1_SDi_3_i),
+	.C(un1_quad1_NE),
+	.D(quad117),
+	.Y(N_75)
+);
+defparam \signal[0][1] .INIT=16'hAB00;
+// @5:45
+  CFG4 \signal[2]_0_iv_0_0_0[1]  (
+	.A(b33),
+	.B(Decoder_ip_0_PRDATA[25]),
+	.C(un1_quad118_a0_Z),
+	.D(quad117),
+	.Y(signal_2__0_iv_0_0_0_0)
+);
+defparam \signal[2]_0_iv_0_0_0[1] .INIT=16'hC8CC;
+// @5:45
+  CFG4 \signal[1]_0_iv_0_0_0[1]  (
+	.A(b33),
+	.B(Decoder_ip_0_PRDATA[26]),
+	.C(un1_quad118_a0_Z),
+	.D(quad117),
+	.Y(signal_1__0_iv_0_0_0_0)
+);
+defparam \signal[1]_0_iv_0_0_0[1] .INIT=16'hC8CC;
+// @5:67
+  CFG3 un1_SDi_3_0_0 (
+	.A(SP_3[1]),
+	.B(N_139),
+	.C(SDi_2_0_a4_1_Z[0]),
+	.Y(un1_SDi_3_0)
+);
+defparam un1_SDi_3_0_0.INIT=8'h41;
+// @5:45
+  CFG3 un1_SDi_2_0 (
+	.A(SDi_4[2]),
+	.B(N_139),
+	.C(SDi_2_0_a4_1_Z[0]),
+	.Y(un1_SDi_2_0_Z)
+);
+defparam un1_SDi_2_0.INIT=8'h41;
+// @5:45
+  CFG4 \un2_1.SUMtt_m2  (
+	.A(SUM_0_a2_0_0[0]),
+	.B(N_102_2),
+	.C(Decoder_ip_0_PRDATA[30]),
+	.D(Decoder_ip_0_PRDATA[26]),
+	.Y(SUMtt_N_3_i)
+);
+defparam \un2_1.SUMtt_m2 .INIT=16'h9669;
+// @6:21
+  CFG4 \N_15_1.SUM_0_a2[0]  (
+	.A(Decoder_ip_0_PRDATA[2]),
+	.B(signal_3__3[1]),
+	.C(N_145),
+	.D(signal_3__6[2]),
+	.Y(N_64)
+);
+defparam \N_15_1.SUM_0_a2[0] .INIT=16'h6996;
+// @5:49
+  CFG4 \b32_1.CO2_0  (
+	.A(quad1_0),
+	.B(SP_2_0_a2_0[0]),
+	.C(quad2[0]),
+	.D(N_142),
+	.Y(CO2_0)
+);
+defparam \b32_1.CO2_0 .INIT=16'h1248;
+// @5:49
+  CFG4 \b33_1.CO2_0  (
+	.A(quad1_0),
+	.B(Decoder_ip_0_PRDATA[8]),
+	.C(N_137),
+	.D(quad2[0]),
+	.Y(CO2_0_0)
+);
+defparam \b33_1.CO2_0 .INIT=16'h1428;
+// @6:21
+  CFG4 \N_15_1.CO0_0  (
+	.A(Decoder_ip_0_PRDATA[20]),
+	.B(linsin_3_[1]),
+	.C(linsin_2_[1]),
+	.D(signal_3__6[2]),
+	.Y(CO0_0_Z)
+);
+defparam \N_15_1.CO0_0 .INIT=16'hC4C8;
+// @6:21
+  CFG3 CO0 (
+	.A(N_142),
+	.B(N_60_i),
+	.C(SP_2_0_a2_0[0]),
+	.Y(CO0_Z)
+);
+defparam CO0.INIT=8'h12;
+// @5:49
+  CFG2 \b32_4_1.ANB0  (
+	.A(N_60_i),
+	.B(quad2[0]),
+	.Y(CO0_1)
+);
+defparam \b32_4_1.ANB0 .INIT=4'h1;
+// @5:49
+  CFG4 \b33_4_1.ANB0  (
+	.A(Decoder_ip_0_PRDATA[10]),
+	.B(N_138),
+	.C(quad1_0),
+	.D(N_137),
+	.Y(CO0_2)
+);
+defparam \b33_4_1.ANB0 .INIT=16'h0906;
+// @6:21
+  CFG3 CO0_0 (
+	.A(quad2[0]),
+	.B(N_137),
+	.C(Decoder_ip_0_PRDATA[8]),
+	.Y(CO0_0_0)
+);
+defparam CO0_0.INIT=8'h14;
+// @6:21
+  CFG4 \N_6_1.CO0_1  (
+	.A(SDi_2_0_a4_1_Z[0]),
+	.B(SDi_3[1]),
+	.C(CO0_m2_0),
+	.D(N_139),
+	.Y(N_61)
+);
+defparam \N_6_1.CO0_1 .INIT=16'hD48E;
+// @5:67
+  CFG4 un1_SDi_3 (
+	.A(SP_2_0_a2_0[0]),
+	.B(N_142),
+	.C(SDi_3[1]),
+	.D(un1_SDi_3_0),
+	.Y(un1_SDi_3_i)
+);
+defparam un1_SDi_3.INIT=16'h0900;
+// @6:21
+  CFG4 sumSP_2_0_a3 (
+	.A(sumSP_2_0_a3_4_Z),
+	.B(SP_2_0_a2_0[0]),
+	.C(sumSP_2_0_a3_1),
+	.D(N_142),
+	.Y(sumSP[0])
+);
+defparam sumSP_2_0_a3.INIT=16'h6996;
+// @5:45
+  CFG4 \_l2.signal[2]_6_i_RNIF8OMN[2]  (
+	.A(Decoder_ip_0_PRDATA[21]),
+	.B(signal_2__6[2]),
+	.C(signal_0__0_iv_0_tz[2]),
+	.D(N_74),
+	.Y(code_out_4)
+);
+defparam \_l2.signal[2]_6_i_RNIF8OMN[2] .INIT=16'hEAC0;
+// @5:45
+  CFG4 \signal[3]_0_iv[1]  (
+	.A(Decoder_ip_0_PRDATA[24]),
+	.B(signal_3__3[1]),
+	.C(signal_3__0_iv_0_tz[1]),
+	.D(N_75),
+	.Y(code_out_1)
+);
+defparam \signal[3]_0_iv[1] .INIT=16'hECA0;
+// @5:45
+  CFG4 \signal[3]_0_iv[2]  (
+	.A(Decoder_ip_0_PRDATA[20]),
+	.B(signal_3__6[2]),
+	.C(signal_0__0_iv_0_tz[2]),
+	.D(N_74),
+	.Y(code_out_0)
+);
+defparam \signal[3]_0_iv[2] .INIT=16'hEAC0;
+// @5:49
+  CFG4 \b32_1.SUMtt_m3  (
+	.A(N_141),
+	.B(SP_0_a3_1[3]),
+	.C(SDi_4[2]),
+	.D(un1_m2_0),
+	.Y(SUMtt_i1_mux)
+);
+defparam \b32_1.SUMtt_m3 .INIT=16'h8B1D;
+// @5:49
+  CFG4 \b33_1.SUMtt_m3  (
+	.A(SP_3[1]),
+	.B(SDi_3[1]),
+	.C(N_139),
+	.D(SDi_2_0_a4_1_Z[0]),
+	.Y(SUMtt_i1_mux_0)
+);
+defparam \b33_1.SUMtt_m3 .INIT=16'h7117;
+// @5:45
+  CFG4 quad117_m6_i_o3 (
+	.A(SDi_3[1]),
+	.B(SDi[3]),
+	.C(un1_SP_1),
+	.D(un1_SDi_2_0_Z),
+	.Y(quad117_N_5)
+);
+defparam quad117_m6_i_o3.INIT=16'hF1F0;
+// @6:21
+  CFG4 \N_1_1.CO0  (
+	.A(N_141),
+	.B(SP_0_a3_1[3]),
+	.C(SDi_4[2]),
+	.D(un1_m2_0),
+	.Y(N_59)
+);
+defparam \N_1_1.CO0 .INIT=16'h74E2;
+// @6:21
+  CFG3 un1_m14_i_1_1 (
+	.A(N_60_i),
+	.B(N_61),
+	.C(un1_N_12),
+	.Y(un1_m14_i_1_1_Z)
+);
+defparam un1_m14_i_1_1.INIT=8'h18;
+// @6:21
+  CFG4 un1_m14_i_1_0 (
+	.A(Decoder_ip_0_PRDATA[8]),
+	.B(quad1_0),
+	.C(N_137),
+	.D(un1_N_12),
+	.Y(un1_m14_i_1_0_Z)
+);
+defparam un1_m14_i_1_0.INIT=16'h2112;
+// @5:49
+  CFG4 \b32_1.SUM_m7  (
+	.A(SUMtt_i1_mux),
+	.B(N_61),
+	.C(CO0_0_0),
+	.D(CO0_1),
+	.Y(SUM_i4_mux_0)
+);
+defparam \b32_1.SUM_m7 .INIT=16'h70F1;
+// @5:49
+  CFG3 \b33_1.SUM_m3  (
+	.A(CO0_2),
+	.B(N_59),
+	.C(SUMtt_i1_mux_0),
+	.Y(SUM_N_4_0)
+);
+defparam \b33_1.SUM_m3 .INIT=8'h17;
+// @5:49
+  CFG4 \b33_1.SUM_m7  (
+	.A(SUMtt_i1_mux_0),
+	.B(CO0_Z),
+	.C(CO0_2),
+	.D(N_59),
+	.Y(SUM_i4_mux_0_0)
+);
+defparam \b33_1.SUM_m7 .INIT=16'h4CCD;
+// @6:21
+  CFG4 un1_quad1_NE_1 (
+	.A(code_in_RNI697J_0),
+	.B(un1_m14_i_1_1_Z),
+	.C(un1_m14_i_1_0_Z),
+	.D(un1_N_18),
+	.Y(un1_quad1_NE)
+);
+defparam un1_quad1_NE_1.INIT=16'h557F;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* decoder */
+
+module Decoder_ip (
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA,
+  Decoder_ip_0_PRDATA,
+  popfeedthru_unused_13,
+  popfeedthru_unused_5,
+  popfeedthru_unused_9,
+  popfeedthru_unused_14,
+  popfeedthru_unused_10,
+  popfeedthru_unused_16,
+  popfeedthru_unused_1,
+  popfeedthru_unused_4,
+  popfeedthru_unused_0,
+  popfeedthru_unused_2,
+  popfeedthru_unused_6,
+  popfeedthru_unused_8,
+  popfeedthru_unused_12,
+  popfeedthru_unused_3,
+  popfeedthru_unused_15,
+  popfeedthru_unused_7,
+  popfeedthru_unused_11,
+  popfeedthru_unused,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1,
+  POWER_ON_RESET_N,
+  prj_hamming_apb_sb_0_FIC_0_CLK
+)
+;
+input [31:16] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA ;
+output [31:0] Decoder_ip_0_PRDATA ;
+input popfeedthru_unused_13 ;
+input popfeedthru_unused_5 ;
+input popfeedthru_unused_9 ;
+input popfeedthru_unused_14 ;
+input popfeedthru_unused_10 ;
+input popfeedthru_unused_16 ;
+input popfeedthru_unused_1 ;
+input popfeedthru_unused_4 ;
+input popfeedthru_unused_0 ;
+input popfeedthru_unused_2 ;
+input popfeedthru_unused_6 ;
+input popfeedthru_unused_8 ;
+input popfeedthru_unused_12 ;
+input popfeedthru_unused_3 ;
+input popfeedthru_unused_15 ;
+input popfeedthru_unused_7 ;
+input popfeedthru_unused_11 ;
+input popfeedthru_unused ;
+input prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+input POWER_ON_RESET_N ;
+input prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire popfeedthru_unused_13 ;
+wire popfeedthru_unused_5 ;
+wire popfeedthru_unused_9 ;
+wire popfeedthru_unused_14 ;
+wire popfeedthru_unused_10 ;
+wire popfeedthru_unused_16 ;
+wire popfeedthru_unused_1 ;
+wire popfeedthru_unused_4 ;
+wire popfeedthru_unused_0 ;
+wire popfeedthru_unused_2 ;
+wire popfeedthru_unused_6 ;
+wire popfeedthru_unused_8 ;
+wire popfeedthru_unused_12 ;
+wire popfeedthru_unused_3 ;
+wire popfeedthru_unused_15 ;
+wire popfeedthru_unused_7 ;
+wire popfeedthru_unused_11 ;
+wire popfeedthru_unused ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+wire POWER_ON_RESET_N ;
+wire prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire [15:0] code_in_6_Z;
+wire [14:9] code_in_6;
+wire [15:0] code_in_6_1_0_Z;
+wire [0:0] linsin_0__1;
+wire [14:14] code_in_6_a2_0_0_Z;
+wire [14:14] code_in_6_a0_2_0_Z;
+wire [14:14] code_in_0_1;
+wire [0:0] quad1;
+wire [10:10] code_in_RNI697J_Z;
+wire [14:14] code_in_0_0;
+wire [14:14] code_in_6_2_tz_Z;
+wire [5:1] code_out;
+wire [1:1] signal_2__5_m;
+wire [1:1] signal_2__0_iv_0_0_0;
+wire [1:1] signal_1__5_m;
+wire [1:1] signal_1__0_iv_0_0_0;
+wire VCC ;
+wire un1_code_in_1_sqmuxa_or_Z ;
+wire GND ;
+wire N_331_i ;
+wire N_14_0 ;
+wire b32 ;
+wire quad117 ;
+wire N_13_0 ;
+wire G_5_0_a5_1_0 ;
+wire un1_SDi_3_i ;
+wire un1_quad1_NE ;
+wire N_15_0 ;
+wire b33 ;
+wire N_7_0 ;
+wire N_14 ;
+wire N_13 ;
+wire G_5_0_a5_1 ;
+wire N_15 ;
+wire N_7 ;
+wire signal_0__0_sqmuxa ;
+wire signal_0__1_sqmuxa ;
+wire code_in_6_N_2L1_Z ;
+wire N_138 ;
+// @6:26
+  SLE \code_in[15]  (
+	.Q(Decoder_ip_0_PRDATA[15]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[15]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[14]  (
+	.Q(Decoder_ip_0_PRDATA[14]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6[14]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[13]  (
+	.Q(Decoder_ip_0_PRDATA[13]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6[13]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[12]  (
+	.Q(Decoder_ip_0_PRDATA[12]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[12]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[11]  (
+	.Q(Decoder_ip_0_PRDATA[11]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[11]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[10]  (
+	.Q(Decoder_ip_0_PRDATA[10]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[10]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[9]  (
+	.Q(Decoder_ip_0_PRDATA[9]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6[9]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[8]  (
+	.Q(Decoder_ip_0_PRDATA[8]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[8]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[7]  (
+	.Q(Decoder_ip_0_PRDATA[7]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[7]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[6]  (
+	.Q(Decoder_ip_0_PRDATA[6]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[6]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[5]  (
+	.Q(Decoder_ip_0_PRDATA[5]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[5]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[4]  (
+	.Q(Decoder_ip_0_PRDATA[4]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[4]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[3]  (
+	.Q(Decoder_ip_0_PRDATA[3]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[3]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[2]  (
+	.Q(Decoder_ip_0_PRDATA[2]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[2]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[1]  (
+	.Q(Decoder_ip_0_PRDATA[1]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[1]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[0]  (
+	.Q(Decoder_ip_0_PRDATA[0]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(code_in_6_Z[0]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(POWER_ON_RESET_N)
+);
+// @6:26
+  SLE \code_in[31]  (
+	.Q(Decoder_ip_0_PRDATA[31]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[31]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[30]  (
+	.Q(Decoder_ip_0_PRDATA[30]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[30]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[29]  (
+	.Q(Decoder_ip_0_PRDATA[29]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[29]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[28]  (
+	.Q(Decoder_ip_0_PRDATA[28]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[28]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[27]  (
+	.Q(Decoder_ip_0_PRDATA[27]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[27]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[26]  (
+	.Q(Decoder_ip_0_PRDATA[26]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[26]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[25]  (
+	.Q(Decoder_ip_0_PRDATA[25]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[25]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[24]  (
+	.Q(Decoder_ip_0_PRDATA[24]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[24]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[23]  (
+	.Q(Decoder_ip_0_PRDATA[23]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[23]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[22]  (
+	.Q(Decoder_ip_0_PRDATA[22]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[22]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[21]  (
+	.Q(Decoder_ip_0_PRDATA[21]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[21]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[20]  (
+	.Q(Decoder_ip_0_PRDATA[20]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[20]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[19]  (
+	.Q(Decoder_ip_0_PRDATA[19]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[19]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[18]  (
+	.Q(Decoder_ip_0_PRDATA[18]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[18]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[17]  (
+	.Q(Decoder_ip_0_PRDATA[17]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[17]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+// @6:26
+  SLE \code_in[16]  (
+	.Q(Decoder_ip_0_PRDATA[16]),
+	.ADn(VCC),
+	.ALn(VCC),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[16]),
+	.EN(un1_code_in_1_sqmuxa_or_Z),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(N_331_i)
+);
+  CFG3 code_in_96_fast (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.B(POWER_ON_RESET_N),
+	.C(popfeedthru_unused),
+	.Y(N_331_i)
+);
+defparam code_in_96_fast.INIT=8'hC4;
+// @6:27
+  CFG4 \code_in_6_1_0[4]  (
+	.A(Decoder_ip_0_PRDATA[25]),
+	.B(Decoder_ip_0_PRDATA[2]),
+	.C(popfeedthru_unused),
+	.D(popfeedthru_unused_11),
+	.Y(code_in_6_1_0_Z[4])
+);
+defparam \code_in_6_1_0[4] .INIT=16'h09F9;
+// @6:27
+  CFG4 \code_in_6_1_0[8]  (
+	.A(Decoder_ip_0_PRDATA[26]),
+	.B(Decoder_ip_0_PRDATA[4]),
+	.C(popfeedthru_unused),
+	.D(popfeedthru_unused_7),
+	.Y(code_in_6_1_0_Z[8])
+);
+defparam \code_in_6_1_0[8] .INIT=16'h09F9;
+// @6:27
+  CFG4 \code_in_6_1_0[0]  (
+	.A(Decoder_ip_0_PRDATA[24]),
+	.B(Decoder_ip_0_PRDATA[0]),
+	.C(popfeedthru_unused),
+	.D(popfeedthru_unused_15),
+	.Y(code_in_6_1_0_Z[0])
+);
+defparam \code_in_6_1_0[0] .INIT=16'h09F9;
+// @6:27
+  CFG4 \code_in_6_1_0[12]  (
+	.A(Decoder_ip_0_PRDATA[27]),
+	.B(Decoder_ip_0_PRDATA[6]),
+	.C(popfeedthru_unused),
+	.D(popfeedthru_unused_3),
+	.Y(code_in_6_1_0_Z[12])
+);
+defparam \code_in_6_1_0[12] .INIT=16'h09F9;
+// @6:27
+  CFG4 \code_in_6_1_0[3]  (
+	.A(Decoder_ip_0_PRDATA[20]),
+	.B(Decoder_ip_0_PRDATA[1]),
+	.C(popfeedthru_unused),
+	.D(popfeedthru_unused_12),
+	.Y(code_in_6_1_0_Z[3])
+);
+defparam \code_in_6_1_0[3] .INIT=16'h09F9;
+// @6:27
+  CFG4 \code_in_6_1_0[7]  (
+	.A(Decoder_ip_0_PRDATA[21]),
+	.B(Decoder_ip_0_PRDATA[3]),
+	.C(popfeedthru_unused),
+	.D(popfeedthru_unused_8),
+	.Y(code_in_6_1_0_Z[7])
+);
+defparam \code_in_6_1_0[7] .INIT=16'h09F9;
+  CFG2 \code_in_RNO_2[9]  (
+	.A(popfeedthru_unused),
+	.B(popfeedthru_unused_6),
+	.Y(N_14_0)
+);
+defparam \code_in_RNO_2[9] .INIT=4'h8;
+  CFG4 \code_in_RNO_3[9]  (
+	.A(Decoder_ip_0_PRDATA[22]),
+	.B(b32),
+	.C(popfeedthru_unused),
+	.D(quad117),
+	.Y(N_13_0)
+);
+defparam \code_in_RNO_3[9] .INIT=16'h080A;
+  CFG4 \code_in_RNO_4[9]  (
+	.A(popfeedthru_unused),
+	.B(quad117),
+	.C(Decoder_ip_0_PRDATA[5]),
+	.D(Decoder_ip_0_PRDATA[30]),
+	.Y(G_5_0_a5_1_0)
+);
+defparam \code_in_RNO_4[9] .INIT=16'h0440;
+  CFG4 \code_in_RNO_0[9]  (
+	.A(Decoder_ip_0_PRDATA[22]),
+	.B(un1_SDi_3_i),
+	.C(popfeedthru_unused),
+	.D(un1_quad1_NE),
+	.Y(N_15_0)
+);
+defparam \code_in_RNO_0[9] .INIT=16'h0008;
+  CFG4 \code_in_RNO_1[9]  (
+	.A(b33),
+	.B(un1_SDi_3_i),
+	.C(G_5_0_a5_1_0),
+	.D(un1_quad1_NE),
+	.Y(N_7_0)
+);
+defparam \code_in_RNO_1[9] .INIT=16'hA0B0;
+  CFG4 \code_in_RNO[9]  (
+	.A(N_15_0),
+	.B(N_7_0),
+	.C(N_14_0),
+	.D(N_13_0),
+	.Y(code_in_6[9])
+);
+defparam \code_in_RNO[9] .INIT=16'hFFFE;
+  CFG2 \code_in_RNO_2[13]  (
+	.A(popfeedthru_unused),
+	.B(popfeedthru_unused_2),
+	.Y(N_14)
+);
+defparam \code_in_RNO_2[13] .INIT=4'h8;
+  CFG4 \code_in_RNO_3[13]  (
+	.A(Decoder_ip_0_PRDATA[23]),
+	.B(b32),
+	.C(popfeedthru_unused),
+	.D(quad117),
+	.Y(N_13)
+);
+defparam \code_in_RNO_3[13] .INIT=16'h080A;
+  CFG4 \code_in_RNO_4[13]  (
+	.A(popfeedthru_unused),
+	.B(quad117),
+	.C(Decoder_ip_0_PRDATA[7]),
+	.D(Decoder_ip_0_PRDATA[31]),
+	.Y(G_5_0_a5_1)
+);
+defparam \code_in_RNO_4[13] .INIT=16'h0440;
+  CFG4 \code_in_RNO_0[13]  (
+	.A(Decoder_ip_0_PRDATA[23]),
+	.B(un1_SDi_3_i),
+	.C(popfeedthru_unused),
+	.D(un1_quad1_NE),
+	.Y(N_15)
+);
+defparam \code_in_RNO_0[13] .INIT=16'h0008;
+  CFG4 \code_in_RNO_1[13]  (
+	.A(b33),
+	.B(un1_SDi_3_i),
+	.C(G_5_0_a5_1),
+	.D(un1_quad1_NE),
+	.Y(N_7)
+);
+defparam \code_in_RNO_1[13] .INIT=16'hA0B0;
+  CFG4 \code_in_RNO[13]  (
+	.A(N_15),
+	.B(N_7),
+	.C(N_14),
+	.D(N_13),
+	.Y(code_in_6[13])
+);
+defparam \code_in_RNO[13] .INIT=16'hFFFE;
+// @6:27
+  CFG4 \code_in_6[7]  (
+	.A(popfeedthru_unused),
+	.B(Decoder_ip_0_PRDATA[29]),
+	.C(signal_0__0_sqmuxa),
+	.D(code_in_6_1_0_Z[7]),
+	.Y(code_in_6_Z[7])
+);
+defparam \code_in_6[7] .INIT=16'h04FE;
+// @6:27
+  CFG4 \code_in_6[3]  (
+	.A(popfeedthru_unused),
+	.B(Decoder_ip_0_PRDATA[28]),
+	.C(signal_0__0_sqmuxa),
+	.D(code_in_6_1_0_Z[3]),
+	.Y(code_in_6_Z[3])
+);
+defparam \code_in_6[3] .INIT=16'h04FE;
+// @6:27
+  CFG4 \code_in_6[15]  (
+	.A(popfeedthru_unused),
+	.B(Decoder_ip_0_PRDATA[31]),
+	.C(signal_0__0_sqmuxa),
+	.D(code_in_6_1_0_Z[15]),
+	.Y(code_in_6_Z[15])
+);
+defparam \code_in_6[15] .INIT=16'h04FE;
+// @6:27
+  CFG3 \code_in_6_1_0[15]  (
+	.A(popfeedthru_unused),
+	.B(linsin_0__1[0]),
+	.C(popfeedthru_unused_0),
+	.Y(code_in_6_1_0_Z[15])
+);
+defparam \code_in_6_1_0[15] .INIT=8'h1B;
+// @6:27
+  CFG4 \code_in_6[12]  (
+	.A(popfeedthru_unused),
+	.B(Decoder_ip_0_PRDATA[19]),
+	.C(signal_0__1_sqmuxa),
+	.D(code_in_6_1_0_Z[12]),
+	.Y(code_in_6_Z[12])
+);
+defparam \code_in_6[12] .INIT=16'h04FE;
+// @6:27
+  CFG4 \code_in_6[0]  (
+	.A(popfeedthru_unused),
+	.B(Decoder_ip_0_PRDATA[16]),
+	.C(signal_0__1_sqmuxa),
+	.D(code_in_6_1_0_Z[0]),
+	.Y(code_in_6_Z[0])
+);
+defparam \code_in_6[0] .INIT=16'h04FE;
+// @6:27
+  CFG4 \code_in_6[8]  (
+	.A(popfeedthru_unused),
+	.B(Decoder_ip_0_PRDATA[18]),
+	.C(signal_0__1_sqmuxa),
+	.D(code_in_6_1_0_Z[8]),
+	.Y(code_in_6_Z[8])
+);
+defparam \code_in_6[8] .INIT=16'h04FE;
+// @6:27
+  CFG4 \code_in_6[4]  (
+	.A(popfeedthru_unused),
+	.B(Decoder_ip_0_PRDATA[17]),
+	.C(signal_0__1_sqmuxa),
+	.D(code_in_6_1_0_Z[4]),
+	.Y(code_in_6_Z[4])
+);
+defparam \code_in_6[4] .INIT=16'h04FE;
+// @6:27
+  CFG4 code_in_6_N_2L1 (
+	.A(Decoder_ip_0_PRDATA[22]),
+	.B(Decoder_ip_0_PRDATA[5]),
+	.C(popfeedthru_unused),
+	.D(popfeedthru_unused_4),
+	.Y(code_in_6_N_2L1_Z)
+);
+defparam code_in_6_N_2L1.INIT=16'h06F6;
+// @6:27
+  CFG4 \code_in_6[11]  (
+	.A(popfeedthru_unused),
+	.B(Decoder_ip_0_PRDATA[30]),
+	.C(signal_0__0_sqmuxa),
+	.D(code_in_6_N_2L1_Z),
+	.Y(code_in_6_Z[11])
+);
+defparam \code_in_6[11] .INIT=16'h54AE;
+// @6:27
+  CFG3 \code_in_6_a2_0_0[14]  (
+	.A(un1_SDi_3_i),
+	.B(popfeedthru_unused),
+	.C(Decoder_ip_0_PRDATA[27]),
+	.Y(code_in_6_a2_0_0_Z[14])
+);
+defparam \code_in_6_a2_0_0[14] .INIT=8'h20;
+// @6:27
+  CFG3 \code_in_6_a0_2_0[14]  (
+	.A(Decoder_ip_0_PRDATA[6]),
+	.B(Decoder_ip_0_PRDATA[19]),
+	.C(popfeedthru_unused),
+	.Y(code_in_6_a0_2_0_Z[14])
+);
+defparam \code_in_6_a0_2_0[14] .INIT=8'h06;
+// @6:27
+  CFG4 \code_in_RNO_0[14]  (
+	.A(Decoder_ip_0_PRDATA[27]),
+	.B(b33),
+	.C(popfeedthru_unused),
+	.D(quad117),
+	.Y(code_in_0_1[14])
+);
+defparam \code_in_RNO_0[14] .INIT=16'h080A;
+// @6:21
+  CFG4 \code_in_RNI697J[10]  (
+	.A(N_138),
+	.B(quad1[0]),
+	.C(Decoder_ip_0_PRDATA[10]),
+	.D(Decoder_ip_0_PRDATA[8]),
+	.Y(code_in_RNI697J_Z[10])
+);
+defparam \code_in_RNI697J[10] .INIT=16'h9669;
+// @6:27
+  CFG4 \code_in_RNO_1[14]  (
+	.A(popfeedthru_unused_1),
+	.B(popfeedthru_unused),
+	.C(code_in_6_a2_0_0_Z[14]),
+	.D(un1_quad1_NE),
+	.Y(code_in_0_0[14])
+);
+defparam \code_in_RNO_1[14] .INIT=16'h88F8;
+// @20:73
+  CFG4 un1_code_in_1_sqmuxa_or (
+	.A(popfeedthru_unused_16),
+	.B(POWER_ON_RESET_N),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(popfeedthru_unused),
+	.Y(un1_code_in_1_sqmuxa_or_Z)
+);
+defparam un1_code_in_1_sqmuxa_or.INIT=16'hB3F3;
+// @6:27
+  CFG4 \code_in_6_2_tz[14]  (
+	.A(b32),
+	.B(un1_SDi_3_i),
+	.C(code_in_6_a0_2_0_Z[14]),
+	.D(un1_quad1_NE),
+	.Y(code_in_6_2_tz_Z[14])
+);
+defparam \code_in_6_2_tz[14] .INIT=16'hA0B0;
+// @6:27
+  CFG3 \code_in_6[5]  (
+	.A(popfeedthru_unused_10),
+	.B(popfeedthru_unused),
+	.C(code_out[5]),
+	.Y(code_in_6_Z[5])
+);
+defparam \code_in_6[5] .INIT=8'hB8;
+// @6:27
+  CFG3 \code_in_6[1]  (
+	.A(popfeedthru_unused_14),
+	.B(popfeedthru_unused),
+	.C(code_out[1]),
+	.Y(code_in_6_Z[1])
+);
+defparam \code_in_6[1] .INIT=8'hB8;
+// @6:27
+  CFG4 \code_in_6[6]  (
+	.A(popfeedthru_unused),
+	.B(popfeedthru_unused_9),
+	.C(signal_2__5_m[1]),
+	.D(signal_2__0_iv_0_0_0[1]),
+	.Y(code_in_6_Z[6])
+);
+defparam \code_in_6[6] .INIT=16'hDDD8;
+// @6:27
+  CFG4 \code_in_6[10]  (
+	.A(popfeedthru_unused),
+	.B(popfeedthru_unused_5),
+	.C(signal_1__5_m[1]),
+	.D(signal_1__0_iv_0_0_0[1]),
+	.Y(code_in_6_Z[10])
+);
+defparam \code_in_6[10] .INIT=16'hDDD8;
+// @6:27
+  CFG3 \code_in_6[2]  (
+	.A(popfeedthru_unused_13),
+	.B(popfeedthru_unused),
+	.C(code_out[2]),
+	.Y(code_in_6_Z[2])
+);
+defparam \code_in_6[2] .INIT=8'hB8;
+// @6:27
+  CFG4 \code_in_RNO[14]  (
+	.A(code_in_0_1[14]),
+	.B(quad117),
+	.C(code_in_0_0[14]),
+	.D(code_in_6_2_tz_Z[14]),
+	.Y(code_in_6[14])
+);
+defparam \code_in_RNO[14] .INIT=16'hFEFA;
+// @6:21
+  decoder TBEC_RSC_DECODER (
+	.code_in_RNI697J_0(code_in_RNI697J_Z[10]),
+	.code_out_4(code_out[5]),
+	.code_out_1(code_out[2]),
+	.code_out_0(code_out[1]),
+	.signal_1__0_iv_0_0_0_0(signal_1__0_iv_0_0_0[1]),
+	.signal_2__0_iv_0_0_0_0(signal_2__0_iv_0_0_0[1]),
+	.signal_2__5_m_0(signal_2__5_m[1]),
+	.signal_1__5_m_0(signal_1__5_m[1]),
+	.Decoder_ip_0_PRDATA(Decoder_ip_0_PRDATA[31:0]),
+	.linsin_0__1_0(linsin_0__1[0]),
+	.quad1_0(quad1[0]),
+	.signal_0__1_sqmuxa_1z(signal_0__1_sqmuxa),
+	.N_138(N_138),
+	.signal_0__0_sqmuxa_1z(signal_0__0_sqmuxa),
+	.un1_SDi_3_i(un1_SDi_3_i),
+	.un1_quad1_NE(un1_quad1_NE),
+	.b33(b33),
+	.b32(b32),
+	.quad117(quad117)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* Decoder_ip */
+
+module prj_hamming_apb_sb_CCC_0_FCCC (
+  FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC,
+  LOCK,
+  prj_hamming_apb_sb_0_FIC_0_CLK
+)
+;
+input FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC ;
+output LOCK ;
+output prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC ;
+wire LOCK ;
+wire prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire [7:0] PRDATA;
+wire GL0_net ;
+wire Y0 ;
+wire Y1 ;
+wire Y2 ;
+wire Y3 ;
+wire BUSY ;
+wire VCC ;
+wire GND ;
+wire GL1 ;
+wire GL2 ;
+wire GL3 ;
+// @11:18
+  CLKINT GL0_INST (
+	.Y(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.A(GL0_net)
+);
+//@19:215
+// @11:20
+  CCC CCC_INST (
+	.Y0(Y0),
+	.Y1(Y1),
+	.Y2(Y2),
+	.Y3(Y3),
+	.PRDATA(PRDATA[7:0]),
+	.LOCK(LOCK),
+	.BUSY(BUSY),
+	.CLK0(VCC),
+	.CLK1(VCC),
+	.CLK2(VCC),
+	.CLK3(VCC),
+	.NGMUX0_SEL(GND),
+	.NGMUX1_SEL(GND),
+	.NGMUX2_SEL(GND),
+	.NGMUX3_SEL(GND),
+	.NGMUX0_HOLD_N(VCC),
+	.NGMUX1_HOLD_N(VCC),
+	.NGMUX2_HOLD_N(VCC),
+	.NGMUX3_HOLD_N(VCC),
+	.NGMUX0_ARST_N(VCC),
+	.NGMUX1_ARST_N(VCC),
+	.NGMUX2_ARST_N(VCC),
+	.NGMUX3_ARST_N(VCC),
+	.PLL_BYPASS_N(VCC),
+	.PLL_ARST_N(VCC),
+	.PLL_POWERDOWN_N(VCC),
+	.GPD0_ARST_N(VCC),
+	.GPD1_ARST_N(VCC),
+	.GPD2_ARST_N(VCC),
+	.GPD3_ARST_N(VCC),
+	.PRESET_N(GND),
+	.PCLK(VCC),
+	.PSEL(VCC),
+	.PENABLE(VCC),
+	.PWRITE(VCC),
+	.PADDR({VCC, VCC, VCC, VCC, VCC, VCC}),
+	.PWDATA({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.CLK0_PAD(GND),
+	.CLK1_PAD(GND),
+	.CLK2_PAD(GND),
+	.CLK3_PAD(GND),
+	.GL0(GL0_net),
+	.GL1(GL1),
+	.GL2(GL2),
+	.GL3(GL3),
+	.RCOSC_25_50MHZ(FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC),
+	.RCOSC_1MHZ(GND),
+	.XTLOSC(GND)
+);
+defparam CCC_INST.INIT=210'h0000007FB0000045574000318C6318C1F18C61EC0404040400103;
+defparam CCC_INST.VCOFREQUENCY=800.0;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* prj_hamming_apb_sb_CCC_0_FCCC */
+
+(* PSEL_SL16="5'b10000" , PSEL_SL15="5'b01111" , PSEL_SL14="5'b01110" , PSEL_SL13="5'b01101" , PSEL_SL12="5'b01100" , PSEL_SL11="5'b01011" , PSEL_SL10="5'b01010" , PSEL_SL9="5'b01001" , PSEL_SL8="5'b01000" , PSEL_SL7="5'b00111" , PSEL_SL6="5'b00110" , PSEL_SL5="5'b00101" , PSEL_SL4="5'b00100" , PSEL_SL3="5'b00011" , PSEL_SL2="5'b00010" , PSEL_SL1="5'b00001" , PSEL_SL0="5'b00000" *)module COREAPB3_MUXPTOB3 (
+  prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA,
+  Decoder_ip_0_PRDATA,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx
+)
+;
+output [31:0] prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA ;
+input [31:0] Decoder_ip_0_PRDATA ;
+input [31:0] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA ;
+input prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+input prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+wire GND ;
+wire VCC ;
+// @16:89
+  CFG4 \PRDATA[7]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[7]),
+	.B(Decoder_ip_0_PRDATA[7]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[7])
+);
+defparam \PRDATA[7] .INIT=16'hCCA0;
+// @16:89
+  CFG4 \PRDATA[19]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[19]),
+	.B(Decoder_ip_0_PRDATA[19]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[19])
+);
+defparam \PRDATA[19] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[20]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[20]),
+	.B(Decoder_ip_0_PRDATA[20]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[20])
+);
+defparam \PRDATA[20] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[27]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[27]),
+	.B(Decoder_ip_0_PRDATA[27]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[27])
+);
+defparam \PRDATA[27] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[31]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[31]),
+	.B(Decoder_ip_0_PRDATA[31]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[31])
+);
+defparam \PRDATA[31] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[6]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[6]),
+	.B(Decoder_ip_0_PRDATA[6]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[6])
+);
+defparam \PRDATA[6] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[1]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[1]),
+	.B(Decoder_ip_0_PRDATA[1]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[1])
+);
+defparam \PRDATA[1] .INIT=16'hCCA0;
+// @16:89
+  CFG4 \PRDATA[8]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[8]),
+	.B(Decoder_ip_0_PRDATA[8]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[8])
+);
+defparam \PRDATA[8] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[30]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[30]),
+	.B(Decoder_ip_0_PRDATA[30]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[30])
+);
+defparam \PRDATA[30] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[26]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[26]),
+	.B(Decoder_ip_0_PRDATA[26]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[26])
+);
+defparam \PRDATA[26] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[28]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[28]),
+	.B(Decoder_ip_0_PRDATA[28]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[28])
+);
+defparam \PRDATA[28] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[24]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[24]),
+	.B(Decoder_ip_0_PRDATA[24]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[24])
+);
+defparam \PRDATA[24] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[22]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[22]),
+	.B(Decoder_ip_0_PRDATA[22]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[22])
+);
+defparam \PRDATA[22] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[5]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[5]),
+	.B(Decoder_ip_0_PRDATA[5]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[5])
+);
+defparam \PRDATA[5] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[4]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[4]),
+	.B(Decoder_ip_0_PRDATA[4]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[4])
+);
+defparam \PRDATA[4] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[3]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[3]),
+	.B(Decoder_ip_0_PRDATA[3]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[3])
+);
+defparam \PRDATA[3] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[2]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[2]),
+	.B(Decoder_ip_0_PRDATA[2]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[2])
+);
+defparam \PRDATA[2] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[0]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[0]),
+	.B(Decoder_ip_0_PRDATA[0]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[0])
+);
+defparam \PRDATA[0] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[10]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[10]),
+	.B(Decoder_ip_0_PRDATA[10]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[10])
+);
+defparam \PRDATA[10] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[17]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[17]),
+	.B(Decoder_ip_0_PRDATA[17]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[17])
+);
+defparam \PRDATA[17] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[29]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[29]),
+	.B(Decoder_ip_0_PRDATA[29]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[29])
+);
+defparam \PRDATA[29] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[25]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[25]),
+	.B(Decoder_ip_0_PRDATA[25]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[25])
+);
+defparam \PRDATA[25] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[21]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[21]),
+	.B(Decoder_ip_0_PRDATA[21]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[21])
+);
+defparam \PRDATA[21] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[13]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[13]),
+	.B(Decoder_ip_0_PRDATA[13]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[13])
+);
+defparam \PRDATA[13] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[11]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[11]),
+	.B(Decoder_ip_0_PRDATA[11]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[11])
+);
+defparam \PRDATA[11] .INIT=16'hCCA0;
+// @16:89
+  CFG4 \PRDATA[16]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[16]),
+	.B(Decoder_ip_0_PRDATA[16]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[16])
+);
+defparam \PRDATA[16] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[23]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[23]),
+	.B(Decoder_ip_0_PRDATA[23]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[23])
+);
+defparam \PRDATA[23] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[18]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[18]),
+	.B(Decoder_ip_0_PRDATA[18]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[18])
+);
+defparam \PRDATA[18] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[15]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[15]),
+	.B(Decoder_ip_0_PRDATA[15]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[15])
+);
+defparam \PRDATA[15] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[14]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[14]),
+	.B(Decoder_ip_0_PRDATA[14]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[14])
+);
+defparam \PRDATA[14] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[12]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[12]),
+	.B(Decoder_ip_0_PRDATA[12]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[12])
+);
+defparam \PRDATA[12] .INIT=16'hCAC0;
+// @16:89
+  CFG4 \PRDATA[9]  (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[9]),
+	.B(Decoder_ip_0_PRDATA[9]),
+	.C(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.Y(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[9])
+);
+defparam \PRDATA[9] .INIT=16'hCAC0;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* COREAPB3_MUXPTOB3 */
+
+module CoreAPB3_Z1 (
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA,
+  Decoder_ip_0_PRDATA,
+  prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1
+)
+;
+input [31:0] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA ;
+input [31:0] Decoder_ip_0_PRDATA ;
+output [31:0] prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA ;
+input prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+input prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+wire GND ;
+wire VCC ;
+// @18:443
+  COREAPB3_MUXPTOB3 u_mux_p_to_b3 (
+	.prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[31:0]),
+	.Decoder_ip_0_PRDATA(Decoder_ip_0_PRDATA[31:0]),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[31:0]),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* CoreAPB3_Z1 */
+
+module CoreResetP_Z2 (
+  POWER_ON_RESET_N,
+  prj_hamming_apb_sb_0_FIC_0_CLK,
+  CORERESETP_0_RESET_N_F2M
+)
+;
+input POWER_ON_RESET_N ;
+input prj_hamming_apb_sb_0_FIC_0_CLK ;
+output CORERESETP_0_RESET_N_F2M ;
+wire POWER_ON_RESET_N ;
+wire prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire CORERESETP_0_RESET_N_F2M ;
+wire VCC ;
+wire sm1_areset_n_clk_base ;
+wire GND ;
+wire sm1_areset_n_q1_Z ;
+wire N_289 ;
+wire N_288 ;
+wire N_287 ;
+wire N_286 ;
+wire N_285 ;
+wire N_284 ;
+wire N_283 ;
+wire N_282 ;
+wire N_281 ;
+wire N_280 ;
+wire N_279 ;
+wire N_278 ;
+wire N_277 ;
+wire N_276 ;
+wire N_275 ;
+wire N_274 ;
+wire N_273 ;
+wire N_272 ;
+wire N_271 ;
+wire N_270 ;
+wire N_269 ;
+wire N_268 ;
+wire N_267 ;
+wire N_266 ;
+wire N_265 ;
+wire N_264 ;
+wire N_263 ;
+wire N_262 ;
+wire N_261 ;
+wire N_260 ;
+wire N_259 ;
+wire N_258 ;
+wire N_257 ;
+wire N_256 ;
+wire N_255 ;
+wire N_254 ;
+wire N_253 ;
+wire N_252 ;
+wire N_251 ;
+wire N_250 ;
+wire N_249 ;
+wire N_248 ;
+wire N_155 ;
+wire N_154 ;
+wire N_222 ;
+wire N_221 ;
+wire N_220 ;
+wire N_219 ;
+wire N_218 ;
+wire N_217 ;
+wire N_216 ;
+wire N_54 ;
+wire N_53 ;
+wire N_52 ;
+wire N_51 ;
+wire N_50 ;
+wire N_49 ;
+wire N_48 ;
+wire N_47 ;
+wire N_46 ;
+wire N_45 ;
+wire N_44 ;
+wire N_43 ;
+wire N_42 ;
+wire N_41 ;
+wire N_40 ;
+wire N_39 ;
+wire N_38 ;
+wire N_37 ;
+wire N_36 ;
+wire N_35 ;
+wire N_34 ;
+wire N_33 ;
+wire N_32 ;
+wire N_31 ;
+wire N_30 ;
+wire N_29 ;
+wire N_28 ;
+wire N_27 ;
+wire N_26 ;
+wire N_25 ;
+wire N_24 ;
+wire N_23 ;
+wire N_22 ;
+wire N_21 ;
+wire N_20 ;
+wire N_19 ;
+wire N_18 ;
+wire N_17 ;
+wire N_16 ;
+wire N_15 ;
+wire N_14 ;
+wire N_13 ;
+wire N_12 ;
+wire N_11 ;
+wire N_10 ;
+wire N_9 ;
+wire N_8 ;
+wire N_7 ;
+// @10:1388
+  SLE RESET_N_F2M_int (
+	.Q(CORERESETP_0_RESET_N_F2M),
+	.ADn(VCC),
+	.ALn(sm1_areset_n_clk_base),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(VCC),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:769
+  SLE sm1_areset_n_q1 (
+	.Q(sm1_areset_n_q1_Z),
+	.ADn(VCC),
+	.ALn(POWER_ON_RESET_N),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(VCC),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+// @10:496
+  SLE POWER_ON_RESET_N_clk_base (
+	.Q(sm1_areset_n_clk_base),
+	.ADn(VCC),
+	.ALn(POWER_ON_RESET_N),
+	.CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.D(sm1_areset_n_q1_Z),
+	.EN(VCC),
+	.LAT(GND),
+	.SD(GND),
+	.SLn(VCC)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* CoreResetP_Z2 */
+
+module prj_hamming_apb_sb_FABOSC_0_OSC (
+  FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC
+)
+;
+output FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC ;
+wire FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC ;
+wire GND ;
+wire VCC ;
+//@19:446
+// @13:26
+  RCOSC_25_50MHZ I_RCOSC_25_50MHZ (
+	.CLKOUT(FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC)
+);
+defparam I_RCOSC_25_50MHZ.FREQUENCY=50.0;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* prj_hamming_apb_sb_FABOSC_0_OSC */
+
+module prj_hamming_apb_sb_MSS (
+  prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA,
+  prj_hamming_apb_sb_0_FIC_0_CLK,
+  CORERESETP_0_RESET_N_F2M,
+  LOCK,
+  GPIO_0_M2F_c,
+  popfeedthru_unused,
+  popfeedthru_unused_0,
+  popfeedthru_unused_1,
+  popfeedthru_unused_2,
+  popfeedthru_unused_3,
+  popfeedthru_unused_4,
+  popfeedthru_unused_5,
+  popfeedthru_unused_6,
+  popfeedthru_unused_7,
+  popfeedthru_unused_8,
+  popfeedthru_unused_9,
+  popfeedthru_unused_10,
+  popfeedthru_unused_11,
+  popfeedthru_unused_12,
+  popfeedthru_unused_13,
+  popfeedthru_unused_14,
+  popfeedthru_unused_15,
+  popfeedthru_unused_16,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx
+)
+;
+input [31:0] prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA ;
+output [31:16] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA ;
+input prj_hamming_apb_sb_0_FIC_0_CLK ;
+input CORERESETP_0_RESET_N_F2M ;
+input LOCK ;
+output GPIO_0_M2F_c ;
+output popfeedthru_unused ;
+output popfeedthru_unused_0 ;
+output popfeedthru_unused_1 ;
+output popfeedthru_unused_2 ;
+output popfeedthru_unused_3 ;
+output popfeedthru_unused_4 ;
+output popfeedthru_unused_5 ;
+output popfeedthru_unused_6 ;
+output popfeedthru_unused_7 ;
+output popfeedthru_unused_8 ;
+output popfeedthru_unused_9 ;
+output popfeedthru_unused_10 ;
+output popfeedthru_unused_11 ;
+output popfeedthru_unused_12 ;
+output popfeedthru_unused_13 ;
+output popfeedthru_unused_14 ;
+output popfeedthru_unused_15 ;
+output popfeedthru_unused_16 ;
+output prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+output prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+wire prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire CORERESETP_0_RESET_N_F2M ;
+wire LOCK ;
+wire GPIO_0_M2F_c ;
+wire popfeedthru_unused ;
+wire popfeedthru_unused_0 ;
+wire popfeedthru_unused_1 ;
+wire popfeedthru_unused_2 ;
+wire popfeedthru_unused_3 ;
+wire popfeedthru_unused_4 ;
+wire popfeedthru_unused_5 ;
+wire popfeedthru_unused_6 ;
+wire popfeedthru_unused_7 ;
+wire popfeedthru_unused_8 ;
+wire popfeedthru_unused_9 ;
+wire popfeedthru_unused_10 ;
+wire popfeedthru_unused_11 ;
+wire popfeedthru_unused_12 ;
+wire popfeedthru_unused_13 ;
+wire popfeedthru_unused_14 ;
+wire popfeedthru_unused_15 ;
+wire popfeedthru_unused_16 ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+wire [31:0] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR;
+wire [7:0] EDAC_ERROR;
+wire [31:0] F_FM0_RDATA;
+wire [1:0] F_HM0_SIZE;
+wire [1:0] FAB_OPMODE;
+wire [3:0] FAB_VCONTROL;
+wire [1:0] FAB_XCVRSEL;
+wire [7:0] FAB_XDATAOUT;
+wire [1:0] FIC32_0_MASTER;
+wire [1:0] FIC32_1_MASTER;
+wire [15:0] H2F_INTERRUPT;
+wire [15:2] FIC_2_APB_M_PADDR;
+wire [31:0] FIC_2_APB_M_PWDATA;
+wire [9:0] TCGF;
+wire [3:0] TRACEDATA;
+wire [3:0] TXD_RIF;
+wire [7:0] TXDF;
+wire [3:0] F_BID;
+wire [1:0] F_BRESP_HRESP0;
+wire [63:0] F_RDATA_HRDATA01;
+wire [3:0] F_RID;
+wire [1:0] F_RRESP_HRESP1;
+wire [15:0] MDDR_FABRIC_PRDATA;
+wire [15:0] DRAM_ADDR;
+wire [2:0] DRAM_BA;
+wire [2:0] DRAM_DM_RDQS_OUT;
+wire [17:0] DRAM_DQ_OUT;
+wire [2:0] DRAM_DQS_OUT;
+wire [1:0] DRAM_FIFO_WE_OUT;
+wire [2:0] DM_OE;
+wire [17:0] DRAM_DQ_OE;
+wire [2:0] DRAM_DQS_OE;
+wire prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PSELx ;
+wire m3_e_0 ;
+wire CAN_RXBUS_MGPIO3A_H2F_A ;
+wire CAN_RXBUS_MGPIO3A_H2F_B ;
+wire CAN_TX_EBL_MGPIO4A_H2F_A ;
+wire CAN_TX_EBL_MGPIO4A_H2F_B ;
+wire CAN_TXBUS_MGPIO2A_H2F_A ;
+wire CAN_TXBUS_MGPIO2A_H2F_B ;
+wire FIC_2_APB_M_PCLK ;
+wire COMMS_INT ;
+wire FIC_2_APB_M_PRESET_N ;
+wire F_FM0_READYOUT ;
+wire F_FM0_RESP ;
+wire F_HM0_TRANS1 ;
+wire FAB_CHRGVBUS ;
+wire FAB_DISCHRGVBUS ;
+wire FAB_DMPULLDOWN ;
+wire FAB_DPPULLDOWN ;
+wire FAB_DRVVBUS ;
+wire FAB_IDPULLUP ;
+wire FAB_SUSPENDM ;
+wire FAB_TERMSEL ;
+wire FAB_TXVALID ;
+wire FAB_VCONTROLLOADM ;
+wire FACC_GLMUX_SEL ;
+wire MSS_RESET_N_M2F ;
+wire GTX_CLK ;
+wire H2F_NMI ;
+wire H2FCALIB ;
+wire I2C0_SCL_MGPIO31B_H2F_A ;
+wire I2C0_SCL_MGPIO31B_H2F_B ;
+wire I2C0_SDA_MGPIO30B_H2F_A ;
+wire I2C0_SDA_MGPIO30B_H2F_B ;
+wire I2C1_SCL_MGPIO1A_H2F_A ;
+wire I2C1_SCL_MGPIO1A_H2F_B ;
+wire I2C1_SDA_MGPIO0A_H2F_A ;
+wire MDCF ;
+wire MDOENF ;
+wire MDOF ;
+wire MMUART0_CTS_MGPIO19B_H2F_A ;
+wire MMUART0_CTS_MGPIO19B_H2F_B ;
+wire MMUART0_DCD_MGPIO22B_H2F_A ;
+wire MMUART0_DCD_MGPIO22B_H2F_B ;
+wire MMUART0_DSR_MGPIO20B_H2F_A ;
+wire MMUART0_DSR_MGPIO20B_H2F_B ;
+wire MMUART0_DTR_MGPIO18B_H2F_A ;
+wire MMUART0_DTR_MGPIO18B_H2F_B ;
+wire MMUART0_RI_MGPIO21B_H2F_A ;
+wire MMUART0_RI_MGPIO21B_H2F_B ;
+wire MMUART0_RTS_MGPIO17B_H2F_A ;
+wire MMUART0_RTS_MGPIO17B_H2F_B ;
+wire MMUART0_RXD_MGPIO28B_H2F_A ;
+wire MMUART0_RXD_MGPIO28B_H2F_B ;
+wire MMUART0_SCK_MGPIO29B_H2F_A ;
+wire MMUART0_SCK_MGPIO29B_H2F_B ;
+wire MMUART0_TXD_MGPIO27B_H2F_A ;
+wire MMUART0_TXD_MGPIO27B_H2F_B ;
+wire MMUART1_DTR_MGPIO12B_H2F_A ;
+wire MMUART1_RTS_MGPIO11B_H2F_A ;
+wire MMUART1_RTS_MGPIO11B_H2F_B ;
+wire MMUART1_RXD_MGPIO26B_H2F_A ;
+wire MMUART1_RXD_MGPIO26B_H2F_B ;
+wire MMUART1_SCK_MGPIO25B_H2F_A ;
+wire MMUART1_SCK_MGPIO25B_H2F_B ;
+wire MMUART1_TXD_MGPIO24B_H2F_A ;
+wire MMUART1_TXD_MGPIO24B_H2F_B ;
+wire MPLL_LOCK ;
+wire FIC_2_APB_M_PENABLE ;
+wire FIC_2_APB_M_PSEL ;
+wire FIC_2_APB_M_PWRITE ;
+wire RTC_MATCH ;
+wire SLEEPDEEP ;
+wire SLEEPHOLDACK ;
+wire SLEEPING ;
+wire SMBALERT_NO0 ;
+wire SMBALERT_NO1 ;
+wire SMBSUS_NO0 ;
+wire SMBSUS_NO1 ;
+wire SPI0_CLK_OUT ;
+wire SPI0_SDI_MGPIO5A_H2F_A ;
+wire SPI0_SDI_MGPIO5A_H2F_B ;
+wire SPI0_SDO_MGPIO6A_H2F_A ;
+wire SPI0_SDO_MGPIO6A_H2F_B ;
+wire SPI0_SS0_MGPIO7A_H2F_A ;
+wire SPI0_SS0_MGPIO7A_H2F_B ;
+wire SPI0_SS1_MGPIO8A_H2F_A ;
+wire SPI0_SS1_MGPIO8A_H2F_B ;
+wire SPI0_SS2_MGPIO9A_H2F_A ;
+wire SPI0_SS2_MGPIO9A_H2F_B ;
+wire SPI0_SS3_MGPIO10A_H2F_A ;
+wire SPI0_SS3_MGPIO10A_H2F_B ;
+wire SPI0_SS4_MGPIO19A_H2F_A ;
+wire SPI0_SS5_MGPIO20A_H2F_A ;
+wire SPI0_SS6_MGPIO21A_H2F_A ;
+wire SPI0_SS7_MGPIO22A_H2F_A ;
+wire SPI1_CLK_OUT ;
+wire SPI1_SDI_MGPIO11A_H2F_A ;
+wire SPI1_SDI_MGPIO11A_H2F_B ;
+wire SPI1_SDO_MGPIO12A_H2F_A ;
+wire SPI1_SDO_MGPIO12A_H2F_B ;
+wire SPI1_SS0_MGPIO13A_H2F_A ;
+wire SPI1_SS0_MGPIO13A_H2F_B ;
+wire SPI1_SS1_MGPIO14A_H2F_A ;
+wire SPI1_SS1_MGPIO14A_H2F_B ;
+wire SPI1_SS2_MGPIO15A_H2F_A ;
+wire SPI1_SS2_MGPIO15A_H2F_B ;
+wire SPI1_SS3_MGPIO16A_H2F_A ;
+wire SPI1_SS3_MGPIO16A_H2F_B ;
+wire SPI1_SS4_MGPIO17A_H2F_A ;
+wire SPI1_SS5_MGPIO18A_H2F_A ;
+wire SPI1_SS6_MGPIO23A_H2F_A ;
+wire SPI1_SS7_MGPIO24A_H2F_A ;
+wire TRACECLK ;
+wire TX_CLK ;
+wire TX_ENF ;
+wire TX_ERRF ;
+wire TXCTL_EN_RIF ;
+wire TXEV ;
+wire WDOGTIMEOUT ;
+wire F_ARREADY_HREADYOUT1 ;
+wire F_AWREADY_HREADYOUT0 ;
+wire F_BVALID ;
+wire F_RLAST ;
+wire F_RVALID ;
+wire F_WREADY ;
+wire MDDR_FABRIC_PREADY ;
+wire MDDR_FABRIC_PSLVERR ;
+wire VCC ;
+wire GND ;
+wire CAN_RXBUS_USBA_DATA1_MGPIO3A_OUT ;
+wire CAN_TX_EBL_USBA_DATA2_MGPIO4A_OUT ;
+wire CAN_TXBUS_USBA_DATA0_MGPIO2A_OUT ;
+wire DRAM_CASN ;
+wire DRAM_CKE ;
+wire DRAM_CLK ;
+wire DRAM_CSN ;
+wire DRAM_ODT ;
+wire DRAM_RASN ;
+wire DRAM_RSTN ;
+wire DRAM_WEN ;
+wire I2C0_SCL_USBC_DATA1_MGPIO31B_OUT ;
+wire I2C0_SDA_USBC_DATA0_MGPIO30B_OUT ;
+wire I2C1_SCL_USBA_DATA4_MGPIO1A_OUT ;
+wire I2C1_SDA_USBA_DATA3_MGPIO0A_OUT ;
+wire MMUART0_CTS_USBC_DATA7_MGPIO19B_OUT ;
+wire MMUART0_DCD_MGPIO22B_OUT ;
+wire MMUART0_DSR_MGPIO20B_OUT ;
+wire MMUART0_DTR_USBC_DATA6_MGPIO18B_OUT ;
+wire MMUART0_RI_MGPIO21B_OUT ;
+wire MMUART0_RTS_USBC_DATA5_MGPIO17B_OUT ;
+wire MMUART0_RXD_USBC_STP_MGPIO28B_OUT ;
+wire MMUART0_SCK_USBC_NXT_MGPIO29B_OUT ;
+wire MMUART0_TXD_USBC_DIR_MGPIO27B_OUT ;
+wire MMUART1_RXD_USBC_DATA3_MGPIO26B_OUT ;
+wire MMUART1_SCK_USBC_DATA4_MGPIO25B_OUT ;
+wire MMUART1_TXD_USBC_DATA2_MGPIO24B_OUT ;
+wire RGMII_GTX_CLK_RMII_CLK_USBB_XCLK_OUT ;
+wire RGMII_MDC_RMII_MDC_OUT ;
+wire RGMII_MDIO_RMII_MDIO_USBB_DATA7_OUT ;
+wire RGMII_RX_CLK_OUT ;
+wire RGMII_RX_CTL_RMII_CRS_DV_USBB_DATA2_OUT ;
+wire RGMII_RXD0_RMII_RXD0_USBB_DATA0_OUT ;
+wire RGMII_RXD1_RMII_RXD1_USBB_DATA1_OUT ;
+wire RGMII_RXD2_RMII_RX_ER_USBB_DATA3_OUT ;
+wire RGMII_RXD3_USBB_DATA4_OUT ;
+wire RGMII_TX_CLK_OUT ;
+wire RGMII_TX_CTL_RMII_TX_EN_USBB_NXT_OUT ;
+wire RGMII_TXD0_RMII_TXD0_USBB_DIR_OUT ;
+wire RGMII_TXD1_RMII_TXD1_USBB_STP_OUT ;
+wire RGMII_TXD2_USBB_DATA5_OUT ;
+wire RGMII_TXD3_USBB_DATA6_OUT ;
+wire SPI0_SCK_USBA_XCLK_OUT ;
+wire SPI0_SDI_USBA_DIR_MGPIO5A_OUT ;
+wire SPI0_SDO_USBA_STP_MGPIO6A_OUT ;
+wire SPI0_SS0_USBA_NXT_MGPIO7A_OUT ;
+wire SPI0_SS1_USBA_DATA5_MGPIO8A_OUT ;
+wire SPI0_SS2_USBA_DATA6_MGPIO9A_OUT ;
+wire SPI0_SS3_USBA_DATA7_MGPIO10A_OUT ;
+wire SPI1_SCK_OUT ;
+wire SPI1_SDI_MGPIO11A_OUT ;
+wire SPI1_SDO_MGPIO12A_OUT ;
+wire SPI1_SS0_MGPIO13A_OUT ;
+wire SPI1_SS1_MGPIO14A_OUT ;
+wire SPI1_SS2_MGPIO15A_OUT ;
+wire SPI1_SS3_MGPIO16A_OUT ;
+wire SPI1_SS4_MGPIO17A_OUT ;
+wire SPI1_SS5_MGPIO18A_OUT ;
+wire SPI1_SS6_MGPIO23A_OUT ;
+wire SPI1_SS7_MGPIO24A_OUT ;
+wire USBC_XCLK_OUT ;
+wire CAN_RXBUS_USBA_DATA1_MGPIO3A_OE ;
+wire CAN_TX_EBL_USBA_DATA2_MGPIO4A_OE ;
+wire CAN_TXBUS_USBA_DATA0_MGPIO2A_OE ;
+wire I2C0_SCL_USBC_DATA1_MGPIO31B_OE ;
+wire I2C0_SDA_USBC_DATA0_MGPIO30B_OE ;
+wire I2C1_SCL_USBA_DATA4_MGPIO1A_OE ;
+wire I2C1_SDA_USBA_DATA3_MGPIO0A_OE ;
+wire MMUART0_CTS_USBC_DATA7_MGPIO19B_OE ;
+wire MMUART0_DCD_MGPIO22B_OE ;
+wire MMUART0_DSR_MGPIO20B_OE ;
+wire MMUART0_DTR_USBC_DATA6_MGPIO18B_OE ;
+wire MMUART0_RI_MGPIO21B_OE ;
+wire MMUART0_RTS_USBC_DATA5_MGPIO17B_OE ;
+wire MMUART0_RXD_USBC_STP_MGPIO28B_OE ;
+wire MMUART0_SCK_USBC_NXT_MGPIO29B_OE ;
+wire MMUART0_TXD_USBC_DIR_MGPIO27B_OE ;
+wire MMUART1_RXD_USBC_DATA3_MGPIO26B_OE ;
+wire MMUART1_SCK_USBC_DATA4_MGPIO25B_OE ;
+wire MMUART1_TXD_USBC_DATA2_MGPIO24B_OE ;
+wire RGMII_GTX_CLK_RMII_CLK_USBB_XCLK_OE ;
+wire RGMII_MDC_RMII_MDC_OE ;
+wire RGMII_MDIO_RMII_MDIO_USBB_DATA7_OE ;
+wire RGMII_RX_CLK_OE ;
+wire RGMII_RX_CTL_RMII_CRS_DV_USBB_DATA2_OE ;
+wire RGMII_RXD0_RMII_RXD0_USBB_DATA0_OE ;
+wire RGMII_RXD1_RMII_RXD1_USBB_DATA1_OE ;
+wire RGMII_RXD2_RMII_RX_ER_USBB_DATA3_OE ;
+wire RGMII_RXD3_USBB_DATA4_OE ;
+wire RGMII_TX_CLK_OE ;
+wire RGMII_TX_CTL_RMII_TX_EN_USBB_NXT_OE ;
+wire RGMII_TXD0_RMII_TXD0_USBB_DIR_OE ;
+wire RGMII_TXD1_RMII_TXD1_USBB_STP_OE ;
+wire RGMII_TXD2_USBB_DATA5_OE ;
+wire RGMII_TXD3_USBB_DATA6_OE ;
+wire SPI0_SCK_USBA_XCLK_OE ;
+wire SPI0_SDI_USBA_DIR_MGPIO5A_OE ;
+wire SPI0_SDO_USBA_STP_MGPIO6A_OE ;
+wire SPI0_SS0_USBA_NXT_MGPIO7A_OE ;
+wire SPI0_SS1_USBA_DATA5_MGPIO8A_OE ;
+wire SPI0_SS2_USBA_DATA6_MGPIO9A_OE ;
+wire SPI0_SS3_USBA_DATA7_MGPIO10A_OE ;
+wire SPI1_SCK_OE ;
+wire SPI1_SDI_MGPIO11A_OE ;
+wire SPI1_SDO_MGPIO12A_OE ;
+wire SPI1_SS0_MGPIO13A_OE ;
+wire SPI1_SS1_MGPIO14A_OE ;
+wire SPI1_SS2_MGPIO15A_OE ;
+wire SPI1_SS3_MGPIO16A_OE ;
+wire SPI1_SS4_MGPIO17A_OE ;
+wire SPI1_SS5_MGPIO18A_OE ;
+wire SPI1_SS6_MGPIO23A_OE ;
+wire SPI1_SS7_MGPIO24A_OE ;
+wire USBC_XCLK_OE ;
+  CFG2 MSS_ADLIB_INST_RNIMB5N (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR[15]),
+	.B(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PSELx),
+	.Y(m3_e_0)
+);
+defparam MSS_ADLIB_INST_RNIMB5N.INIT=4'h4;
+  CFG4 MSS_ADLIB_INST_RNI7DTP1_0 (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR[14]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR[13]),
+	.C(m3_e_0),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR[12]),
+	.Y(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx)
+);
+defparam MSS_ADLIB_INST_RNI7DTP1_0.INIT=16'h0010;
+  CFG4 MSS_ADLIB_INST_RNI7DTP1 (
+	.A(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR[14]),
+	.B(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR[13]),
+	.C(m3_e_0),
+	.D(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR[12]),
+	.Y(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1)
+);
+defparam MSS_ADLIB_INST_RNI7DTP1.INIT=16'h1000;
+// @15:222
+  MSS_010 MSS_ADLIB_INST (
+	.CAN_RXBUS_MGPIO3A_H2F_A(CAN_RXBUS_MGPIO3A_H2F_A),
+	.CAN_RXBUS_MGPIO3A_H2F_B(CAN_RXBUS_MGPIO3A_H2F_B),
+	.CAN_TX_EBL_MGPIO4A_H2F_A(CAN_TX_EBL_MGPIO4A_H2F_A),
+	.CAN_TX_EBL_MGPIO4A_H2F_B(CAN_TX_EBL_MGPIO4A_H2F_B),
+	.CAN_TXBUS_MGPIO2A_H2F_A(CAN_TXBUS_MGPIO2A_H2F_A),
+	.CAN_TXBUS_MGPIO2A_H2F_B(CAN_TXBUS_MGPIO2A_H2F_B),
+	.CLK_CONFIG_APB(FIC_2_APB_M_PCLK),
+	.COMMS_INT(COMMS_INT),
+	.CONFIG_PRESET_N(FIC_2_APB_M_PRESET_N),
+	.EDAC_ERROR(EDAC_ERROR[7:0]),
+	.F_FM0_RDATA(F_FM0_RDATA[31:0]),
+	.F_FM0_READYOUT(F_FM0_READYOUT),
+	.F_FM0_RESP(F_FM0_RESP),
+	.F_HM0_ADDR(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PADDR[31:0]),
+	.F_HM0_ENABLE(popfeedthru_unused_16),
+	.F_HM0_SEL(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PSELx),
+	.F_HM0_SIZE(F_HM0_SIZE[1:0]),
+	.F_HM0_TRANS1(F_HM0_TRANS1),
+	.F_HM0_WDATA({prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[31:16], popfeedthru_unused_0, popfeedthru_unused_1, popfeedthru_unused_2, popfeedthru_unused_3, popfeedthru_unused_4, popfeedthru_unused_5, popfeedthru_unused_6, popfeedthru_unused_7, popfeedthru_unused_8, popfeedthru_unused_9, popfeedthru_unused_10, popfeedthru_unused_11, popfeedthru_unused_12, popfeedthru_unused_13, popfeedthru_unused_14, popfeedthru_unused_15}),
+	.F_HM0_WRITE(popfeedthru_unused),
+	.FAB_CHRGVBUS(FAB_CHRGVBUS),
+	.FAB_DISCHRGVBUS(FAB_DISCHRGVBUS),
+	.FAB_DMPULLDOWN(FAB_DMPULLDOWN),
+	.FAB_DPPULLDOWN(FAB_DPPULLDOWN),
+	.FAB_DRVVBUS(FAB_DRVVBUS),
+	.FAB_IDPULLUP(FAB_IDPULLUP),
+	.FAB_OPMODE(FAB_OPMODE[1:0]),
+	.FAB_SUSPENDM(FAB_SUSPENDM),
+	.FAB_TERMSEL(FAB_TERMSEL),
+	.FAB_TXVALID(FAB_TXVALID),
+	.FAB_VCONTROL(FAB_VCONTROL[3:0]),
+	.FAB_VCONTROLLOADM(FAB_VCONTROLLOADM),
+	.FAB_XCVRSEL(FAB_XCVRSEL[1:0]),
+	.FAB_XDATAOUT(FAB_XDATAOUT[7:0]),
+	.FACC_GLMUX_SEL(FACC_GLMUX_SEL),
+	.FIC32_0_MASTER(FIC32_0_MASTER[1:0]),
+	.FIC32_1_MASTER(FIC32_1_MASTER[1:0]),
+	.FPGA_RESET_N(MSS_RESET_N_M2F),
+	.GTX_CLK(GTX_CLK),
+	.H2F_INTERRUPT(H2F_INTERRUPT[15:0]),
+	.H2F_NMI(H2F_NMI),
+	.H2FCALIB(H2FCALIB),
+	.I2C0_SCL_MGPIO31B_H2F_A(I2C0_SCL_MGPIO31B_H2F_A),
+	.I2C0_SCL_MGPIO31B_H2F_B(I2C0_SCL_MGPIO31B_H2F_B),
+	.I2C0_SDA_MGPIO30B_H2F_A(I2C0_SDA_MGPIO30B_H2F_A),
+	.I2C0_SDA_MGPIO30B_H2F_B(I2C0_SDA_MGPIO30B_H2F_B),
+	.I2C1_SCL_MGPIO1A_H2F_A(I2C1_SCL_MGPIO1A_H2F_A),
+	.I2C1_SCL_MGPIO1A_H2F_B(I2C1_SCL_MGPIO1A_H2F_B),
+	.I2C1_SDA_MGPIO0A_H2F_A(I2C1_SDA_MGPIO0A_H2F_A),
+	.I2C1_SDA_MGPIO0A_H2F_B(GPIO_0_M2F_c),
+	.MDCF(MDCF),
+	.MDOENF(MDOENF),
+	.MDOF(MDOF),
+	.MMUART0_CTS_MGPIO19B_H2F_A(MMUART0_CTS_MGPIO19B_H2F_A),
+	.MMUART0_CTS_MGPIO19B_H2F_B(MMUART0_CTS_MGPIO19B_H2F_B),
+	.MMUART0_DCD_MGPIO22B_H2F_A(MMUART0_DCD_MGPIO22B_H2F_A),
+	.MMUART0_DCD_MGPIO22B_H2F_B(MMUART0_DCD_MGPIO22B_H2F_B),
+	.MMUART0_DSR_MGPIO20B_H2F_A(MMUART0_DSR_MGPIO20B_H2F_A),
+	.MMUART0_DSR_MGPIO20B_H2F_B(MMUART0_DSR_MGPIO20B_H2F_B),
+	.MMUART0_DTR_MGPIO18B_H2F_A(MMUART0_DTR_MGPIO18B_H2F_A),
+	.MMUART0_DTR_MGPIO18B_H2F_B(MMUART0_DTR_MGPIO18B_H2F_B),
+	.MMUART0_RI_MGPIO21B_H2F_A(MMUART0_RI_MGPIO21B_H2F_A),
+	.MMUART0_RI_MGPIO21B_H2F_B(MMUART0_RI_MGPIO21B_H2F_B),
+	.MMUART0_RTS_MGPIO17B_H2F_A(MMUART0_RTS_MGPIO17B_H2F_A),
+	.MMUART0_RTS_MGPIO17B_H2F_B(MMUART0_RTS_MGPIO17B_H2F_B),
+	.MMUART0_RXD_MGPIO28B_H2F_A(MMUART0_RXD_MGPIO28B_H2F_A),
+	.MMUART0_RXD_MGPIO28B_H2F_B(MMUART0_RXD_MGPIO28B_H2F_B),
+	.MMUART0_SCK_MGPIO29B_H2F_A(MMUART0_SCK_MGPIO29B_H2F_A),
+	.MMUART0_SCK_MGPIO29B_H2F_B(MMUART0_SCK_MGPIO29B_H2F_B),
+	.MMUART0_TXD_MGPIO27B_H2F_A(MMUART0_TXD_MGPIO27B_H2F_A),
+	.MMUART0_TXD_MGPIO27B_H2F_B(MMUART0_TXD_MGPIO27B_H2F_B),
+	.MMUART1_DTR_MGPIO12B_H2F_A(MMUART1_DTR_MGPIO12B_H2F_A),
+	.MMUART1_RTS_MGPIO11B_H2F_A(MMUART1_RTS_MGPIO11B_H2F_A),
+	.MMUART1_RTS_MGPIO11B_H2F_B(MMUART1_RTS_MGPIO11B_H2F_B),
+	.MMUART1_RXD_MGPIO26B_H2F_A(MMUART1_RXD_MGPIO26B_H2F_A),
+	.MMUART1_RXD_MGPIO26B_H2F_B(MMUART1_RXD_MGPIO26B_H2F_B),
+	.MMUART1_SCK_MGPIO25B_H2F_A(MMUART1_SCK_MGPIO25B_H2F_A),
+	.MMUART1_SCK_MGPIO25B_H2F_B(MMUART1_SCK_MGPIO25B_H2F_B),
+	.MMUART1_TXD_MGPIO24B_H2F_A(MMUART1_TXD_MGPIO24B_H2F_A),
+	.MMUART1_TXD_MGPIO24B_H2F_B(MMUART1_TXD_MGPIO24B_H2F_B),
+	.MPLL_LOCK(MPLL_LOCK),
+	.PER2_FABRIC_PADDR(FIC_2_APB_M_PADDR[15:2]),
+	.PER2_FABRIC_PENABLE(FIC_2_APB_M_PENABLE),
+	.PER2_FABRIC_PSEL(FIC_2_APB_M_PSEL),
+	.PER2_FABRIC_PWDATA(FIC_2_APB_M_PWDATA[31:0]),
+	.PER2_FABRIC_PWRITE(FIC_2_APB_M_PWRITE),
+	.RTC_MATCH(RTC_MATCH),
+	.SLEEPDEEP(SLEEPDEEP),
+	.SLEEPHOLDACK(SLEEPHOLDACK),
+	.SLEEPING(SLEEPING),
+	.SMBALERT_NO0(SMBALERT_NO0),
+	.SMBALERT_NO1(SMBALERT_NO1),
+	.SMBSUS_NO0(SMBSUS_NO0),
+	.SMBSUS_NO1(SMBSUS_NO1),
+	.SPI0_CLK_OUT(SPI0_CLK_OUT),
+	.SPI0_SDI_MGPIO5A_H2F_A(SPI0_SDI_MGPIO5A_H2F_A),
+	.SPI0_SDI_MGPIO5A_H2F_B(SPI0_SDI_MGPIO5A_H2F_B),
+	.SPI0_SDO_MGPIO6A_H2F_A(SPI0_SDO_MGPIO6A_H2F_A),
+	.SPI0_SDO_MGPIO6A_H2F_B(SPI0_SDO_MGPIO6A_H2F_B),
+	.SPI0_SS0_MGPIO7A_H2F_A(SPI0_SS0_MGPIO7A_H2F_A),
+	.SPI0_SS0_MGPIO7A_H2F_B(SPI0_SS0_MGPIO7A_H2F_B),
+	.SPI0_SS1_MGPIO8A_H2F_A(SPI0_SS1_MGPIO8A_H2F_A),
+	.SPI0_SS1_MGPIO8A_H2F_B(SPI0_SS1_MGPIO8A_H2F_B),
+	.SPI0_SS2_MGPIO9A_H2F_A(SPI0_SS2_MGPIO9A_H2F_A),
+	.SPI0_SS2_MGPIO9A_H2F_B(SPI0_SS2_MGPIO9A_H2F_B),
+	.SPI0_SS3_MGPIO10A_H2F_A(SPI0_SS3_MGPIO10A_H2F_A),
+	.SPI0_SS3_MGPIO10A_H2F_B(SPI0_SS3_MGPIO10A_H2F_B),
+	.SPI0_SS4_MGPIO19A_H2F_A(SPI0_SS4_MGPIO19A_H2F_A),
+	.SPI0_SS5_MGPIO20A_H2F_A(SPI0_SS5_MGPIO20A_H2F_A),
+	.SPI0_SS6_MGPIO21A_H2F_A(SPI0_SS6_MGPIO21A_H2F_A),
+	.SPI0_SS7_MGPIO22A_H2F_A(SPI0_SS7_MGPIO22A_H2F_A),
+	.SPI1_CLK_OUT(SPI1_CLK_OUT),
+	.SPI1_SDI_MGPIO11A_H2F_A(SPI1_SDI_MGPIO11A_H2F_A),
+	.SPI1_SDI_MGPIO11A_H2F_B(SPI1_SDI_MGPIO11A_H2F_B),
+	.SPI1_SDO_MGPIO12A_H2F_A(SPI1_SDO_MGPIO12A_H2F_A),
+	.SPI1_SDO_MGPIO12A_H2F_B(SPI1_SDO_MGPIO12A_H2F_B),
+	.SPI1_SS0_MGPIO13A_H2F_A(SPI1_SS0_MGPIO13A_H2F_A),
+	.SPI1_SS0_MGPIO13A_H2F_B(SPI1_SS0_MGPIO13A_H2F_B),
+	.SPI1_SS1_MGPIO14A_H2F_A(SPI1_SS1_MGPIO14A_H2F_A),
+	.SPI1_SS1_MGPIO14A_H2F_B(SPI1_SS1_MGPIO14A_H2F_B),
+	.SPI1_SS2_MGPIO15A_H2F_A(SPI1_SS2_MGPIO15A_H2F_A),
+	.SPI1_SS2_MGPIO15A_H2F_B(SPI1_SS2_MGPIO15A_H2F_B),
+	.SPI1_SS3_MGPIO16A_H2F_A(SPI1_SS3_MGPIO16A_H2F_A),
+	.SPI1_SS3_MGPIO16A_H2F_B(SPI1_SS3_MGPIO16A_H2F_B),
+	.SPI1_SS4_MGPIO17A_H2F_A(SPI1_SS4_MGPIO17A_H2F_A),
+	.SPI1_SS5_MGPIO18A_H2F_A(SPI1_SS5_MGPIO18A_H2F_A),
+	.SPI1_SS6_MGPIO23A_H2F_A(SPI1_SS6_MGPIO23A_H2F_A),
+	.SPI1_SS7_MGPIO24A_H2F_A(SPI1_SS7_MGPIO24A_H2F_A),
+	.TCGF(TCGF[9:0]),
+	.TRACECLK(TRACECLK),
+	.TRACEDATA(TRACEDATA[3:0]),
+	.TX_CLK(TX_CLK),
+	.TX_ENF(TX_ENF),
+	.TX_ERRF(TX_ERRF),
+	.TXCTL_EN_RIF(TXCTL_EN_RIF),
+	.TXD_RIF(TXD_RIF[3:0]),
+	.TXDF(TXDF[7:0]),
+	.TXEV(TXEV),
+	.WDOGTIMEOUT(WDOGTIMEOUT),
+	.F_ARREADY_HREADYOUT1(F_ARREADY_HREADYOUT1),
+	.F_AWREADY_HREADYOUT0(F_AWREADY_HREADYOUT0),
+	.F_BID(F_BID[3:0]),
+	.F_BRESP_HRESP0(F_BRESP_HRESP0[1:0]),
+	.F_BVALID(F_BVALID),
+	.F_RDATA_HRDATA01(F_RDATA_HRDATA01[63:0]),
+	.F_RID(F_RID[3:0]),
+	.F_RLAST(F_RLAST),
+	.F_RRESP_HRESP1(F_RRESP_HRESP1[1:0]),
+	.F_RVALID(F_RVALID),
+	.F_WREADY(F_WREADY),
+	.MDDR_FABRIC_PRDATA(MDDR_FABRIC_PRDATA[15:0]),
+	.MDDR_FABRIC_PREADY(MDDR_FABRIC_PREADY),
+	.MDDR_FABRIC_PSLVERR(MDDR_FABRIC_PSLVERR),
+	.CAN_RXBUS_F2H_SCP(VCC),
+	.CAN_TX_EBL_F2H_SCP(VCC),
+	.CAN_TXBUS_F2H_SCP(VCC),
+	.COLF(VCC),
+	.CRSF(VCC),
+	.F2_DMAREADY({VCC, VCC}),
+	.F2H_INTERRUPT({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.F2HCALIB(VCC),
+	.F_DMAREADY({VCC, VCC}),
+	.F_FM0_ADDR({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.F_FM0_ENABLE(GND),
+	.F_FM0_MASTLOCK(GND),
+	.F_FM0_READY(VCC),
+	.F_FM0_SEL(GND),
+	.F_FM0_SIZE({GND, GND}),
+	.F_FM0_TRANS1(GND),
+	.F_FM0_WDATA({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.F_FM0_WRITE(GND),
+	.F_HM0_RDATA(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[31:0]),
+	.F_HM0_READY(VCC),
+	.F_HM0_RESP(GND),
+	.FAB_AVALID(VCC),
+	.FAB_HOSTDISCON(VCC),
+	.FAB_IDDIG(VCC),
+	.FAB_LINESTATE({VCC, VCC}),
+	.FAB_M3_RESET_N(VCC),
+	.FAB_PLL_LOCK(LOCK),
+	.FAB_RXACTIVE(VCC),
+	.FAB_RXERROR(VCC),
+	.FAB_RXVALID(VCC),
+	.FAB_RXVALIDH(GND),
+	.FAB_SESSEND(VCC),
+	.FAB_TXREADY(VCC),
+	.FAB_VBUSVALID(VCC),
+	.FAB_VSTATUS({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.FAB_XDATAIN({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.GTX_CLKPF(VCC),
+	.I2C0_BCLK(VCC),
+	.I2C0_SCL_F2H_SCP(VCC),
+	.I2C0_SDA_F2H_SCP(VCC),
+	.I2C1_BCLK(VCC),
+	.I2C1_SCL_F2H_SCP(VCC),
+	.I2C1_SDA_F2H_SCP(VCC),
+	.MDIF(VCC),
+	.MGPIO0A_F2H_GPIN(VCC),
+	.MGPIO10A_F2H_GPIN(VCC),
+	.MGPIO11A_F2H_GPIN(VCC),
+	.MGPIO11B_F2H_GPIN(VCC),
+	.MGPIO12A_F2H_GPIN(VCC),
+	.MGPIO13A_F2H_GPIN(VCC),
+	.MGPIO14A_F2H_GPIN(VCC),
+	.MGPIO15A_F2H_GPIN(VCC),
+	.MGPIO16A_F2H_GPIN(VCC),
+	.MGPIO17B_F2H_GPIN(VCC),
+	.MGPIO18B_F2H_GPIN(VCC),
+	.MGPIO19B_F2H_GPIN(VCC),
+	.MGPIO1A_F2H_GPIN(VCC),
+	.MGPIO20B_F2H_GPIN(VCC),
+	.MGPIO21B_F2H_GPIN(VCC),
+	.MGPIO22B_F2H_GPIN(VCC),
+	.MGPIO24B_F2H_GPIN(VCC),
+	.MGPIO25B_F2H_GPIN(VCC),
+	.MGPIO26B_F2H_GPIN(VCC),
+	.MGPIO27B_F2H_GPIN(VCC),
+	.MGPIO28B_F2H_GPIN(VCC),
+	.MGPIO29B_F2H_GPIN(VCC),
+	.MGPIO2A_F2H_GPIN(VCC),
+	.MGPIO30B_F2H_GPIN(VCC),
+	.MGPIO31B_F2H_GPIN(VCC),
+	.MGPIO3A_F2H_GPIN(VCC),
+	.MGPIO4A_F2H_GPIN(VCC),
+	.MGPIO5A_F2H_GPIN(VCC),
+	.MGPIO6A_F2H_GPIN(VCC),
+	.MGPIO7A_F2H_GPIN(VCC),
+	.MGPIO8A_F2H_GPIN(VCC),
+	.MGPIO9A_F2H_GPIN(VCC),
+	.MMUART0_CTS_F2H_SCP(VCC),
+	.MMUART0_DCD_F2H_SCP(VCC),
+	.MMUART0_DSR_F2H_SCP(VCC),
+	.MMUART0_DTR_F2H_SCP(VCC),
+	.MMUART0_RI_F2H_SCP(VCC),
+	.MMUART0_RTS_F2H_SCP(VCC),
+	.MMUART0_RXD_F2H_SCP(VCC),
+	.MMUART0_SCK_F2H_SCP(VCC),
+	.MMUART0_TXD_F2H_SCP(VCC),
+	.MMUART1_CTS_F2H_SCP(VCC),
+	.MMUART1_DCD_F2H_SCP(VCC),
+	.MMUART1_DSR_F2H_SCP(VCC),
+	.MMUART1_RI_F2H_SCP(VCC),
+	.MMUART1_RTS_F2H_SCP(VCC),
+	.MMUART1_RXD_F2H_SCP(VCC),
+	.MMUART1_SCK_F2H_SCP(VCC),
+	.MMUART1_TXD_F2H_SCP(VCC),
+	.PER2_FABRIC_PRDATA({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.PER2_FABRIC_PREADY(VCC),
+	.PER2_FABRIC_PSLVERR(GND),
+	.RCGF({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.RX_CLKPF(VCC),
+	.RX_DVF(VCC),
+	.RX_ERRF(VCC),
+	.RX_EV(VCC),
+	.RXDF({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.SLEEPHOLDREQ(GND),
+	.SMBALERT_NI0(VCC),
+	.SMBALERT_NI1(VCC),
+	.SMBSUS_NI0(VCC),
+	.SMBSUS_NI1(VCC),
+	.SPI0_CLK_IN(VCC),
+	.SPI0_SDI_F2H_SCP(VCC),
+	.SPI0_SDO_F2H_SCP(VCC),
+	.SPI0_SS0_F2H_SCP(VCC),
+	.SPI0_SS1_F2H_SCP(VCC),
+	.SPI0_SS2_F2H_SCP(VCC),
+	.SPI0_SS3_F2H_SCP(VCC),
+	.SPI1_CLK_IN(VCC),
+	.SPI1_SDI_F2H_SCP(VCC),
+	.SPI1_SDO_F2H_SCP(VCC),
+	.SPI1_SS0_F2H_SCP(VCC),
+	.SPI1_SS1_F2H_SCP(VCC),
+	.SPI1_SS2_F2H_SCP(VCC),
+	.SPI1_SS3_F2H_SCP(VCC),
+	.TX_CLKPF(VCC),
+	.USER_MSS_GPIO_RESET_N(VCC),
+	.USER_MSS_RESET_N(CORERESETP_0_RESET_N_F2M),
+	.XCLK_FAB(VCC),
+	.CLK_BASE(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.CLK_MDDR_APB(VCC),
+	.F_ARADDR_HADDR1({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.F_ARBURST_HTRANS1({GND, GND}),
+	.F_ARID_HSEL1({GND, GND, GND, GND}),
+	.F_ARLEN_HBURST1({GND, GND, GND, GND}),
+	.F_ARLOCK_HMASTLOCK1({GND, GND}),
+	.F_ARSIZE_HSIZE1({GND, GND}),
+	.F_ARVALID_HWRITE1(GND),
+	.F_AWADDR_HADDR0({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.F_AWBURST_HTRANS0({GND, GND}),
+	.F_AWID_HSEL0({GND, GND, GND, GND}),
+	.F_AWLEN_HBURST0({GND, GND, GND, GND}),
+	.F_AWLOCK_HMASTLOCK0({GND, GND}),
+	.F_AWSIZE_HSIZE0({GND, GND}),
+	.F_AWVALID_HWRITE0(GND),
+	.F_BREADY(GND),
+	.F_RMW_AXI(GND),
+	.F_RREADY(GND),
+	.F_WDATA_HWDATA01({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.F_WID_HREADY01({GND, GND, GND, GND}),
+	.F_WLAST(GND),
+	.F_WSTRB({GND, GND, GND, GND, GND, GND, GND, GND}),
+	.F_WVALID(GND),
+	.FPGA_MDDR_ARESET_N(VCC),
+	.MDDR_FABRIC_PADDR({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.MDDR_FABRIC_PENABLE(VCC),
+	.MDDR_FABRIC_PSEL(VCC),
+	.MDDR_FABRIC_PWDATA({VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC, VCC}),
+	.MDDR_FABRIC_PWRITE(VCC),
+	.PRESET_N(GND),
+	.CAN_RXBUS_USBA_DATA1_MGPIO3A_IN(GND),
+	.CAN_TX_EBL_USBA_DATA2_MGPIO4A_IN(GND),
+	.CAN_TXBUS_USBA_DATA0_MGPIO2A_IN(GND),
+	.DM_IN({GND, GND, GND}),
+	.DRAM_DQ_IN({GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND, GND}),
+	.DRAM_DQS_IN({GND, GND, GND}),
+	.DRAM_FIFO_WE_IN({GND, GND}),
+	.I2C0_SCL_USBC_DATA1_MGPIO31B_IN(GND),
+	.I2C0_SDA_USBC_DATA0_MGPIO30B_IN(GND),
+	.I2C1_SCL_USBA_DATA4_MGPIO1A_IN(GND),
+	.I2C1_SDA_USBA_DATA3_MGPIO0A_IN(GND),
+	.MMUART0_CTS_USBC_DATA7_MGPIO19B_IN(GND),
+	.MMUART0_DCD_MGPIO22B_IN(GND),
+	.MMUART0_DSR_MGPIO20B_IN(GND),
+	.MMUART0_DTR_USBC_DATA6_MGPIO18B_IN(GND),
+	.MMUART0_RI_MGPIO21B_IN(GND),
+	.MMUART0_RTS_USBC_DATA5_MGPIO17B_IN(GND),
+	.MMUART0_RXD_USBC_STP_MGPIO28B_IN(GND),
+	.MMUART0_SCK_USBC_NXT_MGPIO29B_IN(GND),
+	.MMUART0_TXD_USBC_DIR_MGPIO27B_IN(GND),
+	.MMUART1_RXD_USBC_DATA3_MGPIO26B_IN(GND),
+	.MMUART1_SCK_USBC_DATA4_MGPIO25B_IN(GND),
+	.MMUART1_TXD_USBC_DATA2_MGPIO24B_IN(GND),
+	.RGMII_GTX_CLK_RMII_CLK_USBB_XCLK_IN(GND),
+	.RGMII_MDC_RMII_MDC_IN(GND),
+	.RGMII_MDIO_RMII_MDIO_USBB_DATA7_IN(GND),
+	.RGMII_RX_CLK_IN(GND),
+	.RGMII_RX_CTL_RMII_CRS_DV_USBB_DATA2_IN(GND),
+	.RGMII_RXD0_RMII_RXD0_USBB_DATA0_IN(GND),
+	.RGMII_RXD1_RMII_RXD1_USBB_DATA1_IN(GND),
+	.RGMII_RXD2_RMII_RX_ER_USBB_DATA3_IN(GND),
+	.RGMII_RXD3_USBB_DATA4_IN(GND),
+	.RGMII_TX_CLK_IN(GND),
+	.RGMII_TX_CTL_RMII_TX_EN_USBB_NXT_IN(GND),
+	.RGMII_TXD0_RMII_TXD0_USBB_DIR_IN(GND),
+	.RGMII_TXD1_RMII_TXD1_USBB_STP_IN(GND),
+	.RGMII_TXD2_USBB_DATA5_IN(GND),
+	.RGMII_TXD3_USBB_DATA6_IN(GND),
+	.SPI0_SCK_USBA_XCLK_IN(GND),
+	.SPI0_SDI_USBA_DIR_MGPIO5A_IN(GND),
+	.SPI0_SDO_USBA_STP_MGPIO6A_IN(GND),
+	.SPI0_SS0_USBA_NXT_MGPIO7A_IN(GND),
+	.SPI0_SS1_USBA_DATA5_MGPIO8A_IN(GND),
+	.SPI0_SS2_USBA_DATA6_MGPIO9A_IN(GND),
+	.SPI0_SS3_USBA_DATA7_MGPIO10A_IN(GND),
+	.SPI1_SCK_IN(GND),
+	.SPI1_SDI_MGPIO11A_IN(GND),
+	.SPI1_SDO_MGPIO12A_IN(GND),
+	.SPI1_SS0_MGPIO13A_IN(GND),
+	.SPI1_SS1_MGPIO14A_IN(GND),
+	.SPI1_SS2_MGPIO15A_IN(GND),
+	.SPI1_SS3_MGPIO16A_IN(GND),
+	.SPI1_SS4_MGPIO17A_IN(GND),
+	.SPI1_SS5_MGPIO18A_IN(GND),
+	.SPI1_SS6_MGPIO23A_IN(GND),
+	.SPI1_SS7_MGPIO24A_IN(GND),
+	.USBC_XCLK_IN(GND),
+	.CAN_RXBUS_USBA_DATA1_MGPIO3A_OUT(CAN_RXBUS_USBA_DATA1_MGPIO3A_OUT),
+	.CAN_TX_EBL_USBA_DATA2_MGPIO4A_OUT(CAN_TX_EBL_USBA_DATA2_MGPIO4A_OUT),
+	.CAN_TXBUS_USBA_DATA0_MGPIO2A_OUT(CAN_TXBUS_USBA_DATA0_MGPIO2A_OUT),
+	.DRAM_ADDR(DRAM_ADDR[15:0]),
+	.DRAM_BA(DRAM_BA[2:0]),
+	.DRAM_CASN(DRAM_CASN),
+	.DRAM_CKE(DRAM_CKE),
+	.DRAM_CLK(DRAM_CLK),
+	.DRAM_CSN(DRAM_CSN),
+	.DRAM_DM_RDQS_OUT(DRAM_DM_RDQS_OUT[2:0]),
+	.DRAM_DQ_OUT(DRAM_DQ_OUT[17:0]),
+	.DRAM_DQS_OUT(DRAM_DQS_OUT[2:0]),
+	.DRAM_FIFO_WE_OUT(DRAM_FIFO_WE_OUT[1:0]),
+	.DRAM_ODT(DRAM_ODT),
+	.DRAM_RASN(DRAM_RASN),
+	.DRAM_RSTN(DRAM_RSTN),
+	.DRAM_WEN(DRAM_WEN),
+	.I2C0_SCL_USBC_DATA1_MGPIO31B_OUT(I2C0_SCL_USBC_DATA1_MGPIO31B_OUT),
+	.I2C0_SDA_USBC_DATA0_MGPIO30B_OUT(I2C0_SDA_USBC_DATA0_MGPIO30B_OUT),
+	.I2C1_SCL_USBA_DATA4_MGPIO1A_OUT(I2C1_SCL_USBA_DATA4_MGPIO1A_OUT),
+	.I2C1_SDA_USBA_DATA3_MGPIO0A_OUT(I2C1_SDA_USBA_DATA3_MGPIO0A_OUT),
+	.MMUART0_CTS_USBC_DATA7_MGPIO19B_OUT(MMUART0_CTS_USBC_DATA7_MGPIO19B_OUT),
+	.MMUART0_DCD_MGPIO22B_OUT(MMUART0_DCD_MGPIO22B_OUT),
+	.MMUART0_DSR_MGPIO20B_OUT(MMUART0_DSR_MGPIO20B_OUT),
+	.MMUART0_DTR_USBC_DATA6_MGPIO18B_OUT(MMUART0_DTR_USBC_DATA6_MGPIO18B_OUT),
+	.MMUART0_RI_MGPIO21B_OUT(MMUART0_RI_MGPIO21B_OUT),
+	.MMUART0_RTS_USBC_DATA5_MGPIO17B_OUT(MMUART0_RTS_USBC_DATA5_MGPIO17B_OUT),
+	.MMUART0_RXD_USBC_STP_MGPIO28B_OUT(MMUART0_RXD_USBC_STP_MGPIO28B_OUT),
+	.MMUART0_SCK_USBC_NXT_MGPIO29B_OUT(MMUART0_SCK_USBC_NXT_MGPIO29B_OUT),
+	.MMUART0_TXD_USBC_DIR_MGPIO27B_OUT(MMUART0_TXD_USBC_DIR_MGPIO27B_OUT),
+	.MMUART1_RXD_USBC_DATA3_MGPIO26B_OUT(MMUART1_RXD_USBC_DATA3_MGPIO26B_OUT),
+	.MMUART1_SCK_USBC_DATA4_MGPIO25B_OUT(MMUART1_SCK_USBC_DATA4_MGPIO25B_OUT),
+	.MMUART1_TXD_USBC_DATA2_MGPIO24B_OUT(MMUART1_TXD_USBC_DATA2_MGPIO24B_OUT),
+	.RGMII_GTX_CLK_RMII_CLK_USBB_XCLK_OUT(RGMII_GTX_CLK_RMII_CLK_USBB_XCLK_OUT),
+	.RGMII_MDC_RMII_MDC_OUT(RGMII_MDC_RMII_MDC_OUT),
+	.RGMII_MDIO_RMII_MDIO_USBB_DATA7_OUT(RGMII_MDIO_RMII_MDIO_USBB_DATA7_OUT),
+	.RGMII_RX_CLK_OUT(RGMII_RX_CLK_OUT),
+	.RGMII_RX_CTL_RMII_CRS_DV_USBB_DATA2_OUT(RGMII_RX_CTL_RMII_CRS_DV_USBB_DATA2_OUT),
+	.RGMII_RXD0_RMII_RXD0_USBB_DATA0_OUT(RGMII_RXD0_RMII_RXD0_USBB_DATA0_OUT),
+	.RGMII_RXD1_RMII_RXD1_USBB_DATA1_OUT(RGMII_RXD1_RMII_RXD1_USBB_DATA1_OUT),
+	.RGMII_RXD2_RMII_RX_ER_USBB_DATA3_OUT(RGMII_RXD2_RMII_RX_ER_USBB_DATA3_OUT),
+	.RGMII_RXD3_USBB_DATA4_OUT(RGMII_RXD3_USBB_DATA4_OUT),
+	.RGMII_TX_CLK_OUT(RGMII_TX_CLK_OUT),
+	.RGMII_TX_CTL_RMII_TX_EN_USBB_NXT_OUT(RGMII_TX_CTL_RMII_TX_EN_USBB_NXT_OUT),
+	.RGMII_TXD0_RMII_TXD0_USBB_DIR_OUT(RGMII_TXD0_RMII_TXD0_USBB_DIR_OUT),
+	.RGMII_TXD1_RMII_TXD1_USBB_STP_OUT(RGMII_TXD1_RMII_TXD1_USBB_STP_OUT),
+	.RGMII_TXD2_USBB_DATA5_OUT(RGMII_TXD2_USBB_DATA5_OUT),
+	.RGMII_TXD3_USBB_DATA6_OUT(RGMII_TXD3_USBB_DATA6_OUT),
+	.SPI0_SCK_USBA_XCLK_OUT(SPI0_SCK_USBA_XCLK_OUT),
+	.SPI0_SDI_USBA_DIR_MGPIO5A_OUT(SPI0_SDI_USBA_DIR_MGPIO5A_OUT),
+	.SPI0_SDO_USBA_STP_MGPIO6A_OUT(SPI0_SDO_USBA_STP_MGPIO6A_OUT),
+	.SPI0_SS0_USBA_NXT_MGPIO7A_OUT(SPI0_SS0_USBA_NXT_MGPIO7A_OUT),
+	.SPI0_SS1_USBA_DATA5_MGPIO8A_OUT(SPI0_SS1_USBA_DATA5_MGPIO8A_OUT),
+	.SPI0_SS2_USBA_DATA6_MGPIO9A_OUT(SPI0_SS2_USBA_DATA6_MGPIO9A_OUT),
+	.SPI0_SS3_USBA_DATA7_MGPIO10A_OUT(SPI0_SS3_USBA_DATA7_MGPIO10A_OUT),
+	.SPI1_SCK_OUT(SPI1_SCK_OUT),
+	.SPI1_SDI_MGPIO11A_OUT(SPI1_SDI_MGPIO11A_OUT),
+	.SPI1_SDO_MGPIO12A_OUT(SPI1_SDO_MGPIO12A_OUT),
+	.SPI1_SS0_MGPIO13A_OUT(SPI1_SS0_MGPIO13A_OUT),
+	.SPI1_SS1_MGPIO14A_OUT(SPI1_SS1_MGPIO14A_OUT),
+	.SPI1_SS2_MGPIO15A_OUT(SPI1_SS2_MGPIO15A_OUT),
+	.SPI1_SS3_MGPIO16A_OUT(SPI1_SS3_MGPIO16A_OUT),
+	.SPI1_SS4_MGPIO17A_OUT(SPI1_SS4_MGPIO17A_OUT),
+	.SPI1_SS5_MGPIO18A_OUT(SPI1_SS5_MGPIO18A_OUT),
+	.SPI1_SS6_MGPIO23A_OUT(SPI1_SS6_MGPIO23A_OUT),
+	.SPI1_SS7_MGPIO24A_OUT(SPI1_SS7_MGPIO24A_OUT),
+	.USBC_XCLK_OUT(USBC_XCLK_OUT),
+	.CAN_RXBUS_USBA_DATA1_MGPIO3A_OE(CAN_RXBUS_USBA_DATA1_MGPIO3A_OE),
+	.CAN_TX_EBL_USBA_DATA2_MGPIO4A_OE(CAN_TX_EBL_USBA_DATA2_MGPIO4A_OE),
+	.CAN_TXBUS_USBA_DATA0_MGPIO2A_OE(CAN_TXBUS_USBA_DATA0_MGPIO2A_OE),
+	.DM_OE(DM_OE[2:0]),
+	.DRAM_DQ_OE(DRAM_DQ_OE[17:0]),
+	.DRAM_DQS_OE(DRAM_DQS_OE[2:0]),
+	.I2C0_SCL_USBC_DATA1_MGPIO31B_OE(I2C0_SCL_USBC_DATA1_MGPIO31B_OE),
+	.I2C0_SDA_USBC_DATA0_MGPIO30B_OE(I2C0_SDA_USBC_DATA0_MGPIO30B_OE),
+	.I2C1_SCL_USBA_DATA4_MGPIO1A_OE(I2C1_SCL_USBA_DATA4_MGPIO1A_OE),
+	.I2C1_SDA_USBA_DATA3_MGPIO0A_OE(I2C1_SDA_USBA_DATA3_MGPIO0A_OE),
+	.MMUART0_CTS_USBC_DATA7_MGPIO19B_OE(MMUART0_CTS_USBC_DATA7_MGPIO19B_OE),
+	.MMUART0_DCD_MGPIO22B_OE(MMUART0_DCD_MGPIO22B_OE),
+	.MMUART0_DSR_MGPIO20B_OE(MMUART0_DSR_MGPIO20B_OE),
+	.MMUART0_DTR_USBC_DATA6_MGPIO18B_OE(MMUART0_DTR_USBC_DATA6_MGPIO18B_OE),
+	.MMUART0_RI_MGPIO21B_OE(MMUART0_RI_MGPIO21B_OE),
+	.MMUART0_RTS_USBC_DATA5_MGPIO17B_OE(MMUART0_RTS_USBC_DATA5_MGPIO17B_OE),
+	.MMUART0_RXD_USBC_STP_MGPIO28B_OE(MMUART0_RXD_USBC_STP_MGPIO28B_OE),
+	.MMUART0_SCK_USBC_NXT_MGPIO29B_OE(MMUART0_SCK_USBC_NXT_MGPIO29B_OE),
+	.MMUART0_TXD_USBC_DIR_MGPIO27B_OE(MMUART0_TXD_USBC_DIR_MGPIO27B_OE),
+	.MMUART1_RXD_USBC_DATA3_MGPIO26B_OE(MMUART1_RXD_USBC_DATA3_MGPIO26B_OE),
+	.MMUART1_SCK_USBC_DATA4_MGPIO25B_OE(MMUART1_SCK_USBC_DATA4_MGPIO25B_OE),
+	.MMUART1_TXD_USBC_DATA2_MGPIO24B_OE(MMUART1_TXD_USBC_DATA2_MGPIO24B_OE),
+	.RGMII_GTX_CLK_RMII_CLK_USBB_XCLK_OE(RGMII_GTX_CLK_RMII_CLK_USBB_XCLK_OE),
+	.RGMII_MDC_RMII_MDC_OE(RGMII_MDC_RMII_MDC_OE),
+	.RGMII_MDIO_RMII_MDIO_USBB_DATA7_OE(RGMII_MDIO_RMII_MDIO_USBB_DATA7_OE),
+	.RGMII_RX_CLK_OE(RGMII_RX_CLK_OE),
+	.RGMII_RX_CTL_RMII_CRS_DV_USBB_DATA2_OE(RGMII_RX_CTL_RMII_CRS_DV_USBB_DATA2_OE),
+	.RGMII_RXD0_RMII_RXD0_USBB_DATA0_OE(RGMII_RXD0_RMII_RXD0_USBB_DATA0_OE),
+	.RGMII_RXD1_RMII_RXD1_USBB_DATA1_OE(RGMII_RXD1_RMII_RXD1_USBB_DATA1_OE),
+	.RGMII_RXD2_RMII_RX_ER_USBB_DATA3_OE(RGMII_RXD2_RMII_RX_ER_USBB_DATA3_OE),
+	.RGMII_RXD3_USBB_DATA4_OE(RGMII_RXD3_USBB_DATA4_OE),
+	.RGMII_TX_CLK_OE(RGMII_TX_CLK_OE),
+	.RGMII_TX_CTL_RMII_TX_EN_USBB_NXT_OE(RGMII_TX_CTL_RMII_TX_EN_USBB_NXT_OE),
+	.RGMII_TXD0_RMII_TXD0_USBB_DIR_OE(RGMII_TXD0_RMII_TXD0_USBB_DIR_OE),
+	.RGMII_TXD1_RMII_TXD1_USBB_STP_OE(RGMII_TXD1_RMII_TXD1_USBB_STP_OE),
+	.RGMII_TXD2_USBB_DATA5_OE(RGMII_TXD2_USBB_DATA5_OE),
+	.RGMII_TXD3_USBB_DATA6_OE(RGMII_TXD3_USBB_DATA6_OE),
+	.SPI0_SCK_USBA_XCLK_OE(SPI0_SCK_USBA_XCLK_OE),
+	.SPI0_SDI_USBA_DIR_MGPIO5A_OE(SPI0_SDI_USBA_DIR_MGPIO5A_OE),
+	.SPI0_SDO_USBA_STP_MGPIO6A_OE(SPI0_SDO_USBA_STP_MGPIO6A_OE),
+	.SPI0_SS0_USBA_NXT_MGPIO7A_OE(SPI0_SS0_USBA_NXT_MGPIO7A_OE),
+	.SPI0_SS1_USBA_DATA5_MGPIO8A_OE(SPI0_SS1_USBA_DATA5_MGPIO8A_OE),
+	.SPI0_SS2_USBA_DATA6_MGPIO9A_OE(SPI0_SS2_USBA_DATA6_MGPIO9A_OE),
+	.SPI0_SS3_USBA_DATA7_MGPIO10A_OE(SPI0_SS3_USBA_DATA7_MGPIO10A_OE),
+	.SPI1_SCK_OE(SPI1_SCK_OE),
+	.SPI1_SDI_MGPIO11A_OE(SPI1_SDI_MGPIO11A_OE),
+	.SPI1_SDO_MGPIO12A_OE(SPI1_SDO_MGPIO12A_OE),
+	.SPI1_SS0_MGPIO13A_OE(SPI1_SS0_MGPIO13A_OE),
+	.SPI1_SS1_MGPIO14A_OE(SPI1_SS1_MGPIO14A_OE),
+	.SPI1_SS2_MGPIO15A_OE(SPI1_SS2_MGPIO15A_OE),
+	.SPI1_SS3_MGPIO16A_OE(SPI1_SS3_MGPIO16A_OE),
+	.SPI1_SS4_MGPIO17A_OE(SPI1_SS4_MGPIO17A_OE),
+	.SPI1_SS5_MGPIO18A_OE(SPI1_SS5_MGPIO18A_OE),
+	.SPI1_SS6_MGPIO23A_OE(SPI1_SS6_MGPIO23A_OE),
+	.SPI1_SS7_MGPIO24A_OE(SPI1_SS7_MGPIO24A_OE),
+	.USBC_XCLK_OE(USBC_XCLK_OE)
+);
+defparam MSS_ADLIB_INST.INIT=1438'h00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F00000000F000000000000000000000000000000007FFFFFFFB000001007C33D00809000608EC0000003FFFFE4000000000000100000000F0F01C000001825FE4010842108421000001FE34001FF8000000400000000020091007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF;
+defparam MSS_ADLIB_INST.ACT_UBITS=56'hFFFFFFFFFFFFFF;
+defparam MSS_ADLIB_INST.MEMORYFILE="ENVM_init.mem";
+defparam MSS_ADLIB_INST.RTC_MAIN_XTL_FREQ=0.0;
+defparam MSS_ADLIB_INST.RTC_MAIN_XTL_MODE="";
+defparam MSS_ADLIB_INST.DDR_CLK_FREQ=100.0;
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* prj_hamming_apb_sb_MSS */
+
+module prj_hamming_apb_sb (
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA,
+  Decoder_ip_0_PRDATA,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA,
+  popfeedthru_unused_16,
+  popfeedthru_unused_15,
+  popfeedthru_unused_14,
+  popfeedthru_unused_13,
+  popfeedthru_unused_12,
+  popfeedthru_unused_11,
+  popfeedthru_unused_10,
+  popfeedthru_unused_9,
+  popfeedthru_unused_8,
+  popfeedthru_unused_7,
+  popfeedthru_unused_6,
+  popfeedthru_unused_5,
+  popfeedthru_unused_4,
+  popfeedthru_unused_3,
+  popfeedthru_unused_2,
+  popfeedthru_unused_1,
+  popfeedthru_unused_0,
+  popfeedthru_unused,
+  GPIO_0_M2F_c,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1,
+  prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx,
+  prj_hamming_apb_sb_0_FIC_0_CLK,
+  DEVRST_N,
+  POWER_ON_RESET_N
+)
+;
+output [31:16] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA ;
+input [31:0] Decoder_ip_0_PRDATA ;
+input [31:0] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA ;
+output popfeedthru_unused_16 ;
+output popfeedthru_unused_15 ;
+output popfeedthru_unused_14 ;
+output popfeedthru_unused_13 ;
+output popfeedthru_unused_12 ;
+output popfeedthru_unused_11 ;
+output popfeedthru_unused_10 ;
+output popfeedthru_unused_9 ;
+output popfeedthru_unused_8 ;
+output popfeedthru_unused_7 ;
+output popfeedthru_unused_6 ;
+output popfeedthru_unused_5 ;
+output popfeedthru_unused_4 ;
+output popfeedthru_unused_3 ;
+output popfeedthru_unused_2 ;
+output popfeedthru_unused_1 ;
+output popfeedthru_unused_0 ;
+output popfeedthru_unused ;
+output GPIO_0_M2F_c ;
+output prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+output prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+output prj_hamming_apb_sb_0_FIC_0_CLK ;
+input DEVRST_N ;
+output POWER_ON_RESET_N ;
+wire popfeedthru_unused_16 ;
+wire popfeedthru_unused_15 ;
+wire popfeedthru_unused_14 ;
+wire popfeedthru_unused_13 ;
+wire popfeedthru_unused_12 ;
+wire popfeedthru_unused_11 ;
+wire popfeedthru_unused_10 ;
+wire popfeedthru_unused_9 ;
+wire popfeedthru_unused_8 ;
+wire popfeedthru_unused_7 ;
+wire popfeedthru_unused_6 ;
+wire popfeedthru_unused_5 ;
+wire popfeedthru_unused_4 ;
+wire popfeedthru_unused_3 ;
+wire popfeedthru_unused_2 ;
+wire popfeedthru_unused_1 ;
+wire popfeedthru_unused_0 ;
+wire popfeedthru_unused ;
+wire GPIO_0_M2F_c ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+wire prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire DEVRST_N ;
+wire POWER_ON_RESET_N ;
+wire [31:0] prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA;
+wire FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC ;
+wire LOCK ;
+wire CORERESETP_0_RESET_N_F2M ;
+wire GND ;
+wire VCC ;
+// @19:488
+  SYSRESET SYSRESET_POR (
+	.POWER_ON_RESET_N(POWER_ON_RESET_N),
+	.DEVRST_N(DEVRST_N)
+);
+// @19:215
+  prj_hamming_apb_sb_CCC_0_FCCC CCC_0 (
+	.FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC(FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC),
+	.LOCK(LOCK),
+	.prj_hamming_apb_sb_0_FIC_0_CLK(prj_hamming_apb_sb_0_FIC_0_CLK)
+);
+// @19:262
+  CoreAPB3_Z1 CoreAPB3_0 (
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[31:0]),
+	.Decoder_ip_0_PRDATA(Decoder_ip_0_PRDATA[31:0]),
+	.prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[31:0]),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1)
+);
+// @19:375
+  CoreResetP_Z2 CORERESETP_0 (
+	.POWER_ON_RESET_N(POWER_ON_RESET_N),
+	.prj_hamming_apb_sb_0_FIC_0_CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.CORERESETP_0_RESET_N_F2M(CORERESETP_0_RESET_N_F2M)
+);
+// @19:446
+  prj_hamming_apb_sb_FABOSC_0_OSC FABOSC_0 (
+	.FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC(FABOSC_0_RCOSC_25_50MHZ_CCC_OUT_RCOSC_25_50MHZ_CCC)
+);
+// @19:459
+  prj_hamming_apb_sb_MSS prj_hamming_apb_sb_MSS_0 (
+	.prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA(prj_hamming_apb_sb_MSS_TMP_0_FIC_0_APB_MASTER_PRDATA[31:0]),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[31:16]),
+	.prj_hamming_apb_sb_0_FIC_0_CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.CORERESETP_0_RESET_N_F2M(CORERESETP_0_RESET_N_F2M),
+	.LOCK(LOCK),
+	.GPIO_0_M2F_c(GPIO_0_M2F_c),
+	.popfeedthru_unused(popfeedthru_unused),
+	.popfeedthru_unused_0(popfeedthru_unused_0),
+	.popfeedthru_unused_1(popfeedthru_unused_1),
+	.popfeedthru_unused_2(popfeedthru_unused_2),
+	.popfeedthru_unused_3(popfeedthru_unused_3),
+	.popfeedthru_unused_4(popfeedthru_unused_4),
+	.popfeedthru_unused_5(popfeedthru_unused_5),
+	.popfeedthru_unused_6(popfeedthru_unused_6),
+	.popfeedthru_unused_7(popfeedthru_unused_7),
+	.popfeedthru_unused_8(popfeedthru_unused_8),
+	.popfeedthru_unused_9(popfeedthru_unused_9),
+	.popfeedthru_unused_10(popfeedthru_unused_10),
+	.popfeedthru_unused_11(popfeedthru_unused_11),
+	.popfeedthru_unused_12(popfeedthru_unused_12),
+	.popfeedthru_unused_13(popfeedthru_unused_13),
+	.popfeedthru_unused_14(popfeedthru_unused_14),
+	.popfeedthru_unused_15(popfeedthru_unused_15),
+	.popfeedthru_unused_16(popfeedthru_unused_16),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* prj_hamming_apb_sb */
+
+module prj_hamming_apb (
+  DEVRST_N,
+  GPIO_0_M2F
+)
+;
+input DEVRST_N ;
+output GPIO_0_M2F ;
+wire DEVRST_N ;
+wire GPIO_0_M2F ;
+wire [31:0] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA;
+wire [31:16] prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA;
+wire [31:0] Decoder_ip_0_PRDATA;
+wire popfeedthru_unused_15 ;
+wire popfeedthru_unused_14 ;
+wire popfeedthru_unused_13 ;
+wire popfeedthru_unused_12 ;
+wire popfeedthru_unused_11 ;
+wire popfeedthru_unused_10 ;
+wire popfeedthru_unused_9 ;
+wire popfeedthru_unused_8 ;
+wire popfeedthru_unused_7 ;
+wire popfeedthru_unused_6 ;
+wire popfeedthru_unused_5 ;
+wire popfeedthru_unused_4 ;
+wire popfeedthru_unused_3 ;
+wire popfeedthru_unused_2 ;
+wire popfeedthru_unused_1 ;
+wire popfeedthru_unused_0 ;
+wire popfeedthru_unused_16 ;
+wire popfeedthru_unused ;
+wire prj_hamming_apb_sb_0_FIC_0_CLK ;
+wire VCC ;
+wire GND ;
+wire prj_hamming_apb_sb_0_POWER_ON_RESET_N ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx ;
+wire prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1 ;
+wire GPIO_0_M2F_c ;
+// @20:23
+  OUTBUF GPIO_0_M2F_obuf (
+	.PAD(GPIO_0_M2F),
+	.D(GPIO_0_M2F_c)
+);
+// @20:57
+  adder_ip Codificador (
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[31:0]),
+	.popfeedthru_unused_4(popfeedthru_unused_4),
+	.popfeedthru_unused_0(popfeedthru_unused_0),
+	.popfeedthru_unused_1(popfeedthru_unused_1),
+	.popfeedthru_unused_2(popfeedthru_unused_2),
+	.popfeedthru_unused_3(popfeedthru_unused_3),
+	.popfeedthru_unused_5(popfeedthru_unused_5),
+	.popfeedthru_unused_6(popfeedthru_unused_6),
+	.popfeedthru_unused_7(popfeedthru_unused_7),
+	.popfeedthru_unused_12(popfeedthru_unused_12),
+	.popfeedthru_unused_9(popfeedthru_unused_9),
+	.popfeedthru_unused_8(popfeedthru_unused_8),
+	.popfeedthru_unused_15(popfeedthru_unused_15),
+	.popfeedthru_unused_13(popfeedthru_unused_13),
+	.popfeedthru_unused_10(popfeedthru_unused_10),
+	.popfeedthru_unused_11(popfeedthru_unused_11),
+	.popfeedthru_unused_14(popfeedthru_unused_14),
+	.popfeedthru_unused(popfeedthru_unused),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.popfeedthru_unused_16(popfeedthru_unused_16),
+	.POWER_ON_RESET_N(prj_hamming_apb_sb_0_POWER_ON_RESET_N),
+	.prj_hamming_apb_sb_0_FIC_0_CLK(prj_hamming_apb_sb_0_FIC_0_CLK)
+);
+// @20:73
+  Decoder_ip Decoder_ip_0 (
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[31:16]),
+	.Decoder_ip_0_PRDATA(Decoder_ip_0_PRDATA[31:0]),
+	.popfeedthru_unused_13(popfeedthru_unused_13),
+	.popfeedthru_unused_5(popfeedthru_unused_5),
+	.popfeedthru_unused_9(popfeedthru_unused_9),
+	.popfeedthru_unused_14(popfeedthru_unused_14),
+	.popfeedthru_unused_10(popfeedthru_unused_10),
+	.popfeedthru_unused_16(popfeedthru_unused_16),
+	.popfeedthru_unused_1(popfeedthru_unused_1),
+	.popfeedthru_unused_4(popfeedthru_unused_4),
+	.popfeedthru_unused_0(popfeedthru_unused_0),
+	.popfeedthru_unused_2(popfeedthru_unused_2),
+	.popfeedthru_unused_6(popfeedthru_unused_6),
+	.popfeedthru_unused_8(popfeedthru_unused_8),
+	.popfeedthru_unused_12(popfeedthru_unused_12),
+	.popfeedthru_unused_3(popfeedthru_unused_3),
+	.popfeedthru_unused_15(popfeedthru_unused_15),
+	.popfeedthru_unused_7(popfeedthru_unused_7),
+	.popfeedthru_unused_11(popfeedthru_unused_11),
+	.popfeedthru_unused(popfeedthru_unused),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.POWER_ON_RESET_N(prj_hamming_apb_sb_0_POWER_ON_RESET_N),
+	.prj_hamming_apb_sb_0_FIC_0_CLK(prj_hamming_apb_sb_0_FIC_0_CLK)
+);
+// @20:89
+  prj_hamming_apb_sb prj_hamming_apb_sb_0 (
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PWDATA[31:16]),
+	.Decoder_ip_0_PRDATA(Decoder_ip_0_PRDATA[31:0]),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PRDATA[31:0]),
+	.popfeedthru_unused_16(popfeedthru_unused_16),
+	.popfeedthru_unused_15(popfeedthru_unused_15),
+	.popfeedthru_unused_14(popfeedthru_unused_14),
+	.popfeedthru_unused_13(popfeedthru_unused_13),
+	.popfeedthru_unused_12(popfeedthru_unused_12),
+	.popfeedthru_unused_11(popfeedthru_unused_11),
+	.popfeedthru_unused_10(popfeedthru_unused_10),
+	.popfeedthru_unused_9(popfeedthru_unused_9),
+	.popfeedthru_unused_8(popfeedthru_unused_8),
+	.popfeedthru_unused_7(popfeedthru_unused_7),
+	.popfeedthru_unused_6(popfeedthru_unused_6),
+	.popfeedthru_unused_5(popfeedthru_unused_5),
+	.popfeedthru_unused_4(popfeedthru_unused_4),
+	.popfeedthru_unused_3(popfeedthru_unused_3),
+	.popfeedthru_unused_2(popfeedthru_unused_2),
+	.popfeedthru_unused_1(popfeedthru_unused_1),
+	.popfeedthru_unused_0(popfeedthru_unused_0),
+	.popfeedthru_unused(popfeedthru_unused),
+	.GPIO_0_M2F_c(GPIO_0_M2F_c),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1(prj_hamming_apb_sb_0_AMBA_SLAVE_1_PSELS1),
+	.prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx(prj_hamming_apb_sb_0_AMBA_SLAVE_0_PSELx),
+	.prj_hamming_apb_sb_0_FIC_0_CLK(prj_hamming_apb_sb_0_FIC_0_CLK),
+	.DEVRST_N(DEVRST_N),
+	.POWER_ON_RESET_N(prj_hamming_apb_sb_0_POWER_ON_RESET_N)
+);
+  GND GND_Z (
+	.Y(GND)
+);
+  VCC VCC_Z (
+	.Y(VCC)
+);
+endmodule /* prj_hamming_apb */
+
