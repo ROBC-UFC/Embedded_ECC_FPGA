@@ -84,7 +84,7 @@ int jaEstaNoVetor(int vetor[], int tamanho, int numero)
     }
     return 0;
 }
-int contador(int num,int in,base_t* decoder,int erros)
+int randomError(int num,int in,base_t* decoder,int erros)
 {
 
     int count = 0;
@@ -118,6 +118,39 @@ int contador(int num,int in,base_t* decoder,int erros)
     free(posicoes);
     return count;
 }
+
+
+int burstError(int num,int in,base_t* decoder,int erros)
+{
+
+    int count = 0;
+    int posicao;
+    int decoded_data;
+    int done,j;
+    int encoded_data;
+
+    int bin = 0b1;
+    for(int i=0;i<erros-1;i++)
+    {
+        bin = (bin << 1) + 1;
+    }
+
+    for(int i=0;i<1000;i++)
+    {
+       encoded_data = in;
+       posicao = rand() % (32-erros);
+       encoded_data = encoded_data^(bin<<posicao);
+       DECODER->IN1 = encoded_data;
+       decoded_data = DECODER->OUT;
+       if(decoded_data == num)
+       {
+           count++;
+       }
+
+
+    }
+    return count;
+}
 int main(void){
     int num = 25;
     int encoded_data;
@@ -133,7 +166,33 @@ int main(void){
 
     int count;
 
-    count = contador(25,encoded_data,DECODER, 2);
+    int count1 = 0;
+    int count2 = 0;
+    int count3 = 0;
+    int count4 =0;
+    int count5 = 0;
+    int count6 = 0;
+    int count7 = 0;
+    int count8 = 0;
+    int count9 = 0;
+    int count10 = 0;
+    int count11 =0;
+    int count12 =0;
+
+     count1 = burstError(25,encoded_data,DECODER, 1);
+     count2 = burstError(25,encoded_data,DECODER, 2);
+     count2 = burstError(25,encoded_data,DECODER, 2);
+     count3 = burstError(25,encoded_data,DECODER, 3);
+     count4 = burstError(25,encoded_data,DECODER, 4);
+     count5 = burstError(25,encoded_data,DECODER, 5);
+     count6 = burstError(25,encoded_data,DECODER, 6);
+     count7 = burstError(25,encoded_data,DECODER, 7);
+     count8 = burstError(25,encoded_data,DECODER, 8);
+     count9 = burstError(25,encoded_data,DECODER, 9);
+     count10 = burstError(25,encoded_data,DECODER, 10);
+     count11 = burstError(25,encoded_data,DECODER, 11);
+     count12 = burstError(25,encoded_data,DECODER, 12);
+
 
 
 
