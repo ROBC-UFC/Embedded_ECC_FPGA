@@ -73,26 +73,38 @@ typedef struct{
 #define ENCODER ((base_t *) 0x30000000)
 #define DECODER ((base_t *) 0x30001000)
 
-
-int contador(int num,int encoded_data,base_t* decoder,int erros)
+int jaEstaNoVetor(int vetor[], int tamanho, int numero)
+{
+    for (int i = 0; i < tamanho; ++i)
+    {
+        if (vetor[i] == numero)
+        {
+            return 1;
+        }
+    }
+    return 0;
+}
+int contador(int num,int in,base_t* decoder,int erros)
 {
 
     int count = 0;
     int posicao;
     int decoded_data;
     int *posicoes = (int *)calloc(erros,sizeof(int));
+    int done,j;
+    int encoded_data;
 
     for(int i=0;i<1000;i++)
        {
-           for(int j = 0;j < erros;j++)
-           {
-               while (posicoes[j] == posicao)
-               {
-                   posicao = rand()% 32 +1;
-               }
-               posicoes[j] = posicao;
-               encoded_data = encoded_data^(1<<posicao);
-           }
+            encoded_data = in;
+            for(int j=0;j<erros;j++)
+            {
+             do {
+                    posicao = rand() % 32+1;
+                } while (jaEstaNoVetor(posicoes, j, posicao));
+                  posicoes[j] = posicao;
+                  encoded_data = encoded_data^(1<<posicao);
+             }
 
            DECODER->IN1 = encoded_data;
            decoded_data = DECODER->OUT;
@@ -121,7 +133,7 @@ int main(void){
 
     int count;
 
-    count = contador(25,encoded_data,DECODER, 1);
+    count = contador(25,encoded_data,DECODER, 2);
 
 
 
