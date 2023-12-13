@@ -61,7 +61,6 @@ int main(void)
 
 
 #include <stdlib.h>
-
 #include "firmware/drivers/mss_gpio/mss_gpio.h"
 #include "firmware/CMSIS/system_m2sxxx.h"
 
@@ -84,7 +83,7 @@ int jaEstaNoVetor(int vetor[], int tamanho, int numero)
     }
     return 0;
 }
-int randomError(int num,int in,base_t* decoder,int erros)
+int randomError(int num,int in,base_t* decoder,int erros, int wordSize)
 {
 
     int count = 0;
@@ -100,14 +99,14 @@ int randomError(int num,int in,base_t* decoder,int erros)
             for(int j=0;j<erros;j++)
             {
              do {
-                    posicao = rand() % 32+1;
+                    posicao = rand() % wordSize+1;
                 } while (jaEstaNoVetor(posicoes, j, posicao));
                   posicoes[j] = posicao;
                   encoded_data = encoded_data^(1<<posicao);
              }
 
-           DECODER->IN1 = encoded_data;
-           decoded_data = DECODER->OUT;
+            decoder->IN1 = encoded_data;
+           decoded_data = decoder->OUT;
            if(decoded_data == num)
            {
                count++;
@@ -120,7 +119,7 @@ int randomError(int num,int in,base_t* decoder,int erros)
 }
 
 
-int burstError(int num,int in,base_t* decoder,int erros)
+int burstError(base_t* encoder,base_t* decoder,int erros,int wordSize)
 {
 
     int count = 0;
@@ -128,6 +127,7 @@ int burstError(int num,int in,base_t* decoder,int erros)
     int decoded_data;
     int done,j;
     int encoded_data;
+    int num;
 
     int bin = 0b1;
     for(int i=0;i<erros-1;i++)
@@ -137,11 +137,13 @@ int burstError(int num,int in,base_t* decoder,int erros)
 
     for(int i=0;i<1000;i++)
     {
-       encoded_data = in;
-       posicao = rand() % (32-erros);
+       num = rand() % (2<<(wordSize/2)-1);
+       encoder->IN1 = num;
+       encoded_data = encoder->OUT;
+       posicao = rand() % (wordSize-erros);
        encoded_data = encoded_data^(bin<<posicao);
-       DECODER->IN1 = encoded_data;
-       decoded_data = DECODER->OUT;
+       decoder->IN1 = encoded_data;
+       decoded_data = decoder->OUT;
        if(decoded_data == num)
        {
            count++;
@@ -155,7 +157,7 @@ int main(void){
     int num = 25;
     int encoded_data;
     int decoded_data;
-
+    srand(*((volatile unsigned int*)0xE0001004));
 
 
     ENCODER->IN1 = num;
@@ -169,29 +171,28 @@ int main(void){
     int count1 = 0;
     int count2 = 0;
     int count3 = 0;
-    int count4 =0;
+    int count4 = 0;
     int count5 = 0;
     int count6 = 0;
     int count7 = 0;
     int count8 = 0;
     int count9 = 0;
     int count10 = 0;
-    int count11 =0;
-    int count12 =0;
+    int count11 = 0;
+    int count12 = 0;
 
-     count1 = burstError(25,encoded_data,DECODER, 1);
-     count2 = burstError(25,encoded_data,DECODER, 2);
-     count2 = burstError(25,encoded_data,DECODER, 2);
-     count3 = burstError(25,encoded_data,DECODER, 3);
-     count4 = burstError(25,encoded_data,DECODER, 4);
-     count5 = burstError(25,encoded_data,DECODER, 5);
-     count6 = burstError(25,encoded_data,DECODER, 6);
-     count7 = burstError(25,encoded_data,DECODER, 7);
-     count8 = burstError(25,encoded_data,DECODER, 8);
-     count9 = burstError(25,encoded_data,DECODER, 9);
-     count10 = burstError(25,encoded_data,DECODER, 10);
-     count11 = burstError(25,encoded_data,DECODER, 11);
-     count12 = burstError(25,encoded_data,DECODER, 12);
+    count1 = burstError(ENCODER, DECODER, 1, 32);
+    count2 = burstError(ENCODER, DECODER, 2, 32);
+    count3 = burstError(ENCODER, DECODER, 3, 32);
+    count4 = burstError(ENCODER, DECODER, 4, 32);
+    count5 = burstError(ENCODER, DECODER, 5, 32);
+    count6 = burstError(ENCODER, DECODER, 6, 32);
+    count7 = burstError(ENCODER, DECODER, 7, 32);
+    count8 = burstError(ENCODER, DECODER, 8, 32);
+    count9 = burstError(ENCODER, DECODER, 9, 32);
+    count10 = burstError(ENCODER, DECODER, 10, 32);
+    count11 = burstError(ENCODER, DECODER, 11, 32);
+    count12 = burstError(ENCODER, DECODER, 12, 32);
 
 
 

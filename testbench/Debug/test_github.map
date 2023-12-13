@@ -23,7 +23,7 @@ c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/
 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
                               c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-malloc.o) (_malloc_r)
 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-rand.o)
-                              ./main.o (rand)
+                              ./main.o (srand)
 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
                               c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
@@ -816,7 +816,7 @@ Discarded input sections
  .text.jaEstaNoVetor
                 0x0000000000000000       0x40 ./main.o
  .text.randomError
-                0x0000000000000000       0xbc ./main.o
+                0x0000000000000000       0xb8 ./main.o
  .debug_macro   0x0000000000000000      0xa84 ./main.o
  .debug_macro   0x0000000000000000       0x18 ./main.o
  .debug_macro   0x0000000000000000       0x22 ./main.o
@@ -899,7 +899,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-rand.o)
  .data          0x0000000000000000        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-rand.o)
  .bss           0x0000000000000000        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-rand.o)
- .text.srand    0x0000000000000000       0x48 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-rand.o)
  .text          0x0000000000000000        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
  .data          0x0000000000000000        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
  .bss           0x0000000000000000        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
@@ -1096,7 +1095,7 @@ END GROUP
                 0x00000000200004b0                . = ALIGN (0x10)
  *fill*         0x00000000200004ac        0x4 
 
-.text           0x00000000200004b0      0xde0
+.text           0x00000000200004b0      0xe70
  CREATE_OBJECT_SYMBOLS
                 0x00000000200004b0                __text_load = LOADADDR (.text)
                 0x00000000200004b0                __text_start = .
@@ -1146,43 +1145,45 @@ END GROUP
  .text.m2s050_rev_a_workarounds
                 0x0000000020000ea8       0x30 ./firmware/CMSIS/system_m2sxxx.o
  .text.burstError
-                0x0000000020000ed8       0x9c ./main.o
+                0x0000000020000ed8       0xc0 ./main.o
                 0x0000000020000ed8                burstError
- .text.main     0x0000000020000f74      0x11c ./main.o
-                0x0000000020000f74                main
+ .text.main     0x0000000020000f98      0x134 ./main.o
+                0x0000000020000f98                main
  .text.__libc_init_array
-                0x0000000020001090       0x48 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-init.o)
-                0x0000000020001090                __libc_init_array
- .text.malloc   0x00000000200010d8       0x10 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-malloc.o)
-                0x00000000200010d8                malloc
+                0x00000000200010cc       0x48 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-init.o)
+                0x00000000200010cc                __libc_init_array
+ .text.malloc   0x0000000020001114       0x10 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-malloc.o)
+                0x0000000020001114                malloc
  .text._malloc_r
-                0x00000000200010e8       0xb4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x00000000200010e8                _malloc_r
- .text.rand     0x000000002000119c       0x68 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-rand.o)
-                0x000000002000119c                rand
- .text._sbrk_r  0x0000000020001204       0x20 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
-                0x0000000020001204                _sbrk_r
+                0x0000000020001124       0xb4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020001124                _malloc_r
+ .text.srand    0x00000000200011d8       0x48 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-rand.o)
+                0x00000000200011d8                srand
+ .text.rand     0x0000000020001220       0x68 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-rand.o)
+                0x0000000020001220                rand
+ .text._sbrk_r  0x0000000020001288       0x20 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+                0x0000000020001288                _sbrk_r
  .text.__malloc_lock
-                0x0000000020001224        0xc c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
-                0x0000000020001224                __malloc_lock
+                0x00000000200012a8        0xc c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x00000000200012a8                __malloc_lock
  .text.__malloc_unlock
-                0x0000000020001230        0xc c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
-                0x0000000020001230                __malloc_unlock
+                0x00000000200012b4        0xc c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x00000000200012b4                __malloc_unlock
  .text.__retarget_lock_acquire_recursive
-                0x000000002000123c        0x2 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x000000002000123c                __retarget_lock_acquire_recursive
+                0x00000000200012c0        0x2 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x00000000200012c0                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x000000002000123e        0x2 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x000000002000123e                __retarget_lock_release_recursive
+                0x00000000200012c2        0x2 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x00000000200012c2                __retarget_lock_release_recursive
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x0000000020001240        0x0 linker stubs
+ .glue_7t       0x00000000200012c4        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x0000000020001240        0x0 linker stubs
+ .glue_7        0x00000000200012c4        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x0000000020001240        0x0 linker stubs
-                0x0000000020001240                . = ALIGN (0x4)
+ .vfp11_veneer  0x00000000200012c4        0x0 linker stubs
+                0x00000000200012c4                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
@@ -1192,154 +1193,155 @@ END GROUP
  *(SORT_BY_NAME(.dtors.*))
  *crtend.o(.dtors)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000000020001240       0x30 ./firmware/CMSIS/startup_gcc/newlib_stubs.o
+ .rodata        0x00000000200012c4       0x30 ./firmware/CMSIS/startup_gcc/newlib_stubs.o
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
  *(.eh_frame_hdr)
  *(.eh_frame)
- .eh_frame      0x0000000020001270        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x00000000200012f4        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
  *(.vector_table)
  *(.init)
- .init          0x0000000020001270        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
-                0x0000000020001270                _init
- .init          0x0000000020001274        0x8 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
+ .init          0x00000000200012f4        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
+                0x00000000200012f4                _init
+ .init          0x00000000200012f8        0x8 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x000000002000127c        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
-                0x000000002000127c                _fini
- .fini          0x0000000020001280        0x8 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
-                0x0000000020001288                PROVIDE (__preinit_array_start = .)
+ .fini          0x0000000020001300        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
+                0x0000000020001300                _fini
+ .fini          0x0000000020001304        0x8 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
+                0x000000002000130c                PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
-                0x0000000020001288                PROVIDE (__preinit_array_end = .)
-                0x0000000020001288                PROVIDE (__init_array_start = .)
+                0x000000002000130c                PROVIDE (__preinit_array_end = .)
+                0x000000002000130c                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x0000000020001288        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
-                0x000000002000128c                PROVIDE (__init_array_end = .)
+ .init_array    0x000000002000130c        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x0000000020001310                PROVIDE (__init_array_end = .)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(.fini_array)
- .fini_array    0x000000002000128c        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+ .fini_array    0x0000000020001310        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000020001290                . = ALIGN (0x10)
-                0x0000000020001290                __exidx_start = .
+                0x0000000020001320                . = ALIGN (0x10)
+ *fill*         0x0000000020001314        0xc 
+                0x0000000020001320                __exidx_start = .
 
-.v4_bx          0x0000000020001290        0x0
- .v4_bx         0x0000000020001290        0x0 linker stubs
+.v4_bx          0x0000000020001320        0x0
+ .v4_bx         0x0000000020001320        0x0 linker stubs
 
-.iplt           0x0000000020001290        0x0
- .iplt          0x0000000020001290        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x0000000020001320        0x0
+ .iplt          0x0000000020001320        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.rel.dyn        0x0000000020001290        0x0
- .rel.iplt      0x0000000020001290        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x0000000020001320        0x0
+ .rel.iplt      0x0000000020001320        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000020001290                __exidx_end = .
-                0x0000000020001290                _etext = .
+                0x0000000020001320                __exidx_end = .
+                0x0000000020001320                _etext = .
                 [!provide]                        PROVIDE (__text_end = .)
 
-.data           0x0000000020001290       0x70
-                0x0000000020001290                __data_load = LOADADDR (.data)
-                0x0000000020001290                _sidata = LOADADDR (.data)
-                0x0000000020001290                __data_start = .
-                0x0000000020001290                _sdata = .
+.data           0x0000000020001320       0x70
+                0x0000000020001320                __data_load = LOADADDR (.data)
+                0x0000000020001320                _sidata = LOADADDR (.data)
+                0x0000000020001320                __data_start = .
+                0x0000000020001320                _sdata = .
  *(.jcr)
  *(.got.plt)
  *(.got)
  *(.shdata)
  *(.data .data.* .gnu.linkonce.d.*)
  .data._impure_ptr
-                0x0000000020001290        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
-                0x0000000020001290                _impure_ptr
+                0x0000000020001320        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x0000000020001320                _impure_ptr
  .data.impure_data
-                0x0000000020001294       0x60 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
-                0x0000000020001300                . = ALIGN (0x10)
- *fill*         0x00000000200012f4        0xc 
-                0x0000000020001300                _edata = .
+                0x0000000020001324       0x60 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x0000000020001390                . = ALIGN (0x10)
+ *fill*         0x0000000020001384        0xc 
+                0x0000000020001390                _edata = .
 
-.igot.plt       0x0000000020001300        0x0
- .igot.plt      0x0000000020001300        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+.igot.plt       0x0000000020001390        0x0
+ .igot.plt      0x0000000020001390        0x0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.bss            0x0000000020001300       0x90
-                0x0000000020001300                __bss_start__ = .
-                0x0000000020001300                _sbss = .
+.bss            0x0000000020001390       0x90
+                0x0000000020001390                __bss_start__ = .
+                0x0000000020001390                _sbss = .
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
  .bss.completed.8911
-                0x0000000020001300        0x1 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
- *fill*         0x0000000020001301        0x3 
+                0x0000000020001390        0x1 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+ *fill*         0x0000000020001391        0x3 
  .bss.object.8916
-                0x0000000020001304       0x18 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x0000000020001394       0x18 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtbegin.o
  .bss.g_comblk_cmd_opcode
-                0x000000002000131c        0x1 ./firmware/drivers/mss_sys_services/mss_comblk.o
- *fill*         0x000000002000131d        0x3 
+                0x00000000200013ac        0x1 ./firmware/drivers/mss_sys_services/mss_comblk.o
+ *fill*         0x00000000200013ad        0x3 
  .bss.g_comblk_p_cmd
-                0x0000000020001320        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013b0        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_comblk_cmd_size
-                0x0000000020001324        0x2 ./firmware/drivers/mss_sys_services/mss_comblk.o
- *fill*         0x0000000020001326        0x2 
+                0x00000000200013b4        0x2 ./firmware/drivers/mss_sys_services/mss_comblk.o
+ *fill*         0x00000000200013b6        0x2 
  .bss.g_comblk_p_data
-                0x0000000020001328        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013b8        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_comblk_data_size
-                0x000000002000132c        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013bc        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_comblk_p_response
-                0x0000000020001330        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013c0        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_comblk_response_size
-                0x0000000020001334        0x2 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013c4        0x2 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_comblk_response_idx
-                0x0000000020001336        0x2 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013c6        0x2 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_comblk_completion_handler
-                0x0000000020001338        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013c8        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_comblk_page_handler
-                0x000000002000133c        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013cc        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_request_in_progress
-                0x0000000020001340        0x1 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013d0        0x1 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_comblk_state
-                0x0000000020001341        0x1 ./firmware/drivers/mss_sys_services/mss_comblk.o
- *fill*         0x0000000020001342        0x2 
+                0x00000000200013d1        0x1 ./firmware/drivers/mss_sys_services/mss_comblk.o
+ *fill*         0x00000000200013d2        0x2 
  .bss.g_async_event_handler
-                0x0000000020001344        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
+                0x00000000200013d4        0x4 ./firmware/drivers/mss_sys_services/mss_comblk.o
  .bss.g_transfer
-                0x0000000020001348       0x18 ./firmware/drivers/mss_hpdma/mss_hpdma.o
+                0x00000000200013d8       0x18 ./firmware/drivers/mss_hpdma/mss_hpdma.o
  .bss.g_hpdma_end_desc
-                0x0000000020001360        0x4 ./firmware/drivers/mss_hpdma/mss_hpdma.o
+                0x00000000200013f0        0x4 ./firmware/drivers/mss_hpdma/mss_hpdma.o
  .bss.g_hpdma_current_desc
-                0x0000000020001364        0x4 ./firmware/drivers/mss_hpdma/mss_hpdma.o
+                0x00000000200013f4        0x4 ./firmware/drivers/mss_hpdma/mss_hpdma.o
  .bss.heap_end.5417
-                0x0000000020001368        0x4 ./firmware/CMSIS/startup_gcc/newlib_stubs.o
+                0x00000000200013f8        0x4 ./firmware/CMSIS/startup_gcc/newlib_stubs.o
  .bss.__malloc_free_list
-                0x000000002000136c        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x000000002000136c                __malloc_free_list
+                0x00000000200013fc        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00000000200013fc                __malloc_free_list
  .bss.__malloc_sbrk_start
-                0x0000000020001370        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020001370                __malloc_sbrk_start
+                0x0000000020001400        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020001400                __malloc_sbrk_start
  *(COMMON)
- COMMON         0x0000000020001374        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-reent.o)
-                0x0000000020001374                errno
- COMMON         0x0000000020001378        0x9 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x0000000020001378                __lock___atexit_recursive_mutex
-                0x0000000020001379                __lock___arc4random_mutex
-                0x000000002000137a                __lock___env_recursive_mutex
-                0x000000002000137b                __lock___sinit_recursive_mutex
-                0x000000002000137c                __lock___malloc_recursive_mutex
-                0x000000002000137d                __lock___at_quick_exit_mutex
-                0x000000002000137e                __lock___dd_hash_mutex
-                0x000000002000137f                __lock___tz_mutex
-                0x0000000020001380                __lock___sfp_recursive_mutex
-                0x0000000020001390                . = ALIGN (0x10)
- *fill*         0x0000000020001381        0xf 
-                0x0000000020001390                __bss_end__ = .
-                0x0000000020001390                _end = .
-                0x0000000020001390                __end = _end
-                0x0000000020001390                _ebss = .
+ COMMON         0x0000000020001404        0x4 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-reent.o)
+                0x0000000020001404                errno
+ COMMON         0x0000000020001408        0x9 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x0000000020001408                __lock___atexit_recursive_mutex
+                0x0000000020001409                __lock___arc4random_mutex
+                0x000000002000140a                __lock___env_recursive_mutex
+                0x000000002000140b                __lock___sinit_recursive_mutex
+                0x000000002000140c                __lock___malloc_recursive_mutex
+                0x000000002000140d                __lock___at_quick_exit_mutex
+                0x000000002000140e                __lock___dd_hash_mutex
+                0x000000002000140f                __lock___tz_mutex
+                0x0000000020001410                __lock___sfp_recursive_mutex
+                0x0000000020001420                . = ALIGN (0x10)
+ *fill*         0x0000000020001411        0xf 
+                0x0000000020001420                __bss_end__ = .
+                0x0000000020001420                _end = .
+                0x0000000020001420                __end = _end
+                0x0000000020001420                _ebss = .
                 [!provide]                        PROVIDE (end = .)
 
-.heap           0x0000000020001390     0xdc70
-                0x0000000020001390                __heap_start__ = .
-                0x0000000020002390                . = (. + MIN_SIZE_HEAP)
- *fill*         0x0000000020001390     0x1000 
+.heap           0x0000000020001420     0xdbe0
+                0x0000000020001420                __heap_start__ = .
+                0x0000000020002420                . = (. + MIN_SIZE_HEAP)
+ *fill*         0x0000000020001420     0x1000 
                 0x000000002000f000                . = (. + (((ABSOLUTE (RAM_START_ADDRESS) + RAM_SIZE) - MAIN_STACK_SIZE) - .))
- *fill*         0x0000000020002390     0xcc70 
+ *fill*         0x0000000020002420     0xcbe0 
                 0x000000002000f000                _eheap = .
 
 .stack          0x000000002000f000     0x1000
@@ -1384,14 +1386,14 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x46a2
+.debug_info     0x0000000000000000     0x46c1
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0xb4b ./firmware/drivers/mss_sys_services/mss_comblk.o
  .debug_info    0x0000000000000b4b     0x1231 ./firmware/drivers/mss_hpdma/mss_hpdma.o
  .debug_info    0x0000000000001d7c     0x1071 ./firmware/CMSIS/startup_gcc/newlib_stubs.o
  .debug_info    0x0000000000002ded       0x26 ./firmware/CMSIS/startup_gcc/startup_m2sxxx.o
  .debug_info    0x0000000000002e13      0xb61 ./firmware/CMSIS/system_m2sxxx.o
- .debug_info    0x0000000000003974      0xd2e ./main.o
+ .debug_info    0x0000000000003974      0xd4d ./main.o
 
 .debug_abbrev   0x0000000000000000      0xc2f
  *(.debug_abbrev)
@@ -1402,14 +1404,14 @@ END GROUP
  .debug_abbrev  0x000000000000080e      0x1b2 ./firmware/CMSIS/system_m2sxxx.o
  .debug_abbrev  0x00000000000009c0      0x26f ./main.o
 
-.debug_line     0x0000000000000000     0x1f3f
+.debug_line     0x0000000000000000     0x1f4e
  *(.debug_line)
  .debug_line    0x0000000000000000      0x8ad ./firmware/drivers/mss_sys_services/mss_comblk.o
  .debug_line    0x00000000000008ad      0x665 ./firmware/drivers/mss_hpdma/mss_hpdma.o
  .debug_line    0x0000000000000f12      0x559 ./firmware/CMSIS/startup_gcc/newlib_stubs.o
  .debug_line    0x000000000000146b      0x197 ./firmware/CMSIS/startup_gcc/startup_m2sxxx.o
  .debug_line    0x0000000000001602      0x431 ./firmware/CMSIS/system_m2sxxx.o
- .debug_line    0x0000000000001a33      0x50c ./main.o
+ .debug_line    0x0000000000001a33      0x51b ./main.o
 
 .debug_frame    0x0000000000000000      0xad8
  *(.debug_frame)
@@ -1427,7 +1429,7 @@ END GROUP
  .debug_frame   0x00000000000009cc       0x5c c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-reent.o)
  .debug_frame   0x0000000000000a28       0xb0 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp\libg_nano.a(lib_a-lock.o)
 
-.debug_str      0x0000000000000000    0x10fab
+.debug_str      0x0000000000000000    0x10fbc
  *(.debug_str)
  .debug_str     0x0000000000000000     0x9fae ./firmware/drivers/mss_sys_services/mss_comblk.o
                                        0xa1f0 (size before relaxing)
@@ -1439,8 +1441,8 @@ END GROUP
                                          0x7b (size before relaxing)
  .debug_str     0x000000000001016c      0x815 ./firmware/CMSIS/system_m2sxxx.o
                                        0xa1e1 (size before relaxing)
- .debug_str     0x0000000000010981      0x62a ./main.o
-                                       0xc913 (size before relaxing)
+ .debug_str     0x0000000000010981      0x63b ./main.o
+                                       0xc924 (size before relaxing)
 
 .debug_loc
  *(.debug_loc)
