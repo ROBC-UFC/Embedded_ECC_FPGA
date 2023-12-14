@@ -1,0 +1,15 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Tue Dec 12 12:49:10 2023
+Project   :  C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - Modificado
+Component :  prj_hamming_apb
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Lesc/Documents/LiberoProjects/prj_hamming_apb - Modificado/component/work/prj_hamming_apb/prj_hamming_apb.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/Lesc/Documents/LiberoProjects/prj_hamming_apb - Modificado/component/work/prj_hamming_apb/subsystem.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/prj_hamming_apb - Modificado/component/work/prj_hamming_apb/subsystem.bfm
+

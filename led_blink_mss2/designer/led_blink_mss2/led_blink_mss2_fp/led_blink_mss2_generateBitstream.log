@@ -1,0 +1,13 @@
+Software Version: 2023.2.0.8
+Opened 'C:\Users\Lesc\Documents\LiberoProjects\led_blink_mss2\designer\led_blink_mss2\led_blink_mss2_fp\led_blink_mss2.pro'
+PDB file 'C:\Users\Lesc\Documents\LiberoProjects\led_blink_mss2\designer\led_blink_mss2\led_blink_mss2.pdb' has been loaded successfully.
+DESIGN : led_blink_mss2;  CHECKSUM : F4A5;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+File/Folder 'C:\Users\Lesc\Documents\LiberoProjects\led_blink_mss2\designer\led_blink_mss2\led_blink_mss2.ppd' will be overwritten.
+Successfully exported PPD file for currently secured device: 'C:\Users\Lesc\Documents\LiberoProjects\led_blink_mss2\designer\led_blink_mss2\led_blink_mss2.ppd'; file programs Fabric.
+Fabric component bitstream digest: 3025d254ff94707b1d09fac06ea13b4d125ac8bad0700fa6602c27e9a8184abc
+Entire bitstream digest: 5ff41dfa7a9afd0c82f8a2b6a18781833b34cc46099ffcf75ade882cd0d1ac1f
+Finished: Mon Dec 11 11:44:59 2023 (Elapsed time 00:00:08)
+
+Project saved.
+Project closed.

@@ -1,0 +1,16 @@
+Project Name: prj_hamming_apb
+Location: C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2S010-TQ144
+Family         : SmartFusion2
+Die            : M2S010
+Package        : 144 TQ
+Speed          : STD
+Core Voltage   : 1.2
+Range          : COM

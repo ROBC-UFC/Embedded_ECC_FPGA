@@ -1,0 +1,31 @@
+# Microchip Physical design constraints file
+
+# Version: 2023.2 2023.2.0.8
+
+# Design Name: led_blink_mss2 
+
+# Input Netlist Format: EDIF 
+
+# Family: SmartFusion2 , Die: M2S010 , Package: 144 TQ , Speed grade: STD 
+
+# Date generated: Mon Dec 11 11:44:07 2023 
+
+
+#
+# I/O constraints
+#
+
+set_io b -DIRECTION OUTPUT -pinname 118 -fixed no
+
+#
+# Core cell constraints
+#
+
+set_location led_blink_mss2_sb_0/CCC_0/GL0_INST -fixed no 220 54
+set_location led_blink_mss2_sb_0/FABOSC_0/I_RCOSC_25_50MHZ -fixed no 396 92
+set_location led_blink_mss2_sb_0/led_blink_mss2_sb_MSS_0/MSS_ADLIB_INST_RNIFLR5 -fixed no 254 99
+set_location ip_interface_inst -fixed no 191 0
+set_location led_blink_mss2_sb_0/CCC_0/GL0_INST/U0_RGB1 -fixed no 218 102
+set_location flash_freeze_inst/INST_FLASH_FREEZE_IP -fixed no 396 8
+set_location led_blink_mss2_sb_0/led_blink_mss2_sb_MSS_0/MSS_ADLIB_INST -fixed no 300 104
+set_location led_blink_mss2_sb_0/CCC_0/CCC_INST -fixed no 390 92

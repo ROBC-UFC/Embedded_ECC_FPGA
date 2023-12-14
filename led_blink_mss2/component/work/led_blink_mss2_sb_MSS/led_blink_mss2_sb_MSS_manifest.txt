@@ -1,0 +1,28 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Mon Dec  4 18:36:27 2023
+Project   :  C:\Users\Lesc\Documents\LiberoProjects\led_blink_mss2
+Component :  led_blink_mss2_sb_MSS
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/work/led_blink_mss2_sb_MSS/led_blink_mss2_sb_MSS.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/work/led_blink_mss2_sb_MSS/led_blink_mss2_sb_MSS_syn.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/work/led_blink_mss2_sb_MSS/led_blink_mss2_sb_MSS_pre.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/work/led_blink_mss2_sb_MSS/CM3_compile_bfm.tcl
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/work/led_blink_mss2_sb_MSS/user.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/work/led_blink_mss2_sb_MSS/test.bfm
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/Actel/SmartFusion2MSS/MSS/1.1.500/peripheral_init.bfm
+
+Firmware files for all Software IDE tools:
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/work/led_blink_mss2_sb_MSS/sys_config_mss_clocks.h
+
+Constraint files:
+    C:/Users/Lesc/Documents/LiberoProjects/led_blink_mss2/component/work/led_blink_mss2_sb_MSS\led_blink_mss2_sb_MSS.sdc

@@ -1,0 +1,16 @@
+@P:  Worst Slack : 1.479
+@P:  prj_hamming_apb_sb_CCC_0_FCCC|GL0_net_inferred_clock - Estimated Frequency : 117.4 MHz
+@P:  prj_hamming_apb_sb_CCC_0_FCCC|GL0_net_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  prj_hamming_apb_sb_CCC_0_FCCC|GL0_net_inferred_clock - Estimated Period : 8.521
+@P:  prj_hamming_apb_sb_CCC_0_FCCC|GL0_net_inferred_clock - Requested Period : 10.000
+@P:  prj_hamming_apb_sb_CCC_0_FCCC|GL0_net_inferred_clock - Slack : 1.479
+@P:  prj_hamming_apb_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Estimated Frequency : NA
+@P:  prj_hamming_apb_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  prj_hamming_apb_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Estimated Period : NA
+@P:  prj_hamming_apb_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Requested Period : 10.000
+@P:  prj_hamming_apb_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Slack : NA
+@P: prj_hamming_apb Part : m2s010vf400std
+@P: prj_hamming_apb Register bits  : 163 
+@P: prj_hamming_apb DSP Blocks  : 0
+@P: prj_hamming_apb I/O primitives : 1
+@P:  CPU Time : 0h:00m:04s

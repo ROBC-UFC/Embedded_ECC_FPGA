@@ -1,0 +1,876 @@
+KEY LIBERO "2023.2"
+KEY CAPTURE "2023.2.0.8"
+KEY DEFAULT_IMPORT_LOC "E:\Hotline_Cases\IP_cases\2012\493642-863181735\Mir_429\component\Actel\DirectCore\CORE429\3.1.103\rtl\vhdl\core"
+KEY DEFAULT_OPEN_LOC ""
+KEY ProjectID "0"
+KEY HDLTechnology "VERILOG"
+KEY VERILOGMODE "SYSTEMVERILOG"
+KEY VHDLMODE "VHDL2008"
+KEY SYSTEMVERILOGMFCU "FALSE"
+KEY UseConstraintFlowTechnology "TRUE"
+KEY VendorTechnology_Family "SmartFusion2"
+KEY VendorTechnology_Die "PA4M1000_N"
+KEY VendorTechnology_Package "tq144"
+KEY VendorTechnology_Speed "STD"
+KEY VendorTechnology_DieVoltage "1.2"
+KEY VendorTechnology_PART_RANGE "COM"
+KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE "100_MS"
+KEY VendorTechnology_IO_DEFT_STD "LVCMOS25"
+KEY VendorTechnology_OPCONR ""
+KEY VendorTechnology_PLL_SUPPLY "PLL_SUPPLY_25"
+KEY VendorTechnology_RAD_EXPOSURE ""
+KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
+KEY VendorTechnology_RESTRICTPROBEPINS "1"
+KEY VendorTechnology_RESTRICTSPIPINS "0"
+KEY VendorTechnology_SYSTEM_CONTROLLER_SUSPEND_MODE "0"
+KEY VendorTechnology_TARGETDEVICESFORMIGRATION "PA4M1000_N"
+KEY VendorTechnology_TEMPR "COM"
+KEY VendorTechnology_UNUSED_MSS_IO_RESISTOR_PULL "None"
+KEY VendorTechnology_VCCI_1.2_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
+KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
+KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
+KEY VendorTechnology_VOLTR "COM"
+KEY ProjectLocation "C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - CLC"
+KEY ProjectDescription ""
+KEY UseRootLocationForLinkedFiles "FALSE"
+KEY RootLocationENVForLinkedFiles ""
+KEY RootLocationForLinkedFiles ""
+KEY GlobalIncludePaths ""
+KEY Pa4PeripheralNewSeq "GOOD"
+KEY MemoryMapDrcSeverity "FALSE"
+KEY LossOfDataDRCSeverity "TRUE"
+KEY IdWidthMismatchDRCSeverity "TRUE"
+KEY SimulationType "VERILOG"
+KEY Vendor "Actel"
+KEY ActiveRoot "prj_hamming_apb::work"
+LIST REVISIONS
+VALUE="Impl1",NUM=1
+CURREV=1
+ENDLIST
+LIST LIBRARIES
+COREAHBLITE_LIB
+COREAPB3_LIB
+ENDLIST
+LIST LIBRARY_COREAHBLITE_LIB
+ALIAS=..\component\Actel\DirectCore\CoreAHBLite\5.2.100\mti\user_vlog\COREAHBLITE_LIB
+COMPILE_OPTION=COMPILE
+CUSTOMPATH=false
+ENDLIST
+LIST LIBRARY_COREAPB3_LIB
+ALIAS=COREAPB3_LIB
+COMPILE_OPTION=COMPILE
+CUSTOMPATH=false
+ENDLIST
+LIST GlobalIncludeFileList
+ENDLIST
+LIST FileManager
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394732"
+SIZE="2736"
+PARENT="<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
+STATE="utd"
+TIME="1702394732"
+SIZE="1284"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\mti\scripts\wave_user.do,do"
+STATE="utd"
+TIME="1702325563"
+SIZE="912"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="4636"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="9073"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="25129"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="36275"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="122456"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v,hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="29701"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v,hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="4465"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v,hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="5708"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1702325563"
+SIZE="23651"
+LIBRARY="COREAPB3_LIB"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+MODULE_UNDER_TEST="testbench"
+SIMULATION_TIME="-all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreResetP\7.1.100\CoreResetP.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394732"
+SIZE="584"
+PARENT="<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp.v,hdl"
+STATE="utd"
+TIME="1700832826"
+SIZE="65628"
+PARENT="<project>\component\Actel\DirectCore\CoreResetP\7.1.100\CoreResetP.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp_pcie_hotreset.v,hdl"
+STATE="utd"
+TIME="1700832826"
+SIZE="8822"
+PARENT="<project>\component\Actel\DirectCore\CoreResetP\7.1.100\CoreResetP.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\SgCore\FCCC\2.0.201\FCCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394732"
+SIZE="241"
+PARENT="<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SgCore\OSC\2.0.101\OSC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394733"
+SIZE="684"
+PARENT="<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SgCore\OSC\2.0.101\osc_comps.v,hdl"
+STATE="utd"
+TIME="1700832828"
+SIZE="924"
+PARENT="<project>\component\Actel\SgCore\OSC\2.0.101\OSC.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
+TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\SgCore\OSC\2.0.101\osc_comps_pre.v,hdl"
+STATE="utd"
+TIME="1700832828"
+SIZE="726"
+PARENT="<project>\component\Actel\SgCore\OSC\2.0.101\OSC.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
+TOOL_CONSTRAINT_USE="PRECISION_EXT"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS\1.1.500\MSS.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394728"
+SIZE="526"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_CCC\1.0.100\MSS_CCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="253"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_CC\1.0.100\MSS_CC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="252"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_CFGM\1.1.100\MSS_CFGM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="254"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_CM3\1.0.200\MSS_CM3.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="253"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_DDRB\1.0.200\MSS_DDRB.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="254"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_EDAC\1.0.101\MSS_EDAC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="254"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_ENVM\1.0.101\MSS_ENVM.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="254"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_FIC32\1.0.100\MSS_FIC32.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="255"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_GPIO\1.0.100\MSS_GPIO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="254"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_INTR\1.0.200\MSS_INTR.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="254"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_RESET\1.0.100\MSS_RESET.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="255"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_SECURITY\1.0.100\MSS_SECURITY.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="258"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\SmartFusion2MSS\MSS_SWITCH\1.0.101\MSS_SWITCH.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394725"
+SIZE="256"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702396292"
+SIZE="1697"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb\prj_hamming_apb.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702513932"
+SIZE="2190"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb\prj_hamming_apb.v,hdl"
+STATE="utd"
+TIME="1702396149"
+SIZE="5531"
+PARENT="<project>\component\work\prj_hamming_apb\prj_hamming_apb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb\CCC_0\prj_hamming_apb_sb_CCC_0_FCCC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394732"
+SIZE="723"
+PARENT="<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb\CCC_0\prj_hamming_apb_sb_CCC_0_FCCC.v,hdl"
+STATE="utd"
+TIME="1702394732"
+SIZE="1732"
+PARENT="<project>\component\work\prj_hamming_apb_sb\CCC_0\prj_hamming_apb_sb_CCC_0_FCCC.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb\FABOSC_0\prj_hamming_apb_sb_FABOSC_0_OSC.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394733"
+SIZE="485"
+PARENT="<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb\FABOSC_0\prj_hamming_apb_sb_FABOSC_0_OSC.v,hdl"
+STATE="utd"
+TIME="1702394733"
+SIZE="802"
+PARENT="<project>\component\work\prj_hamming_apb_sb\FABOSC_0\prj_hamming_apb_sb_FABOSC_0_OSC.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394734"
+SIZE="11171"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.v,hdl"
+STATE="utd"
+TIME="1702394733"
+SIZE="24322"
+PARENT="<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf,actgen_cxf"
+STATE="utd"
+TIME="1702394729"
+SIZE="15234"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.v,hdl"
+STATE="utd"
+TIME="1702394728"
+SIZE="44728"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS_pre.v,hdl"
+STATE="utd"
+TIME="1702394728"
+SIZE="55893"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
+TOOL_CONSTRAINT_USE="PRECISION_EXT"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS_syn.v,hdl"
+STATE="utd"
+TIME="1702394728"
+SIZE="48864"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+BEGIN_USE_CONSTRAINT
+TOOL_CONSTRAINT_TYPE="ideSYNTHESIS"
+TOOL_CONSTRAINT_USE="SYNPLIFY7_EXT"
+END_USE_CONSTRAINT
+USE_FOR_ANY_TOOL="FALSE"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\constraint\io\test_sdc.pdc,io_pdc"
+STATE="utd"
+TIME="1702346896"
+SIZE="898"
+IS_TARGET="TRUE"
+ENDFILE
+VALUE "<project>\hdl\adder_ip.v,hdl"
+STATE="utd"
+TIME="1702513189"
+SIZE="1519"
+ENDFILE
+VALUE "<project>\hdl\codificador.v,hdl"
+STATE="utd"
+TIME="1702487265"
+SIZE="1141"
+ENDFILE
+VALUE "<project>\hdl\decoder.v,hdl"
+STATE="utd"
+TIME="1702392243"
+SIZE="2720"
+ENDFILE
+VALUE "<project>\hdl\Decoder_ip.v,hdl"
+STATE="utd"
+TIME="1702513676"
+SIZE="1684"
+ENDFILE
+VALUE "<project>\hdl\decodificador.v,hdl"
+STATE="utd"
+TIME="1702487270"
+SIZE="2526"
+ENDFILE
+VALUE "<project>\hdl\encoder.v,hdl"
+STATE="utd"
+TIME="1702392237"
+SIZE="1321"
+ENDFILE
+VALUE "<project>\hdl\hamming.sv,hdl"
+STATE="utd"
+TIME="1702346425"
+SIZE="1223"
+ENDFILE
+VALUE "<project>\hdl\hamming_decode.sv,hdl"
+STATE="utd"
+TIME="1702393253"
+SIZE="1512"
+ENDFILE
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+STATE="utd"
+TIME="1702325563"
+SIZE="1229"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+ENDFILE
+VALUE "<project>\simulation\CM3_compile_bfm.tcl,sim"
+STATE="utd"
+TIME="1702394728"
+SIZE="504"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\simulation\coreapb3_usertb_master.bfm,sim"
+STATE="utd"
+TIME="1702325563"
+SIZE="8016"
+PARENT="<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\CoreAPB3.cxf"
+ENDFILE
+VALUE "<project>\simulation\peripheral_init.bfm,sim"
+STATE="utd"
+TIME="1699548478"
+SIZE="8450"
+PARENT="<project>\component\Actel\SmartFusion2MSS\MSS\1.1.500\MSS.cxf"
+ENDFILE
+VALUE "<project>\simulation\subsystem.bfm,sim"
+STATE="utd"
+TIME="1702396150"
+SIZE="834"
+PARENT="<project>\component\work\prj_hamming_apb\prj_hamming_apb.cxf"
+PARENT="<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.cxf"
+ENDFILE
+VALUE "<project>\simulation\test.bfm,sim"
+STATE="utd"
+TIME="1702394728"
+SIZE="734"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\simulation\user.bfm,sim"
+STATE="utd"
+TIME="1702346419"
+SIZE="555"
+PARENT="<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.cxf"
+ENDFILE
+VALUE "<project>\synthesis\prj_hamming_apb.so,so"
+STATE="utd"
+TIME="1702401895"
+SIZE="271"
+ENDFILE
+VALUE "<project>\synthesis\prj_hamming_apb.vm,syn_vm"
+STATE="utd"
+TIME="1702401894"
+SIZE="124568"
+ENDFILE
+VALUE "<project>\synthesis\prj_hamming_apb_syn.prj,prj"
+STATE="utd"
+TIME="1702485205"
+SIZE="4745"
+ENDFILE
+VALUE "<project>\synthesis\prj_hamming_apb_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1702401894"
+SIZE="1350"
+ENDFILE
+VALUE "<project>\synthesis\synwork\layer0.so,so"
+STATE="utd"
+TIME="1702401772"
+SIZE="159"
+ENDFILE
+ENDLIST
+LIST UsedFile
+ENDLIST
+LIST NewModulesInfo
+LIST "prj_hamming_apb::work"
+FILE "<project>\component\work\prj_hamming_apb\prj_hamming_apb.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\subsystem.bfm,sim"
+ENDLIST
+LIST PNRConstraints
+VALUE "<project>\constraint\io\test_sdc.pdc,io_pdc"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\prj_hamming_apb.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "prj_hamming_apb_sb::work"
+FILE "<project>\component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\subsystem.bfm,sim"
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+VALUE "<project>\simulation\coreapb3_usertb_master.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\mti\scripts\wave_user.do,do"
+ENDLIST
+LIST AssociatedStimulus
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST "prj_hamming_apb_sb_MSS::work"
+FILE "<project>\component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.v,hdl"
+LIST Other_Association
+VALUE "<project>\simulation\CM3_compile_bfm.tcl,sim"
+VALUE "<project>\simulation\user.bfm,sim"
+VALUE "<project>\simulation\test.bfm,sim"
+VALUE "<project>\simulation\peripheral_init.bfm,sim"
+ENDLIST
+ENDLIST
+ENDLIST
+LIST AssociatedStimulus
+LIST prj_hamming_apb_sb
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
+ENDLIST
+ENDLIST
+LIST Other_Association
+LIST prj_hamming_apb
+VALUE "<project>\simulation\subsystem.bfm,sim"
+ENDLIST
+LIST prj_hamming_apb_sb
+VALUE "<project>\simulation\subsystem.bfm,sim"
+VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
+VALUE "<project>\simulation\coreapb3_usertb_master.bfm,sim"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\coreparameters.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_main.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_ahbtoapb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apb.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\CoreAPB3\4.1.100\mti\scripts\wave_user.do,do"
+ENDLIST
+LIST prj_hamming_apb_sb_MSS
+VALUE "<project>\simulation\CM3_compile_bfm.tcl,sim"
+VALUE "<project>\simulation\user.bfm,sim"
+VALUE "<project>\simulation\test.bfm,sim"
+VALUE "<project>\simulation\peripheral_init.bfm,sim"
+ENDLIST
+ENDLIST
+LIST SimulationOptions
+UseAutomaticDoFile=true
+IncludeWaveDo=false
+Type=max
+RunTime=1000ns
+Resolution=1fs
+VsimOpt=
+EntityName=testbench
+TopInstanceName=<top>_0
+DoFileName=
+DoFileName2=wave.do
+DoFileParams=
+DisplayDUTWave=false
+LogAllSignals=false
+DisablePulseFiltering=false
+DumpVCD=false
+VCDFileName=power.vcd
+VHDL2008=false
+Verilog2001=false
+SystemVerilog=false
+TimeUnit=1
+TimeUnitBase=ns
+Precision=100
+PrecisionBase=ps
+ENDLIST
+LIST ModelSimLibPath
+UseCustomPath=FALSE
+LibraryPath=
+ENDLIST
+LIST GlobalFlowOptions
+GenerateHDLAfterSynthesis=FALSE
+GenerateHDLAfterPhySynthesis=FALSE
+RunDRCAfterSynthesis=FALSE
+AutoCheckConstraints=TRUE
+UpdateModelSimIni=TRUE
+NoIOMode=FALSE
+PeriInitStandalone=FALSE
+OnDemandBuildDH=TRUE
+EnableViewDraw=FALSE
+UpdateViewDrawIni=TRUE
+GenerateHDLFromSchematic=TRUE
+VmNetlistFlowOn=TRUE
+EnableDesignSeparationOn=FALSE
+EnableSETMitigationOn=FALSE
+DisplayFanoutLimit=10
+AbortFlowOnPDCErrorsOn=TRUE
+AbortFlowOnSDCErrorsOn=TRUE
+AbortFlowOn3.3V_IO_ON=FALSE
+InstantiateInSmartDesign=TRUE
+FlashProInputFile=pdb
+SmartGenCompileReport=T
+ENDLIST
+LIST PhySynthesisOptions
+ENDLIST
+LIST Profiles
+NAME="SoftConsole"
+FUNCTION="SoftwareIDE"
+TOOL="SoftConsole"
+LOCATION="eclipse.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Synplify Pro ME"
+FUNCTION="Synthesis"
+TOOL="Synplify Pro ME"
+LOCATION="C:\Microchip\Libero_SoC_v2023.2\SynplifyPro\bin\synplify_pro.exe"
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="ModelSim ME Pro"
+FUNCTION="Simulation"
+TOOL="ModelSim Pro Edition"
+LOCATION="C:\Microchip\Libero_SoC_v2023.2\ModelSimPro\win32acoem\modelsim.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+NAME="Identify Debugger"
+FUNCTION="IdentifyDebugger"
+TOOL="Identify Debugger"
+LOCATION="C:\Microchip\Libero_SoC_v2023.2\Identify\bin\identify_debugger.exe"
+PARAM=""
+BATCH=0
+LICENSE=""
+IS32BIT="1"
+EndProfile
+ENDLIST
+LIST ProjectState5.1
+LIST "prj_hamming_apb::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\prj_hamming_apb.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+LIST "prj_hamming_apb_sb::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
+LIST ExcludePackageForSimulation
+ENDLIST
+LIST ExcludePackageForSynthesis
+ENDLIST
+LIST IncludeModuleForSimulation
+ENDLIST
+LIST CDBOrder
+ENDLIST
+LIST UserCustomizedFileList
+ENDLIST
+LIST OpenedFileList
+ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Generate Memory Map:prj_hamming_apb_DataSheet.xml
+SmartDesign;prj_hamming_apb;0
+HDL;hdl\hamming.sv;0
+HDL;hdl\decoder.v;0
+HDL;hdl\adder_ip.v;0
+HDL;hdl\encoder.v;0
+HDL;hdl\hamming_decode.sv;0
+HDL;hdl\codificador.v;0
+HDL;hdl\Decoder_ip.v;0
+HDL;hdl\decodificador.v;0
+StartPage;StartPage;0
+ACTIVEVIEW;Reports
+ENDLIST
+LIST ModuleSubBlockList
+LIST "adder_ip::work","hdl\adder_ip.v","FALSE","FALSE"
+SUBBLOCK "codificador::work","hdl\codificador.v","FALSE","FALSE"
+ENDLIST
+LIST "codificador::work","hdl\codificador.v","FALSE","FALSE"
+ENDLIST
+LIST "coreresetp_pcie_hotreset::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp_pcie_hotreset.v","FALSE","FALSE"
+ENDLIST
+LIST "decoder::work","hdl\decoder.v","FALSE","FALSE"
+ENDLIST
+LIST "Decoder_ip::work","hdl\Decoder_ip.v","FALSE","FALSE"
+SUBBLOCK "decodificador::work","hdl\decodificador.v","FALSE","FALSE"
+ENDLIST
+LIST "decodificador::work","hdl\decodificador.v","FALSE","FALSE"
+ENDLIST
+LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+SUBBLOCK "SmartFusion2_CMSIS::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_GPIO_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_HPDMA_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_NVM_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_System_Services_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_Timer_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "CoreResetP::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp.v","FALSE","FALSE"
+SUBBLOCK "coreresetp_pcie_hotreset::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp_pcie_hotreset.v","FALSE","FALSE"
+ENDLIST
+LIST "MSS_010::work","component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS_syn.v","FALSE","FALSE"
+ENDLIST
+LIST "encoder::work","hdl\encoder.v","FALSE","FALSE"
+ENDLIST
+LIST "hamming_code::work","hdl\hamming.sv","FALSE","FALSE"
+ENDLIST
+LIST "hamming_decode::work","hdl\hamming_decode.sv","FALSE","FALSE"
+ENDLIST
+LIST "prj_hamming_apb::work","component\work\prj_hamming_apb\prj_hamming_apb.v","TRUE","FALSE"
+SUBBLOCK "Decoder_ip::work","hdl\Decoder_ip.v","FALSE","FALSE"
+SUBBLOCK "adder_ip::work","hdl\adder_ip.v","FALSE","FALSE"
+SUBBLOCK "prj_hamming_apb_sb::work","component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.v","TRUE","FALSE"
+ENDLIST
+LIST "prj_hamming_apb_sb::work","component\work\prj_hamming_apb_sb\prj_hamming_apb_sb.v","TRUE","FALSE"
+SUBBLOCK "CoreResetP::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp.v","FALSE","FALSE"
+SUBBLOCK "prj_hamming_apb_sb_CCC_0_FCCC::work","component\work\prj_hamming_apb_sb\CCC_0\prj_hamming_apb_sb_CCC_0_FCCC.v","FALSE","FALSE"
+SUBBLOCK "prj_hamming_apb_sb_FABOSC_0_OSC::work","component\work\prj_hamming_apb_sb\FABOSC_0\prj_hamming_apb_sb_FABOSC_0_OSC.v","FALSE","FALSE"
+SUBBLOCK "prj_hamming_apb_sb_MSS::work","component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.v","TRUE","FALSE"
+SUBBLOCK "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v","FALSE","FALSE"
+ENDLIST
+LIST "prj_hamming_apb_sb_CCC_0_FCCC::work","component\work\prj_hamming_apb_sb\CCC_0\prj_hamming_apb_sb_CCC_0_FCCC.v","FALSE","FALSE"
+ENDLIST
+LIST "prj_hamming_apb_sb_FABOSC_0_OSC::work","component\work\prj_hamming_apb_sb\FABOSC_0\prj_hamming_apb_sb_FABOSC_0_OSC.v","FALSE","FALSE"
+SUBBLOCK "RCOSC_25_50MHZ_FAB::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+SUBBLOCK "RCOSC_25_50MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "prj_hamming_apb_sb_MSS::work","component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS.v","TRUE","FALSE"
+SUBBLOCK "MSS_010::work","component\work\prj_hamming_apb_sb_MSS\prj_hamming_apb_sb_MSS_syn.v","FALSE","FALSE"
+ENDLIST
+LIST "RCOSC_1MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "RCOSC_1MHZ_FAB::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "RCOSC_25_50MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "RCOSC_25_50MHZ_FAB::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_CMSIS::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_GPIO_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_HPDMA_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_NVM_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_System_Services_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_Timer_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "XTLOSC::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "XTLOSC_FAB::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "coreapb3_iaddr_reg::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v","FALSE","FALSE"
+ENDLIST
+LIST "COREAPB3_MUXPTOB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v","FALSE","FALSE"
+ENDLIST
+LIST "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v","FALSE","FALSE"
+SUBBLOCK "COREAPB3_MUXPTOB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_muxptob3.v","FALSE","FALSE"
+SUBBLOCK "coreapb3_iaddr_reg::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3_iaddr_reg.v","FALSE","FALSE"
+ENDLIST
+LIST "BFM_APB::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
+SUBBLOCK "BFMA1l1OII::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
+SUBBLOCK "BFM_MAIN::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_APBSLAVE::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v","FALSE","TRUE"
+SUBBLOCK "BFM_APBSLAVEEXT::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_APBSLAVEEXT::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslaveext.v","FALSE","TRUE"
+ENDLIST
+LIST "BFM_MAIN::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "BFMA1l1OII::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
+ENDLIST
+LIST "testbench::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
+SUBBLOCK "BFM_APB::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apb.v","FALSE","TRUE"
+SUBBLOCK "BFM_APBSLAVE::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\amba_bfm\bfm_apbslave.v","FALSE","TRUE"
+SUBBLOCK "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.1.100\rtl\vlog\core\coreapb3.v","FALSE","FALSE"
+ENDLIST
+ENDLIST
+LIST ActiveTestBenchList
+ENDLIST
+LIST IOTabList
+VALUE "constraint\io\test_sdc.pdc"
+ENDLIST
+LIST FPTabList
+ENDLIST
+LIST TimingTabList
+ENDLIST
+LIST FDCTabList
+ENDLIST

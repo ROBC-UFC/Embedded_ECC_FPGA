@@ -1,0 +1,16 @@
+@P:  Worst Slack : NA
+@P:  led_blink_mss2_sb_CCC_0_FCCC|GL0_net_inferred_clock - Estimated Frequency : NA
+@P:  led_blink_mss2_sb_CCC_0_FCCC|GL0_net_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  led_blink_mss2_sb_CCC_0_FCCC|GL0_net_inferred_clock - Estimated Period : NA
+@P:  led_blink_mss2_sb_CCC_0_FCCC|GL0_net_inferred_clock - Requested Period : 10.000
+@P:  led_blink_mss2_sb_CCC_0_FCCC|GL0_net_inferred_clock - Slack : NA
+@P:  led_blink_mss2_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Estimated Frequency : NA
+@P:  led_blink_mss2_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Requested Frequency : 100.0 MHz
+@P:  led_blink_mss2_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Estimated Period : NA
+@P:  led_blink_mss2_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Requested Period : 10.000
+@P:  led_blink_mss2_sb_FABOSC_0_OSC|RCOSC_25_50MHZ_CCC_inferred_clock - Slack : NA
+@P: led_blink_mss2 Part : m2s010vf400std
+@P: led_blink_mss2 Register bits  : 0 
+@P: led_blink_mss2 DSP Blocks  : 0
+@P: led_blink_mss2 I/O primitives : 1
+@P:  CPU Time : 0h:00m:03s

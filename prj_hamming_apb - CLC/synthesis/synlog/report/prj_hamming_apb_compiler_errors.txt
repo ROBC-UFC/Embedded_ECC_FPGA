@@ -1,0 +1,2 @@
+@E: CG389 :"C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - CLC\component\work\prj_hamming_apb\prj_hamming_apb.v":73:11:73:22|Reference to undefined module Decoder_ip
+

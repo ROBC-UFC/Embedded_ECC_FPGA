@@ -1,0 +1,14 @@
+
+. Module name, SLE, CFG, ARI1, BUFFER, MACC, RAM1K18, RAM64X18, GLOBAL, IO
+. prj_hamming_apb, 163, 292, 0, 0, 0, 0, 0, 1, 1
+.	. Decoder_ip, 96, 184, 0, 0, 0, 0, 0, 0, 0
+.	.	. decodificador, 0, 100, 0, 0, 0, 0, 0, 0, 0
+.	. adder_ip, 64, 73, 0, 0, 0, 0, 0, 0, 0
+.	.	. codificador, 0, 18, 0, 0, 0, 0, 0, 0, 0
+.	. prj_hamming_apb_sb, 3, 35, 0, 0, 0, 0, 0, 1, 0
+.	.	. CoreAPB3_Z1, 0, 32, 0, 0, 0, 0, 0, 0, 0
+.	.	.	. COREAPB3_MUXPTOB3, 0, 32, 0, 0, 0, 0, 0, 0, 0
+.	.	. CoreResetP_Z2, 3, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. prj_hamming_apb_sb_CCC_0_FCCC, 0, 0, 0, 0, 0, 0, 0, 1, 0
+.	.	. prj_hamming_apb_sb_FABOSC_0_OSC, 0, 0, 0, 0, 0, 0, 0, 0, 0
+.	.	. prj_hamming_apb_sb_MSS, 0, 3, 0, 0, 0, 0, 0, 0, 0

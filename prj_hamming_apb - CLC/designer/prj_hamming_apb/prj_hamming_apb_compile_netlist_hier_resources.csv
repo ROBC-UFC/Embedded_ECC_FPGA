@@ -1,0 +1,12 @@
+Detailed Resource Usage
+Module Name,Fabric 4LUT,Fabric DFF,Single-Ended I/O,PLLs and CCCs,Chip Globals,MSS,Multi-Mode UART,RCOSC_50MHZ
+Codificador/CLC_ENCODER/Primitives,18,0,0,0,0,0,0,0
+Codificador/Primitives,55,64,0,0,0,0,0,0
+Decoder_ip_0/CLC_DECODER/Primitives,100,0,0,0,0,0,0,0
+Decoder_ip_0/Primitives,84,96,0,0,0,0,0,0
+Primitives/Primitives,0,0,1,0,0,0,0,0
+prj_hamming_apb_sb_0/CCC_0/Primitives,0,0,0,1,1,0,0,0
+prj_hamming_apb_sb_0/CORERESETP_0/Primitives,0,3,0,0,0,0,0,0
+prj_hamming_apb_sb_0/CoreAPB3_0/u_mux_p_to_b3/Primitives,32,0,0,0,0,0,0,0
+prj_hamming_apb_sb_0/FABOSC_0/Primitives,0,0,0,0,0,0,0,1
+prj_hamming_apb_sb_0/prj_hamming_apb_sb_MSS_0/Primitives,3,0,0,0,0,1,0,0

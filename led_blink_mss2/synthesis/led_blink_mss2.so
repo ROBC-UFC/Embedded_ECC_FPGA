@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SynplifyOutput>
+	<result>Success</result>
+	<design>led_blink_mss2</design>
+	<target_verilog>C:\Users\Lesc\Documents\LiberoProjects\led_blink_mss2\synthesis\led_blink_mss2.vm</target_verilog>
+</SynplifyOutput>

@@ -7,35 +7,35 @@ start address 0x20000191
 
 Program Header:
     LOAD off    0x00010000 vaddr 0x20000000 paddr 0x20000000 align 2**16
-         filesz 0x00001390 memsz 0x00010000 flags rwx
+         filesz 0x00000ee0 memsz 0x00010000 flags rwx
 private flags = 5000200: [Version5 EABI] [soft-float ABI]
 
 Sections:
 Idx Name            Size      VMA       LMA       File off  Algn  Flags
   0 .vector_table   00000190  20000000  20000000  00010000  2**4  CONTENTS, ALLOC, LOAD, READONLY, CODE
   1 .boot_code      00000320  20000190  20000190  00010190  2**4  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .text           00000e70  200004b0  200004b0  000104b0  2**4  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  3 .data           00000070  20001320  20001320  00011320  2**4  CONTENTS, ALLOC, LOAD, DATA
-  4 .bss            00000090  20001390  20001390  00011390  2**4  ALLOC
-  5 .heap           0000dbe0  20001420  20001420  00011390  2**4  ALLOC
-  6 .stack          00001000  2000f000  2000f000  00011390  2**4  ALLOC
-  7 .debug_aranges  00000260  00000000  00000000  00011390  2**3  CONTENTS, READONLY, DEBUGGING
-  8 .debug_info     000046c1  00000000  00000000  000115f0  2**0  CONTENTS, READONLY, DEBUGGING
-  9 .debug_abbrev   00000c2f  00000000  00000000  00015cb1  2**0  CONTENTS, READONLY, DEBUGGING
- 10 .debug_line     00001f4e  00000000  00000000  000168e0  2**0  CONTENTS, READONLY, DEBUGGING
- 11 .debug_frame    00000ad8  00000000  00000000  00018830  2**2  CONTENTS, READONLY, DEBUGGING
- 12 .debug_str      00010fbc  00000000  00000000  00019308  2**0  CONTENTS, READONLY, DEBUGGING
- 13 .ARM.attributes 00000029  00000000  00000000  0002a2c4  2**0  CONTENTS, READONLY
- 14 .debug_ranges   00000258  00000000  00000000  0002a2ed  2**0  CONTENTS, READONLY, DEBUGGING
- 15 .debug_macro    00001643  00000000  00000000  0002a545  2**0  CONTENTS, READONLY, DEBUGGING
- 16 .comment        00000066  00000000  00000000  0002bb88  2**0  CONTENTS, READONLY
+  2 .text           00000a30  200004b0  200004b0  000104b0  2**4  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .data           00000000  20000ee0  20000ee0  00010ee0  2**4  CONTENTS, ALLOC, LOAD, DATA
+  4 .bss            00000070  20000ee0  20000ee0  00010ee0  2**4  ALLOC
+  5 .heap           0000e0b0  20000f50  20000f50  00010ee0  2**4  ALLOC
+  6 .stack          00001000  2000f000  2000f000  00010ee0  2**4  ALLOC
+  7 .debug_aranges  000001b8  00000000  00000000  00010ee0  2**3  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info     0000363e  00000000  00000000  00011098  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev   0000091a  00000000  00000000  000146d6  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line     000019eb  00000000  00000000  00014ff0  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_frame    00000628  00000000  00000000  000169dc  2**2  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_str      0000e875  00000000  00000000  00017004  2**0  CONTENTS, READONLY, DEBUGGING
+ 13 .ARM.attributes 00000029  00000000  00000000  00025879  2**0  CONTENTS, READONLY
+ 14 .debug_ranges   000001c0  00000000  00000000  000258a2  2**0  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_macro    00000741  00000000  00000000  00025a62  2**0  CONTENTS, READONLY, DEBUGGING
+ 16 .comment        00000066  00000000  00000000  000261a3  2**0  CONTENTS, READONLY
 SYMBOL TABLE:
 20000000 l    d  .vector_table	00000000 .vector_table
 20000190 l    d  .boot_code	00000000 .boot_code
 200004b0 l    d  .text	00000000 .text
-20001320 l    d  .data	00000000 .data
-20001390 l    d  .bss	00000000 .bss
-20001420 l    d  .heap	00000000 .heap
+20000ee0 l    d  .data	00000000 .data
+20000ee0 l    d  .bss	00000000 .bss
+20000f50 l    d  .heap	00000000 .heap
 2000f000 l    d  .stack	00000000 .stack
 00000000 l    d  .debug_aranges	00000000 .debug_aranges
 00000000 l    d  .debug_info	00000000 .debug_info
@@ -89,27 +89,27 @@ SYMBOL TABLE:
 20000354 l       .boot_code	00000000 fill_memory_loop
 20000366 l       .boot_code	00000000 fill_memory_spare_end_loop
 00000000 l    df *ABS*	00000000 crtstuff.c
-200012f4 l     O .text	00000000 __EH_FRAME_BEGIN__
+20000ebc l     O .text	00000000 __EH_FRAME_BEGIN__
 200004b0 l     F .text	00000000 __do_global_dtors_aux
-20001390 l     O .bss	00000000 completed.8911
-20001310 l     O .text	00000000 __do_global_dtors_aux_fini_array_entry
+20000ee0 l     O .bss	00000000 completed.8911
+20000ed8 l     O .text	00000000 __do_global_dtors_aux_fini_array_entry
 200004d4 l     F .text	00000000 frame_dummy
-20001394 l     O .bss	00000000 object.8916
-2000130c l     O .text	00000000 __frame_dummy_init_array_entry
+20000ee4 l     O .bss	00000000 object.8916
+20000ed4 l     O .text	00000000 __frame_dummy_init_array_entry
 00000000 l    df *ABS*	00000000 mss_comblk.c
-200013ac l     O .bss	00000001 g_comblk_cmd_opcode
-200013b0 l     O .bss	00000004 g_comblk_p_cmd
-200013b4 l     O .bss	00000002 g_comblk_cmd_size
-200013b8 l     O .bss	00000004 g_comblk_p_data
-200013bc l     O .bss	00000004 g_comblk_data_size
-200013c0 l     O .bss	00000004 g_comblk_p_response
-200013c4 l     O .bss	00000002 g_comblk_response_size
-200013c6 l     O .bss	00000002 g_comblk_response_idx
-200013c8 l     O .bss	00000004 g_comblk_completion_handler
-200013cc l     O .bss	00000004 g_comblk_page_handler
-200013d0 l     O .bss	00000001 g_request_in_progress
-200013d1 l     O .bss	00000001 g_comblk_state
-200013d4 l     O .bss	00000004 g_async_event_handler
+20000efc l     O .bss	00000001 g_comblk_cmd_opcode
+20000f00 l     O .bss	00000004 g_comblk_p_cmd
+20000f04 l     O .bss	00000002 g_comblk_cmd_size
+20000f08 l     O .bss	00000004 g_comblk_p_data
+20000f0c l     O .bss	00000004 g_comblk_data_size
+20000f10 l     O .bss	00000004 g_comblk_p_response
+20000f14 l     O .bss	00000002 g_comblk_response_size
+20000f16 l     O .bss	00000002 g_comblk_response_idx
+20000f18 l     O .bss	00000004 g_comblk_completion_handler
+20000f1c l     O .bss	00000004 g_comblk_page_handler
+20000f20 l     O .bss	00000001 g_request_in_progress
+20000f21 l     O .bss	00000001 g_comblk_state
+20000f24 l     O .bss	00000004 g_async_event_handler
 20000938 l     F .text	0000004c abort_current_cmd
 20000984 l     F .text	00000060 fill_tx_fifo
 200006e8 l     F .text	00000210 handle_rx_okay_irq
@@ -117,54 +117,39 @@ SYMBOL TABLE:
 200008f8 l     F .text	00000040 complete_request
 200009e4 l     F .text	00000028 process_sys_ctrl_command
 00000000 l    df *ABS*	00000000 mss_hpdma.c
-200013d8 l     O .bss	00000018 g_transfer
-200013f0 l     O .bss	00000004 g_hpdma_end_desc
-200013f4 l     O .bss	00000004 g_hpdma_current_desc
+20000f28 l     O .bss	00000018 g_transfer
+20000f40 l     O .bss	00000004 g_hpdma_end_desc
+20000f44 l     O .bss	00000004 g_hpdma_current_desc
 20000a0c l     F .text	00000154 start_transfer
-00000000 l    df *ABS*	00000000 newlib_stubs.c
-200013f8 l     O .bss	00000004 heap_end.5417
 00000000 l    df *ABS*	00000000 system_m2sxxx.c
-20000e84 l     F .text	00000022 silicon_workarounds
-20000e3c l     F .text	00000048 get_silicon_revision
-20000ea8 l     F .text	00000030 m2s050_rev_a_workarounds
+20000dc4 l     F .text	00000022 silicon_workarounds
+20000d7c l     F .text	00000048 get_silicon_revision
+20000de8 l     F .text	00000030 m2s050_rev_a_workarounds
 00000000 l    df *ABS*	00000000 main.c
 00000000 l    df *ABS*	00000000 init.c
-00000000 l    df *ABS*	00000000 malloc.c
-00000000 l    df *ABS*	00000000 nano-mallocr.c
-00000000 l    df *ABS*	00000000 rand.c
-00000000 l    df *ABS*	00000000 sbrkr.c
-00000000 l    df *ABS*	00000000 mlock.c
-00000000 l    df *ABS*	00000000 lock.c
 00000000 l    df *ABS*	00000000 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crti.o
 00000000 l    df *ABS*	00000000 c:/microchip/softconsole-v2021.1/arm-none-eabi-gcc/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7-m/nofp/crtn.o
-00000000 l    df *ABS*	00000000 impure.c
-20001324 l     O .data	00000060 impure_data
-00000000 l    df *ABS*	00000000 reent.c
 00000000 l    df *ABS*	00000000 
-20001310 l       .text	00000000 __init_array_end
-2000130c l       .text	00000000 __preinit_array_end
-2000130c l       .text	00000000 __init_array_start
-2000130c l       .text	00000000 __preinit_array_start
+20000ed8 l       .text	00000000 __init_array_end
+20000ed4 l       .text	00000000 __preinit_array_end
+20000ed4 l       .text	00000000 __init_array_start
+20000ed4 l       .text	00000000 __preinit_array_start
 2000038a  w    F .boot_code	00000000 DebugMon_Handler
 20000398  w    F .boot_code	00000000 I2C0_IRQHandler
 200003ec  w    F .boot_code	00000000 FabricIrq12_IRQHandler
-20001408 g     O .bss	00000001 __lock___atexit_recursive_mutex
 20000000 g       *ABS*	00000000 __vector_table_load
 20000380  w    F .boot_code	00000000 HardFault_Handler
-200012b4 g     F .text	0000000c __malloc_unlock
-20001320 g       *ABS*	00000000 __data_load
+20000ee0 g       *ABS*	00000000 __data_load
 2000038e  w    F .boot_code	00000000 SysTick_Handler
-20001409 g     O .bss	00000001 __lock___arc4random_mutex
-20001320 g       *ABS*	00000000 _sidata
+20000ee0 g       *ABS*	00000000 _sidata
 2000038c  w    F .boot_code	00000000 PendSV_Handler
 2000037e  w    F .boot_code	00000000 NMI_Handler
-20001320 g       .text	00000000 __exidx_end
+20000ee0 g       .text	00000000 __exidx_end
 2000039e  w    F .boot_code	00000000 I2C1_IRQHandler
 200003a6  w    F .boot_code	00000000 UART1_IRQHandler
 200003fe  w    F .boot_code	00000000 GPIO5_IRQHandler
-20001404 g     O .bss	00000004 errno
-20001320 g       .text	00000000 _etext
-20001390 g       .bss	00000000 _sbss
+20000ee0 g       .text	00000000 _etext
+20000ee0 g       .bss	00000000 _sbss
 200003be  w    F .boot_code	00000000 PLL_LockLost_IRQHandler
 200004b0 g       .text	00000000 __text_start
 20000430  w    F .boot_code	00000000 GPIO30_IRQHandler
@@ -175,16 +160,14 @@ SYMBOL TABLE:
 20000424  w    F .boot_code	00000000 GPIO24_IRQHandler
 2000039a  w    F .boot_code	00000000 I2C0_SMBAlert_IRQHandler
 20000190 g       .vector_table	00000000 _evector_table
-20001114 g     F .text	00000010 malloc
 20000386  w    F .boot_code	00000000 UsageFault_Handler
 200003b2  w    F .boot_code	00000000 ENVM0_IRQHandler
 20000400  w    F .boot_code	00000000 GPIO6_IRQHandler
 00010000 g       *ABS*	00000000 RAM_SIZE
-20001390 g       .bss	00000000 __bss_start__
+20000ee0 g       .bss	00000000 __bss_start__
 00000000 g       *ABS*	00000000 __DYNAMIC
-20001320 g       .data	00000000 _sdata
+20000ee0 g       .data	00000000 _sdata
 20000396  w    F .boot_code	00000000 SPI1_IRQHandler
-20001288 g     F .text	00000020 _sbrk_r
 20000426  w    F .boot_code	00000000 GPIO25_IRQHandler
 200003f2  w    F .boot_code	00000000 FabricIrq15_IRQHandler
 200003f6  w    F .boot_code	00000000 GPIO1_IRQHandler
@@ -192,37 +175,31 @@ SYMBOL TABLE:
 200003e8  w    F .boot_code	00000000 FabricIrq10_IRQHandler
 20000b60 g     F .text	000000f8 HPDMA_Complete_IRQHandler
 20000416  w    F .boot_code	00000000 GPIO17_IRQHandler
-20001320 g       .text	00000000 __exidx_start
-2000140a g     O .bss	00000001 __lock___env_recursive_mutex
-2000140b g     O .bss	00000001 __lock___sinit_recursive_mutex
+20000ee0 g       .text	00000000 __exidx_start
 00001000 g       *ABS*	00000000 MAIN_STACK_SIZE
-200010cc g     F .text	00000048 __libc_init_array
+20000e74 g     F .text	00000048 __libc_init_array
 20000406  w    F .boot_code	00000000 GPIO9_IRQHandler
 200003c0  w    F .boot_code	00000000 CommSwitchError_IRQHandler
-20000d80 g     F .text	0000009c _sbrk
 20000422  w    F .boot_code	00000000 GPIO23_IRQHandler
-200012f4 g     F .text	00000000 _init
+20000ebc g     F .text	00000000 _init
 2000042e  w    F .boot_code	00000000 GPIO29_IRQHandler
 200003d8  w    F .boot_code	00000000 FabricIrq2_IRQHandler
-20001420 g       .bss	00000000 _ebss
+20000f50 g       .bss	00000000 _ebss
 20000418  w    F .boot_code	00000000 GPIO18_IRQHandler
 20000190 g     F .boot_code	00000000 Reset_Handler
 20000000 g       .vector_table	00000000 __vector_table_vma_base_address
 200003a0  w    F .boot_code	00000000 I2C1_SMBAlert_IRQHandler
 2000040a  w    F .boot_code	00000000 GPIO11_IRQHandler
-2000140c g     O .bss	00000001 __lock___malloc_recursive_mutex
 20000c58 g     F .text	00000104 HPDMA_Error_IRQHandler
 00001000 g       *ABS*	00000000 MIN_SIZE_HEAP
 00000000 g       *ABS*	00000000 __smartfusion2_memory_remap
 20000390  w    F .boot_code	00000000 WdogWakeup_IRQHandler
-200012c2 g     F .text	00000002 __retarget_lock_release_recursive
 200003ba  w    F .boot_code	00000000 USB_DMA_IRQHandler
 200003ae  w    F .boot_code	00000000 Timer2_IRQHandler
 200003f8  w    F .boot_code	00000000 GPIO2_IRQHandler
-20001420 g       .bss	00000000 __bss_end__
+20000f50 g       .bss	00000000 __bss_end__
 200003ea  w    F .boot_code	00000000 FabricIrq11_IRQHandler
-20001420 g       .bss	00000000 __end
-20001220 g     F .text	00000068 rand
+20000f50 g       .bss	00000000 __end
 200003d4  w    F .boot_code	00000000 FabricIrq0_IRQHandler
 200003bc  w    F .boot_code	00000000 PLL_Lock_IRQHandler
 200003a8  w    F .boot_code	00000000 EthernetMAC_IRQHandler
@@ -232,28 +209,22 @@ SYMBOL TABLE:
 200003ac  w    F .boot_code	00000000 Timer1_IRQHandler
 20000000 g       .vector_table	00000000 __vector_table_start
 200003fa  w    F .boot_code	00000000 GPIO3_IRQHandler
-200012a8 g     F .text	0000000c __malloc_lock
 200003da  w    F .boot_code	00000000 FabricIrq3_IRQHandler
 20000000 g       *ABS*	00000000 RAM_START_ADDRESS
-200012c0 g     F .text	00000002 __retarget_lock_acquire_recursive
 20000382  w    F .boot_code	00000000 MemManage_Handler
-20000f98 g     F .text	00000134 main
-200011d8 g     F .text	00000048 srand
+20000e18 g     F .text	0000005c main
 20000388  w    F .boot_code	00000000 SVC_Handler
 20010000 g       *ABS*	00000000 __main_stack_start
 200004b0 g       *ABS*	00000000 __text_load
-20001124 g     F .text	000000b4 _malloc_r
-20001420 g       .heap	00000000 __heap_start__
+20000f50 g       .heap	00000000 __heap_start__
 20000402  w    F .boot_code	00000000 GPIO7_IRQHandler
 2000040e  w    F .boot_code	00000000 GPIO13_IRQHandler
-20000e1c g     F .text	00000020 SystemInit
-20001300 g     F .text	00000000 _fini
+20000d5c g     F .text	00000020 SystemInit
+20000ec8 g     F .text	00000000 _fini
 200003e2  w    F .boot_code	00000000 FabricIrq7_IRQHandler
 20000410  w    F .boot_code	00000000 GPIO14_IRQHandler
-20000d66 g     F .text	0000001a _write_r
 200003d2  w    F .boot_code	00000000 FIC64_IRQHandler
 20000434  w    F .boot_code	00000000 mscc_post_hw_cfg_init
-20001320 g     O .data	00000004 _impure_ptr
 200003b4  w    F .boot_code	00000000 ENVM1_IRQHandler
 200003c2  w    F .boot_code	00000000 CacheError_IRQHandler
 200003e0  w    F .boot_code	00000000 FabricIrq6_IRQHandler
@@ -266,29 +237,23 @@ SYMBOL TABLE:
 2000f000 g       .heap	00000000 _eheap
 20000408  w    F .boot_code	00000000 GPIO10_IRQHandler
 2000039c  w    F .boot_code	00000000 I2C0_SMBus_IRQHandler
-20001390 g       .data	00000000 _edata
+20000ee0 g       .data	00000000 _edata
 20000394  w    F .boot_code	00000000 SPI0_IRQHandler
-20001420 g       .bss	00000000 _end
+20000f50 g       .bss	00000000 _end
 2000041c  w    F .boot_code	00000000 GPIO20_IRQHandler
 200003d6  w    F .boot_code	00000000 FabricIrq1_IRQHandler
-2000140d g     O .bss	00000001 __lock___at_quick_exit_mutex
 200003dc  w    F .boot_code	00000000 FabricIrq4_IRQHandler
 200003f4  w    F .boot_code	00000000 GPIO0_IRQHandler
 200003e4  w    F .boot_code	00000000 FabricIrq8_IRQHandler
 20000000 g     O .vector_table	00000000 g_pfnVectors
 200003aa  w    F .boot_code	00000000 DMA_IRQHandler
 200003ee  w    F .boot_code	00000000 FabricIrq13_IRQHandler
-20000d5c g     F .text	0000000a _exit
 200003ce  w    F .boot_code	00000000 FAB_PLL_Lock_IRQHandler
 20000384  w    F .boot_code	00000000 BusFault_Handler
-2000140e g     O .bss	00000001 __lock___dd_hash_mutex
-2000140f g     O .bss	00000001 __lock___tz_mutex
 20000392  w    F .boot_code	00000000 RTC_Wakeup_IRQHandler
-20001400 g     O .bss	00000004 __malloc_sbrk_start
-20001320 g       .data	00000000 __data_start
+20000ee0 g       .data	00000000 __data_start
 2000041e  w    F .boot_code	00000000 GPIO21_IRQHandler
 20000432  w    F .boot_code	00000000 GPIO31_IRQHandler
-200013fc g     O .bss	00000004 __malloc_free_list
 200003de  w    F .boot_code	00000000 FabricIrq5_IRQHandler
 2000f000 g       .stack	00000000 __stack_start__
 200003ca  w    F .boot_code	00000000 ECC_Error_IRQHandler
@@ -297,9 +262,7 @@ SYMBOL TABLE:
 200003f0  w    F .boot_code	00000000 FabricIrq14_IRQHandler
 200003a2  w    F .boot_code	00000000 I2C1_SMBus_IRQHandler
 20000414  w    F .boot_code	00000000 GPIO16_IRQHandler
-20000ed8 g     F .text	000000c0 burstError
 200003fc  w    F .boot_code	00000000 GPIO4_IRQHandler
-20001410 g     O .bss	00000001 __lock___sfp_recursive_mutex
 2000042a  w    F .boot_code	00000000 GPIO27_IRQHandler
 20000412  w    F .boot_code	00000000 GPIO15_IRQHandler
 
@@ -2189,7 +2152,7 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
 20000460:	20010000 	.word	0x20010000
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:177
     ldr r0, =SystemInit
-20000464:	20000e1d 	.word	0x20000e1d
+20000464:	20000d5d 	.word	0x20000d5d
 	...
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:243
     ldr r0, =__vector_table_load
@@ -2208,34 +2171,34 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
 20000480:	200004b0 	.word	0x200004b0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:254
     ldr r2, =_etext
-20000484:	20001320 	.word	0x20001320
+20000484:	20000ee0 	.word	0x20000ee0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:262
     ldr r0, =__data_load
-20000488:	20001320 	.word	0x20001320
+20000488:	20000ee0 	.word	0x20000ee0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:263
     ldr r1, =__data_start
-2000048c:	20001320 	.word	0x20001320
+2000048c:	20000ee0 	.word	0x20000ee0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:264
     ldr r2, =_edata
-20000490:	20001390 	.word	0x20001390
+20000490:	20000ee0 	.word	0x20000ee0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:271
     ldr r0, =__bss_start__
-20000494:	20001390 	.word	0x20001390
+20000494:	20000ee0 	.word	0x20000ee0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:272
     ldr r1, =__bss_end__
-20000498:	20001420 	.word	0x20001420
+20000498:	20000f50 	.word	0x20000f50
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:289
     ldr r0, =__heap_start__
-2000049c:	20001420 	.word	0x20001420
+2000049c:	20000f50 	.word	0x20000f50
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:290
     ldr r1, =_eheap
 200004a0:	2000f000 	.word	0x2000f000
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:313
     ldr.w r0, =__libc_init_array
-200004a4:	200010cd 	.word	0x200010cd
+200004a4:	20000e75 	.word	0x20000e75
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/startup_m2sxxx.S:323
     ldr pc, =main
-200004a8:	20000f99 	.word	0x20000f99
+200004a8:	20000e19 	.word	0x20000e19
 200004ac:	00000000 	.word	0x00000000
 
 Disassembly of section .text:
@@ -2253,9 +2216,9 @@ __text_start():
 200004c2:	2301      	movs	r3, #1
 200004c4:	7023      	strb	r3, [r4, #0]
 200004c6:	bd10      	pop	{r4, pc}
-200004c8:	20001390 	.word	0x20001390
+200004c8:	20000ee0 	.word	0x20000ee0
 200004cc:	00000000 	.word	0x00000000
-200004d0:	200012f4 	.word	0x200012f4
+200004d0:	20000ebc 	.word	0x20000ebc
 
 200004d4 <frame_dummy>:
 frame_dummy():
@@ -2267,8 +2230,8 @@ frame_dummy():
 200004de:	f3af 8000 	nop.w
 200004e2:	bd08      	pop	{r3, pc}
 200004e4:	00000000 	.word	0x00000000
-200004e8:	20001394 	.word	0x20001394
-200004ec:	200012f4 	.word	0x200012f4
+200004e8:	20000ee4 	.word	0x20000ee4
+200004ec:	20000ebc 	.word	0x20000ebc
 
 200004f0 <ComBlk_IRQHandler>:
 ComBlk_IRQHandler():
@@ -2691,13 +2654,13 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/driver
 200006c6:	3710      	adds	r7, #16
 200006c8:	46bd      	mov	sp, r7
 200006ca:	bd80      	pop	{r7, pc}
-200006cc:	200013d1 	.word	0x200013d1
-200006d0:	200013b4 	.word	0x200013b4
-200006d4:	200013b0 	.word	0x200013b0
-200006d8:	200013bc 	.word	0x200013bc
-200006dc:	200013b8 	.word	0x200013b8
+200006cc:	20000f21 	.word	0x20000f21
+200006d0:	20000f04 	.word	0x20000f04
+200006d4:	20000f00 	.word	0x20000f00
+200006d8:	20000f0c 	.word	0x20000f0c
+200006dc:	20000f08 	.word	0x20000f08
 200006e0:	40016000 	.word	0x40016000
-200006e4:	200013cc 	.word	0x200013cc
+200006e4:	20000f1c 	.word	0x20000f1c
 
 200006e8 <handle_rx_okay_irq>:
 handle_rx_okay_irq():
@@ -3126,11 +3089,11 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/driver
 200008dc:	bd80      	pop	{r7, pc}
 200008de:	bf00      	nop
 200008e0:	40016000 	.word	0x40016000
-200008e4:	200013d1 	.word	0x200013d1
-200008e8:	200013c6 	.word	0x200013c6
-200008ec:	200013c0 	.word	0x200013c0
-200008f0:	200013ac 	.word	0x200013ac
-200008f4:	200013c4 	.word	0x200013c4
+200008e4:	20000f21 	.word	0x20000f21
+200008e8:	20000f16 	.word	0x20000f16
+200008ec:	20000f10 	.word	0x20000f10
+200008f0:	20000efc 	.word	0x20000efc
+200008f4:	20000f14 	.word	0x20000f14
 
 200008f8 <complete_request>:
 complete_request():
@@ -3179,9 +3142,9 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/driver
 20000926:	3708      	adds	r7, #8
 20000928:	46bd      	mov	sp, r7
 2000092a:	bd80      	pop	{r7, pc}
-2000092c:	200013c8 	.word	0x200013c8
-20000930:	200013c0 	.word	0x200013c0
-20000934:	200013d0 	.word	0x200013d0
+2000092c:	20000f18 	.word	0x20000f18
+20000930:	20000f10 	.word	0x20000f10
+20000934:	20000f20 	.word	0x20000f20
 
 20000938 <abort_current_cmd>:
 abort_current_cmd():
@@ -3244,8 +3207,8 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/driver
 20000972:	3708      	adds	r7, #8
 20000974:	46bd      	mov	sp, r7
 20000976:	bd80      	pop	{r7, pc}
-20000978:	200013d0 	.word	0x200013d0
-2000097c:	200013c6 	.word	0x200013c6
+20000978:	20000f20 	.word	0x20000f20
+2000097c:	20000f16 	.word	0x20000f16
 20000980:	40016000 	.word	0x40016000
 
 20000984 <fill_tx_fifo>:
@@ -3366,7 +3329,7 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/driver
 20000a02:	3708      	adds	r7, #8
 20000a04:	46bd      	mov	sp, r7
 20000a06:	bd80      	pop	{r7, pc}
-20000a08:	200013d4 	.word	0x200013d4
+20000a08:	20000f24 	.word	0x20000f24
 
 20000a0c <start_transfer>:
 start_transfer():
@@ -3575,9 +3538,9 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/driver
 20000b4c:	4770      	bx	lr
 20000b4e:	bf00      	nop
 20000b50:	42280000 	.word	0x42280000
-20000b54:	200013f0 	.word	0x200013f0
+20000b54:	20000f40 	.word	0x20000f40
 20000b58:	40014000 	.word	0x40014000
-20000b5c:	200013d8 	.word	0x200013d8
+20000b5c:	20000f28 	.word	0x20000f28
 
 20000b60 <HPDMA_Complete_IRQHandler>:
 HPDMA_Complete_IRQHandler():
@@ -3750,10 +3713,10 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/driver
 20000c40:	4770      	bx	lr
 20000c42:	bf00      	nop
 20000c44:	42280000 	.word	0x42280000
-20000c48:	200013f4 	.word	0x200013f4
+20000c48:	20000f44 	.word	0x20000f44
 20000c4c:	40014000 	.word	0x40014000
-20000c50:	200013d8 	.word	0x200013d8
-20000c54:	200013f0 	.word	0x200013f0
+20000c50:	20000f28 	.word	0x20000f28
+20000c54:	20000f40 	.word	0x20000f40
 
 20000c58 <HPDMA_Error_IRQHandler>:
 HPDMA_Error_IRQHandler():
@@ -3954,193 +3917,10 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/driver
 20000d4a:	bf00      	nop
 20000d4c:	40014000 	.word	0x40014000
 20000d50:	42280000 	.word	0x42280000
-20000d54:	200013f4 	.word	0x200013f4
-20000d58:	200013d8 	.word	0x200013d8
+20000d54:	20000f44 	.word	0x20000f44
+20000d58:	20000f28 	.word	0x20000f28
 
-20000d5c <_exit>:
-_exit():
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:90
-
-/*==============================================================================
- * Exit a program without cleaning up files.
- */
-void _exit( int code )
-{
-20000d5c:	b480      	push	{r7}
-20000d5e:	b083      	sub	sp, #12
-20000d60:	af00      	add	r7, sp, #0
-20000d62:	6078      	str	r0, [r7, #4]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:92 (discriminator 1)
-    /* Should we force a system reset? */
-    while( 1 )
-20000d64:	e7fe      	b.n	20000d64 <_exit+0x8>
-
-20000d66 <_write_r>:
-_write_r():
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:181
- * all files, including stdout—so if you need to generate any output, for
- * example to a serial port for debugging, you should make your minimal write
- * capable of doing this.
- */
-int _write_r( void * reent, int file, char * ptr, int len )
-{
-20000d66:	b480      	push	{r7}
-20000d68:	b085      	sub	sp, #20
-20000d6a:	af00      	add	r7, sp, #0
-20000d6c:	60f8      	str	r0, [r7, #12]
-20000d6e:	60b9      	str	r1, [r7, #8]
-20000d70:	607a      	str	r2, [r7, #4]
-20000d72:	603b      	str	r3, [r7, #0]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:203
-     */
-    MSS_UART_polled_tx(gp_my_uart, (uint8_t *)ptr, len);
-    
-    return len;
-#else   /* MICROSEMI_STDIO_THRU_UART */
-    return 0;
-20000d74:	2300      	movs	r3, #0
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:205
-#endif  /* MICROSEMI_STDIO_THRU_UART */
-}
-20000d76:	4618      	mov	r0, r3
-20000d78:	3714      	adds	r7, #20
-20000d7a:	46bd      	mov	sp, r7
-20000d7c:	bc80      	pop	{r7}
-20000d7e:	4770      	bx	lr
-
-20000d80 <_sbrk>:
-_sbrk():
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:214
- * it is useful to have a working implementation. The following suffices for a
- * standalone system; it exploits the symbol _end automatically defined by the
- * GNU linker. 
- */
-caddr_t _sbrk(int incr)
-{
-20000d80:	b580      	push	{r7, lr}
-20000d82:	b086      	sub	sp, #24
-20000d84:	af00      	add	r7, sp, #0
-20000d86:	6078      	str	r0, [r7, #4]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:220
-    extern char _end;       /* Defined by the linker */
-    static char *heap_end;
-    char *prev_heap_end;
-    char * stack_ptr;
-    
-    if (heap_end == 0)
-20000d88:	4b1f      	ldr	r3, [pc, #124]	; (20000e08 <_sbrk+0x88>)
-20000d8a:	681b      	ldr	r3, [r3, #0]
-20000d8c:	2b00      	cmp	r3, #0
-20000d8e:	d102      	bne.n	20000d96 <_sbrk+0x16>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:222
-    {
-      heap_end = &_end;
-20000d90:	4b1d      	ldr	r3, [pc, #116]	; (20000e08 <_sbrk+0x88>)
-20000d92:	4a1e      	ldr	r2, [pc, #120]	; (20000e0c <_sbrk+0x8c>)
-20000d94:	601a      	str	r2, [r3, #0]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:225
-    }
-    
-    prev_heap_end = heap_end;
-20000d96:	4b1c      	ldr	r3, [pc, #112]	; (20000e08 <_sbrk+0x88>)
-20000d98:	681b      	ldr	r3, [r3, #0]
-20000d9a:	617b      	str	r3, [r7, #20]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:227
-    
-    asm volatile ("MRS %0, msp" : "=r" (stack_ptr) );
-20000d9c:	f3ef 8308 	mrs	r3, MSP
-20000da0:	613b      	str	r3, [r7, #16]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:228
-    if(heap_end < stack_ptr)
-20000da2:	4b19      	ldr	r3, [pc, #100]	; (20000e08 <_sbrk+0x88>)
-20000da4:	681b      	ldr	r3, [r3, #0]
-20000da6:	693a      	ldr	r2, [r7, #16]
-20000da8:	429a      	cmp	r2, r3
-20000daa:	d90f      	bls.n	20000dcc <_sbrk+0x4c>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:235
-        /*
-         * Heap is at an address below the stack, growing up toward the stack.
-         * The stack is above the heap, growing down towards the heap.
-         * Make sure the stack and heap do not run into each other.
-         */
-        if (heap_end + incr > stack_ptr)
-20000dac:	4b16      	ldr	r3, [pc, #88]	; (20000e08 <_sbrk+0x88>)
-20000dae:	681a      	ldr	r2, [r3, #0]
-20000db0:	687b      	ldr	r3, [r7, #4]
-20000db2:	4413      	add	r3, r2
-20000db4:	693a      	ldr	r2, [r7, #16]
-20000db6:	429a      	cmp	r2, r3
-20000db8:	d21a      	bcs.n	20000df0 <_sbrk+0x70>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:237
-        {
-          _write_r ((void *)0, 1, "Heap and stack collision\n", 25);
-20000dba:	2319      	movs	r3, #25
-20000dbc:	4a14      	ldr	r2, [pc, #80]	; (20000e10 <_sbrk+0x90>)
-20000dbe:	2101      	movs	r1, #1
-20000dc0:	2000      	movs	r0, #0
-20000dc2:	f7ff ffd0 	bl	20000d66 <_write_r>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:238
-          _exit (1);
-20000dc6:	2001      	movs	r0, #1
-20000dc8:	f7ff ffc8 	bl	20000d5c <_exit>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:257
-         * SmartFusion2 cache design.
-         */
-        extern char _eheap;     /* Defined by the linker */
-        char *top_of_heap;
-        
-        top_of_heap = &_eheap;
-20000dcc:	4b11      	ldr	r3, [pc, #68]	; (20000e14 <_sbrk+0x94>)
-20000dce:	60fb      	str	r3, [r7, #12]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:258
-        if(heap_end + incr  > top_of_heap)
-20000dd0:	4b0d      	ldr	r3, [pc, #52]	; (20000e08 <_sbrk+0x88>)
-20000dd2:	681a      	ldr	r2, [r3, #0]
-20000dd4:	687b      	ldr	r3, [r7, #4]
-20000dd6:	4413      	add	r3, r2
-20000dd8:	68fa      	ldr	r2, [r7, #12]
-20000dda:	429a      	cmp	r2, r3
-20000ddc:	d208      	bcs.n	20000df0 <_sbrk+0x70>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:260
-        {
-          _write_r ((void *)0, 1, "Out of heap memory\n", 25);
-20000dde:	2319      	movs	r3, #25
-20000de0:	4a0d      	ldr	r2, [pc, #52]	; (20000e18 <_sbrk+0x98>)
-20000de2:	2101      	movs	r1, #1
-20000de4:	2000      	movs	r0, #0
-20000de6:	f7ff ffbe 	bl	20000d66 <_write_r>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:261
-          _exit (1);
-20000dea:	2001      	movs	r0, #1
-20000dec:	f7ff ffb6 	bl	20000d5c <_exit>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:265
-        }
-    }
-  
-    heap_end += incr;
-20000df0:	4b05      	ldr	r3, [pc, #20]	; (20000e08 <_sbrk+0x88>)
-20000df2:	681a      	ldr	r2, [r3, #0]
-20000df4:	687b      	ldr	r3, [r7, #4]
-20000df6:	4413      	add	r3, r2
-20000df8:	4a03      	ldr	r2, [pc, #12]	; (20000e08 <_sbrk+0x88>)
-20000dfa:	6013      	str	r3, [r2, #0]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:266
-    return (caddr_t) prev_heap_end;
-20000dfc:	697b      	ldr	r3, [r7, #20]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/startup_gcc/newlib_stubs.c:267
-}
-20000dfe:	4618      	mov	r0, r3
-20000e00:	3718      	adds	r7, #24
-20000e02:	46bd      	mov	sp, r7
-20000e04:	bd80      	pop	{r7, pc}
-20000e06:	bf00      	nop
-20000e08:	200013f8 	.word	0x200013f8
-20000e0c:	20001420 	.word	0x20001420
-20000e10:	200012c4 	.word	0x200012c4
-20000e14:	2000f000 	.word	0x2000f000
-20000e18:	200012e0 	.word	0x200012e0
-
-20000e1c <SystemInit>:
+20000d5c <SystemInit>:
 SystemInit():
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:433
 
@@ -4149,8 +3929,8 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
  */
 void SystemInit(void)
 {
-20000e1c:	b580      	push	{r7, lr}
-20000e1e:	af00      	add	r7, sp, #0
+20000d5c:	b580      	push	{r7, lr}
+20000d5e:	af00      	add	r7, sp, #0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:456
      */
 #if (MSS_SYS_FACC_INIT_BY_CORTEX == 1)
@@ -4158,7 +3938,7 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
 #endif
 
     silicon_workarounds();
-20000e20:	f000 f830 	bl	20000e84 <silicon_workarounds>
+20000d60:	f000 f830 	bl	20000dc4 <silicon_workarounds>
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:463
     /*--------------------------------------------------------------------------
      * Set STKALIGN to ensure exception stacking starts on 8 bytes address
@@ -4166,11 +3946,11 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
      * the ARM Architecture" (AAPCS).
      */
     SCB->CCR |= SCB_CCR_STKALIGN_Msk;
-20000e24:	4b04      	ldr	r3, [pc, #16]	; (20000e38 <SystemInit+0x1c>)
-20000e26:	695b      	ldr	r3, [r3, #20]
-20000e28:	4a03      	ldr	r2, [pc, #12]	; (20000e38 <SystemInit+0x1c>)
-20000e2a:	f443 7300 	orr.w	r3, r3, #512	; 0x200
-20000e2e:	6153      	str	r3, [r2, #20]
+20000d64:	4b04      	ldr	r3, [pc, #16]	; (20000d78 <SystemInit+0x1c>)
+20000d66:	695b      	ldr	r3, [r3, #20]
+20000d68:	4a03      	ldr	r2, [pc, #12]	; (20000d78 <SystemInit+0x1c>)
+20000d6a:	f443 7300 	orr.w	r3, r3, #512	; 0x200
+20000d6e:	6153      	str	r3, [r2, #20]
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:492
 #endif
 
@@ -4178,7 +3958,7 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
      * Call user defined configuration function.
      */
     mscc_post_hw_cfg_init();
-20000e30:	f7ff fb00 	bl	20000434 <mscc_post_hw_cfg_init>
+20000d70:	f7ff fb60 	bl	20000434 <mscc_post_hw_cfg_init>
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:539
     do
     {
@@ -4186,11 +3966,11 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
     } while (0u == init_done);
 #endif
 }
-20000e34:	bf00      	nop
-20000e36:	bd80      	pop	{r7, pc}
-20000e38:	e000ed00 	.word	0xe000ed00
+20000d74:	bf00      	nop
+20000d76:	bd80      	pop	{r7, pc}
+20000d78:	e000ed00 	.word	0xe000ed00
 
-20000e3c <get_silicon_revision>:
+20000d7c <get_silicon_revision>:
 get_silicon_revision():
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:916
 
@@ -4199,71 +3979,71 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
  */
 static uint32_t get_silicon_revision(void)
 {
-20000e3c:	b480      	push	{r7}
-20000e3e:	b083      	sub	sp, #12
-20000e40:	af00      	add	r7, sp, #0
+20000d7c:	b480      	push	{r7}
+20000d7e:	b083      	sub	sp, #12
+20000d80:	af00      	add	r7, sp, #0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:920
     uint32_t silicon_revision;
     uint32_t device_version;
 
     device_version = SYSREG->DEVICE_VERSION;
-20000e42:	4b0e      	ldr	r3, [pc, #56]	; (20000e7c <get_silicon_revision+0x40>)
-20000e44:	f8d3 314c 	ldr.w	r3, [r3, #332]	; 0x14c
-20000e48:	603b      	str	r3, [r7, #0]
+20000d82:	4b0e      	ldr	r3, [pc, #56]	; (20000dbc <get_silicon_revision+0x40>)
+20000d84:	f8d3 314c 	ldr.w	r3, [r3, #332]	; 0x14c
+20000d88:	603b      	str	r3, [r7, #0]
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:921
     switch(device_version)
-20000e4a:	683b      	ldr	r3, [r7, #0]
-20000e4c:	f64f 0202 	movw	r2, #63490	; 0xf802
-20000e50:	4293      	cmp	r3, r2
-20000e52:	d004      	beq.n	20000e5e <get_silicon_revision+0x22>
-20000e54:	683b      	ldr	r3, [r7, #0]
-20000e56:	4a0a      	ldr	r2, [pc, #40]	; (20000e80 <get_silicon_revision+0x44>)
-20000e58:	4293      	cmp	r3, r2
-20000e5a:	d003      	beq.n	20000e64 <get_silicon_revision+0x28>
-20000e5c:	e005      	b.n	20000e6a <get_silicon_revision+0x2e>
+20000d8a:	683b      	ldr	r3, [r7, #0]
+20000d8c:	f64f 0202 	movw	r2, #63490	; 0xf802
+20000d90:	4293      	cmp	r3, r2
+20000d92:	d004      	beq.n	20000d9e <get_silicon_revision+0x22>
+20000d94:	683b      	ldr	r3, [r7, #0]
+20000d96:	4a0a      	ldr	r2, [pc, #40]	; (20000dc0 <get_silicon_revision+0x44>)
+20000d98:	4293      	cmp	r3, r2
+20000d9a:	d003      	beq.n	20000da4 <get_silicon_revision+0x28>
+20000d9c:	e005      	b.n	20000daa <get_silicon_revision+0x2e>
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:924
     {
         case 0x0000F802:
             silicon_revision = M2S050_REV_A_SILICON;
-20000e5e:	2301      	movs	r3, #1
-20000e60:	607b      	str	r3, [r7, #4]
+20000d9e:	2301      	movs	r3, #1
+20000da0:	607b      	str	r3, [r7, #4]
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:925
             break;
-20000e62:	e005      	b.n	20000e70 <get_silicon_revision+0x34>
+20000da2:	e005      	b.n	20000db0 <get_silicon_revision+0x34>
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:928
 
         case 0x0001F802:
             silicon_revision = M2S050_REV_B_SILICON;
-20000e64:	2302      	movs	r3, #2
-20000e66:	607b      	str	r3, [r7, #4]
+20000da4:	2302      	movs	r3, #2
+20000da6:	607b      	str	r3, [r7, #4]
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:929
             break;
-20000e68:	e002      	b.n	20000e70 <get_silicon_revision+0x34>
+20000da8:	e002      	b.n	20000db0 <get_silicon_revision+0x34>
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:932
 
         default:
             silicon_revision = UNKNOWN_SILICON_REV;
-20000e6a:	2300      	movs	r3, #0
-20000e6c:	607b      	str	r3, [r7, #4]
+20000daa:	2300      	movs	r3, #0
+20000dac:	607b      	str	r3, [r7, #4]
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:933
             break;
-20000e6e:	bf00      	nop
+20000dae:	bf00      	nop
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:936
     }
 
     return silicon_revision;
-20000e70:	687b      	ldr	r3, [r7, #4]
+20000db0:	687b      	ldr	r3, [r7, #4]
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:937
 }
-20000e72:	4618      	mov	r0, r3
-20000e74:	370c      	adds	r7, #12
-20000e76:	46bd      	mov	sp, r7
-20000e78:	bc80      	pop	{r7}
-20000e7a:	4770      	bx	lr
-20000e7c:	40038000 	.word	0x40038000
-20000e80:	0001f802 	.word	0x0001f802
+20000db2:	4618      	mov	r0, r3
+20000db4:	370c      	adds	r7, #12
+20000db6:	46bd      	mov	sp, r7
+20000db8:	bc80      	pop	{r7}
+20000dba:	4770      	bx	lr
+20000dbc:	40038000 	.word	0x40038000
+20000dc0:	0001f802 	.word	0x0001f802
 
-20000e84 <silicon_workarounds>:
+20000dc4 <silicon_workarounds>:
 silicon_workarounds():
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:943
 
@@ -4272,29 +4052,29 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
  */
 static void silicon_workarounds(void)
 {
-20000e84:	b580      	push	{r7, lr}
-20000e86:	b082      	sub	sp, #8
-20000e88:	af00      	add	r7, sp, #0
+20000dc4:	b580      	push	{r7, lr}
+20000dc6:	b082      	sub	sp, #8
+20000dc8:	af00      	add	r7, sp, #0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:946
     uint32_t silicon_revision;
 
     silicon_revision = get_silicon_revision();
-20000e8a:	f7ff ffd7 	bl	20000e3c <get_silicon_revision>
-20000e8e:	6078      	str	r0, [r7, #4]
+20000dca:	f7ff ffd7 	bl	20000d7c <get_silicon_revision>
+20000dce:	6078      	str	r0, [r7, #4]
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:948
 
     switch(silicon_revision)
-20000e90:	687b      	ldr	r3, [r7, #4]
-20000e92:	2b01      	cmp	r3, #1
-20000e94:	d102      	bne.n	20000e9c <silicon_workarounds+0x18>
+20000dd0:	687b      	ldr	r3, [r7, #4]
+20000dd2:	2b01      	cmp	r3, #1
+20000dd4:	d102      	bne.n	20000ddc <silicon_workarounds+0x18>
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:951
     {
         case M2S050_REV_A_SILICON:
             m2s050_rev_a_workarounds();
-20000e96:	f000 f807 	bl	20000ea8 <m2s050_rev_a_workarounds>
+20000dd6:	f000 f807 	bl	20000de8 <m2s050_rev_a_workarounds>
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:952
             break;
-20000e9a:	e000      	b.n	20000e9e <silicon_workarounds+0x1a>
+20000dda:	e000      	b.n	20000dde <silicon_workarounds+0x1a>
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:959
         case M2S050_REV_B_SILICON:
             /* Fall through. */
@@ -4302,17 +4082,17 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
             /* Fall through. */
         default:
             break;
-20000e9c:	bf00      	nop
+20000ddc:	bf00      	nop
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:961
     }
 }
-20000e9e:	bf00      	nop
-20000ea0:	3708      	adds	r7, #8
-20000ea2:	46bd      	mov	sp, r7
-20000ea4:	bd80      	pop	{r7, pc}
+20000dde:	bf00      	nop
+20000de0:	3708      	adds	r7, #8
+20000de2:	46bd      	mov	sp, r7
+20000de4:	bd80      	pop	{r7, pc}
 	...
 
-20000ea8 <m2s050_rev_a_workarounds>:
+20000de8 <m2s050_rev_a_workarounds>:
 m2s050_rev_a_workarounds():
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:967
 
@@ -4321,662 +4101,171 @@ C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/
  */
 static void m2s050_rev_a_workarounds(void)
 {
-20000ea8:	b480      	push	{r7}
-20000eaa:	af00      	add	r7, sp, #0
+20000de8:	b480      	push	{r7}
+20000dea:	af00      	add	r7, sp, #0
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:972
     /*--------------------------------------------------------------------------
      * Work around a couple of silicon issues:
      */
     /* DDR_CLK_EN <- 1 */
     SYSREG->MSSDDR_FACC1_CR |= (uint32_t)1 << DDR_CLK_EN_SHIFT;
-20000eac:	4b09      	ldr	r3, [pc, #36]	; (20000ed4 <m2s050_rev_a_workarounds+0x2c>)
-20000eae:	f8d3 3098 	ldr.w	r3, [r3, #152]	; 0x98
-20000eb2:	4a08      	ldr	r2, [pc, #32]	; (20000ed4 <m2s050_rev_a_workarounds+0x2c>)
-20000eb4:	f443 7380 	orr.w	r3, r3, #256	; 0x100
-20000eb8:	f8c2 3098 	str.w	r3, [r2, #152]	; 0x98
+20000dec:	4b09      	ldr	r3, [pc, #36]	; (20000e14 <m2s050_rev_a_workarounds+0x2c>)
+20000dee:	f8d3 3098 	ldr.w	r3, [r3, #152]	; 0x98
+20000df2:	4a08      	ldr	r2, [pc, #32]	; (20000e14 <m2s050_rev_a_workarounds+0x2c>)
+20000df4:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+20000df8:	f8c2 3098 	str.w	r3, [r2, #152]	; 0x98
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:975
 
     /* CONTROLLER_PLL_INIT <- 0 */
     SYSREG->MSSDDR_FACC1_CR = SYSREG->MSSDDR_FACC1_CR & ~CONTROLLER_PLL_INIT_MASK;
-20000ebc:	4b05      	ldr	r3, [pc, #20]	; (20000ed4 <m2s050_rev_a_workarounds+0x2c>)
-20000ebe:	f8d3 3098 	ldr.w	r3, [r3, #152]	; 0x98
-20000ec2:	4a04      	ldr	r2, [pc, #16]	; (20000ed4 <m2s050_rev_a_workarounds+0x2c>)
-20000ec4:	f023 6380 	bic.w	r3, r3, #67108864	; 0x4000000
-20000ec8:	f8c2 3098 	str.w	r3, [r2, #152]	; 0x98
+20000dfc:	4b05      	ldr	r3, [pc, #20]	; (20000e14 <m2s050_rev_a_workarounds+0x2c>)
+20000dfe:	f8d3 3098 	ldr.w	r3, [r3, #152]	; 0x98
+20000e02:	4a04      	ldr	r2, [pc, #16]	; (20000e14 <m2s050_rev_a_workarounds+0x2c>)
+20000e04:	f023 6380 	bic.w	r3, r3, #67108864	; 0x4000000
+20000e08:	f8c2 3098 	str.w	r3, [r2, #152]	; 0x98
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../firmware/CMSIS/system_m2sxxx.c:976
 }
-20000ecc:	bf00      	nop
-20000ece:	46bd      	mov	sp, r7
-20000ed0:	bc80      	pop	{r7}
-20000ed2:	4770      	bx	lr
-20000ed4:	40038000 	.word	0x40038000
+20000e0c:	bf00      	nop
+20000e0e:	46bd      	mov	sp, r7
+20000e10:	bc80      	pop	{r7}
+20000e12:	4770      	bx	lr
+20000e14:	40038000 	.word	0x40038000
 
-20000ed8 <burstError>:
-burstError():
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:123
-    return count;
-}
-
-
-int burstError(base_t* encoder,base_t* decoder,int erros,int wordSize)
-{
-20000ed8:	b580      	push	{r7, lr}
-20000eda:	b08c      	sub	sp, #48	; 0x30
-20000edc:	af00      	add	r7, sp, #0
-20000ede:	60f8      	str	r0, [r7, #12]
-20000ee0:	60b9      	str	r1, [r7, #8]
-20000ee2:	607a      	str	r2, [r7, #4]
-20000ee4:	603b      	str	r3, [r7, #0]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:125
-
-    int count = 0;
-20000ee6:	2300      	movs	r3, #0
-20000ee8:	62fb      	str	r3, [r7, #44]	; 0x2c
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:132
-    int decoded_data;
-    int done,j;
-    int encoded_data;
-    int num;
-
-    int bin = 0b1;
-20000eea:	2301      	movs	r3, #1
-20000eec:	62bb      	str	r3, [r7, #40]	; 0x28
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:133
-    for(int i=0;i<erros-1;i++)
-20000eee:	2300      	movs	r3, #0
-20000ef0:	627b      	str	r3, [r7, #36]	; 0x24
-20000ef2:	e006      	b.n	20000f02 <burstError+0x2a>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:135 (discriminator 3)
-    {
-        bin = (bin << 1) + 1;
-20000ef4:	6abb      	ldr	r3, [r7, #40]	; 0x28
-20000ef6:	005b      	lsls	r3, r3, #1
-20000ef8:	3301      	adds	r3, #1
-20000efa:	62bb      	str	r3, [r7, #40]	; 0x28
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:133 (discriminator 3)
-    for(int i=0;i<erros-1;i++)
-20000efc:	6a7b      	ldr	r3, [r7, #36]	; 0x24
-20000efe:	3301      	adds	r3, #1
-20000f00:	627b      	str	r3, [r7, #36]	; 0x24
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:133 (discriminator 1)
-20000f02:	687b      	ldr	r3, [r7, #4]
-20000f04:	3b01      	subs	r3, #1
-20000f06:	6a7a      	ldr	r2, [r7, #36]	; 0x24
-20000f08:	429a      	cmp	r2, r3
-20000f0a:	dbf3      	blt.n	20000ef4 <burstError+0x1c>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:138
-    }
-
-    for(int i=0;i<1000;i++)
-20000f0c:	2300      	movs	r3, #0
-20000f0e:	623b      	str	r3, [r7, #32]
-20000f10:	e039      	b.n	20000f86 <burstError+0xae>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:140
-    {
-       num = rand() % (2<<(wordSize/2)-1);
-20000f12:	f000 f985 	bl	20001220 <rand>
-20000f16:	4602      	mov	r2, r0
-20000f18:	683b      	ldr	r3, [r7, #0]
-20000f1a:	0fd9      	lsrs	r1, r3, #31
-20000f1c:	440b      	add	r3, r1
-20000f1e:	105b      	asrs	r3, r3, #1
-20000f20:	3b01      	subs	r3, #1
-20000f22:	2102      	movs	r1, #2
-20000f24:	fa01 f303 	lsl.w	r3, r1, r3
-20000f28:	fb92 f1f3 	sdiv	r1, r2, r3
-20000f2c:	fb03 f301 	mul.w	r3, r3, r1
-20000f30:	1ad3      	subs	r3, r2, r3
-20000f32:	61fb      	str	r3, [r7, #28]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:141
-       encoder->IN1 = num;
-20000f34:	69fa      	ldr	r2, [r7, #28]
-20000f36:	68fb      	ldr	r3, [r7, #12]
-20000f38:	601a      	str	r2, [r3, #0]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:142
-       encoded_data = encoder->OUT;
-20000f3a:	68fb      	ldr	r3, [r7, #12]
-20000f3c:	685b      	ldr	r3, [r3, #4]
-20000f3e:	61bb      	str	r3, [r7, #24]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:143
-       posicao = rand() % (wordSize-erros);
-20000f40:	f000 f96e 	bl	20001220 <rand>
-20000f44:	4602      	mov	r2, r0
-20000f46:	6839      	ldr	r1, [r7, #0]
-20000f48:	687b      	ldr	r3, [r7, #4]
-20000f4a:	1acb      	subs	r3, r1, r3
-20000f4c:	fb92 f1f3 	sdiv	r1, r2, r3
-20000f50:	fb03 f301 	mul.w	r3, r3, r1
-20000f54:	1ad3      	subs	r3, r2, r3
-20000f56:	617b      	str	r3, [r7, #20]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:144
-       encoded_data = encoded_data^(bin<<posicao);
-20000f58:	6aba      	ldr	r2, [r7, #40]	; 0x28
-20000f5a:	697b      	ldr	r3, [r7, #20]
-20000f5c:	fa02 f303 	lsl.w	r3, r2, r3
-20000f60:	69ba      	ldr	r2, [r7, #24]
-20000f62:	4053      	eors	r3, r2
-20000f64:	61bb      	str	r3, [r7, #24]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:145
-       decoder->IN1 = encoded_data;
-20000f66:	69ba      	ldr	r2, [r7, #24]
-20000f68:	68bb      	ldr	r3, [r7, #8]
-20000f6a:	601a      	str	r2, [r3, #0]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:146
-       decoded_data = decoder->OUT;
-20000f6c:	68bb      	ldr	r3, [r7, #8]
-20000f6e:	685b      	ldr	r3, [r3, #4]
-20000f70:	613b      	str	r3, [r7, #16]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:147
-       if(decoded_data == num)
-20000f72:	693a      	ldr	r2, [r7, #16]
-20000f74:	69fb      	ldr	r3, [r7, #28]
-20000f76:	429a      	cmp	r2, r3
-20000f78:	d102      	bne.n	20000f80 <burstError+0xa8>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:149
-       {
-           count++;
-20000f7a:	6afb      	ldr	r3, [r7, #44]	; 0x2c
-20000f7c:	3301      	adds	r3, #1
-20000f7e:	62fb      	str	r3, [r7, #44]	; 0x2c
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:138 (discriminator 2)
-    for(int i=0;i<1000;i++)
-20000f80:	6a3b      	ldr	r3, [r7, #32]
-20000f82:	3301      	adds	r3, #1
-20000f84:	623b      	str	r3, [r7, #32]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:138 (discriminator 1)
-20000f86:	6a3b      	ldr	r3, [r7, #32]
-20000f88:	f5b3 7f7a 	cmp.w	r3, #1000	; 0x3e8
-20000f8c:	dbc1      	blt.n	20000f12 <burstError+0x3a>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:154
-       }
-
-
-    }
-    return count;
-20000f8e:	6afb      	ldr	r3, [r7, #44]	; 0x2c
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:155
-}
-20000f90:	4618      	mov	r0, r3
-20000f92:	3730      	adds	r7, #48	; 0x30
-20000f94:	46bd      	mov	sp, r7
-20000f96:	bd80      	pop	{r7, pc}
-
-20000f98 <main>:
+20000e18 <main>:
 main():
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:156
-int main(void){
-20000f98:	b580      	push	{r7, lr}
-20000f9a:	b090      	sub	sp, #64	; 0x40
-20000f9c:	af00      	add	r7, sp, #0
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:157
-    int num = 25;
-20000f9e:	2319      	movs	r3, #25
-20000fa0:	63fb      	str	r3, [r7, #60]	; 0x3c
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:160
-    int encoded_data;
-    int decoded_data;
-    srand(*((volatile unsigned int*)0xE0001004));
-20000fa2:	4b48      	ldr	r3, [pc, #288]	; (200010c4 <main+0x12c>)
-20000fa4:	681b      	ldr	r3, [r3, #0]
-20000fa6:	4618      	mov	r0, r3
-20000fa8:	f000 f916 	bl	200011d8 <srand>
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:163
-
-
-    ENCODER->IN1 = num;
-20000fac:	f04f 5240 	mov.w	r2, #805306368	; 0x30000000
-20000fb0:	6bfb      	ldr	r3, [r7, #60]	; 0x3c
-20000fb2:	6013      	str	r3, [r2, #0]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:164
-    encoded_data = ENCODER->OUT;
-20000fb4:	f04f 5340 	mov.w	r3, #805306368	; 0x30000000
-20000fb8:	685b      	ldr	r3, [r3, #4]
-20000fba:	63bb      	str	r3, [r7, #56]	; 0x38
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:166
-
-    DECODER->IN1 = encoded_data;
-20000fbc:	4a42      	ldr	r2, [pc, #264]	; (200010c8 <main+0x130>)
-20000fbe:	6bbb      	ldr	r3, [r7, #56]	; 0x38
-20000fc0:	6013      	str	r3, [r2, #0]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:167
-    decoded_data = DECODER->OUT;
-20000fc2:	4b41      	ldr	r3, [pc, #260]	; (200010c8 <main+0x130>)
-20000fc4:	685b      	ldr	r3, [r3, #4]
-20000fc6:	637b      	str	r3, [r7, #52]	; 0x34
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:171
-
-    int count;
-
-    int count1 = 0;
-20000fc8:	2300      	movs	r3, #0
-20000fca:	633b      	str	r3, [r7, #48]	; 0x30
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:172
-    int count2 = 0;
-20000fcc:	2300      	movs	r3, #0
-20000fce:	62fb      	str	r3, [r7, #44]	; 0x2c
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:173
-    int count3 = 0;
-20000fd0:	2300      	movs	r3, #0
-20000fd2:	62bb      	str	r3, [r7, #40]	; 0x28
 C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:174
-    int count4 = 0;
-20000fd4:	2300      	movs	r3, #0
-20000fd6:	627b      	str	r3, [r7, #36]	; 0x24
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:175
-    int count5 = 0;
-20000fd8:	2300      	movs	r3, #0
-20000fda:	623b      	str	r3, [r7, #32]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:176
-    int count6 = 0;
-20000fdc:	2300      	movs	r3, #0
-20000fde:	61fb      	str	r3, [r7, #28]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:177
-    int count7 = 0;
-20000fe0:	2300      	movs	r3, #0
-20000fe2:	61bb      	str	r3, [r7, #24]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:178
-    int count8 = 0;
-20000fe4:	2300      	movs	r3, #0
-20000fe6:	617b      	str	r3, [r7, #20]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:179
-    int count9 = 0;
-20000fe8:	2300      	movs	r3, #0
-20000fea:	613b      	str	r3, [r7, #16]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:180
-    int count10 = 0;
-20000fec:	2300      	movs	r3, #0
-20000fee:	60fb      	str	r3, [r7, #12]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:181
-    int count11 = 0;
-20000ff0:	2300      	movs	r3, #0
-20000ff2:	60bb      	str	r3, [r7, #8]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:182
-    int count12 = 0;
-20000ff4:	2300      	movs	r3, #0
-20000ff6:	607b      	str	r3, [r7, #4]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:184
 
-    count1 = burstError(ENCODER, DECODER, 1, 32);
-20000ff8:	2320      	movs	r3, #32
-20000ffa:	2201      	movs	r2, #1
-20000ffc:	4932      	ldr	r1, [pc, #200]	; (200010c8 <main+0x130>)
-20000ffe:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001002:	f7ff ff69 	bl	20000ed8 <burstError>
-20001006:	6338      	str	r0, [r7, #48]	; 0x30
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:185
-    count2 = burstError(ENCODER, DECODER, 2, 32);
-20001008:	2320      	movs	r3, #32
-2000100a:	2202      	movs	r2, #2
-2000100c:	492e      	ldr	r1, [pc, #184]	; (200010c8 <main+0x130>)
-2000100e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001012:	f7ff ff61 	bl	20000ed8 <burstError>
-20001016:	62f8      	str	r0, [r7, #44]	; 0x2c
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:186
-    count3 = burstError(ENCODER, DECODER, 3, 32);
-20001018:	2320      	movs	r3, #32
-2000101a:	2203      	movs	r2, #3
-2000101c:	492a      	ldr	r1, [pc, #168]	; (200010c8 <main+0x130>)
-2000101e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001022:	f7ff ff59 	bl	20000ed8 <burstError>
-20001026:	62b8      	str	r0, [r7, #40]	; 0x28
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:187
-    count4 = burstError(ENCODER, DECODER, 4, 32);
-20001028:	2320      	movs	r3, #32
-2000102a:	2204      	movs	r2, #4
-2000102c:	4926      	ldr	r1, [pc, #152]	; (200010c8 <main+0x130>)
-2000102e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001032:	f7ff ff51 	bl	20000ed8 <burstError>
-20001036:	6278      	str	r0, [r7, #36]	; 0x24
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:188
-    count5 = burstError(ENCODER, DECODER, 5, 32);
-20001038:	2320      	movs	r3, #32
-2000103a:	2205      	movs	r2, #5
-2000103c:	4922      	ldr	r1, [pc, #136]	; (200010c8 <main+0x130>)
-2000103e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001042:	f7ff ff49 	bl	20000ed8 <burstError>
-20001046:	6238      	str	r0, [r7, #32]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:189
-    count6 = burstError(ENCODER, DECODER, 6, 32);
-20001048:	2320      	movs	r3, #32
-2000104a:	2206      	movs	r2, #6
-2000104c:	491e      	ldr	r1, [pc, #120]	; (200010c8 <main+0x130>)
-2000104e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001052:	f7ff ff41 	bl	20000ed8 <burstError>
-20001056:	61f8      	str	r0, [r7, #28]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:190
-    count7 = burstError(ENCODER, DECODER, 7, 32);
-20001058:	2320      	movs	r3, #32
-2000105a:	2207      	movs	r2, #7
-2000105c:	491a      	ldr	r1, [pc, #104]	; (200010c8 <main+0x130>)
-2000105e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001062:	f7ff ff39 	bl	20000ed8 <burstError>
-20001066:	61b8      	str	r0, [r7, #24]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:191
-    count8 = burstError(ENCODER, DECODER, 8, 32);
-20001068:	2320      	movs	r3, #32
-2000106a:	2208      	movs	r2, #8
-2000106c:	4916      	ldr	r1, [pc, #88]	; (200010c8 <main+0x130>)
-2000106e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001072:	f7ff ff31 	bl	20000ed8 <burstError>
-20001076:	6178      	str	r0, [r7, #20]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:192
-    count9 = burstError(ENCODER, DECODER, 9, 32);
-20001078:	2320      	movs	r3, #32
-2000107a:	2209      	movs	r2, #9
-2000107c:	4912      	ldr	r1, [pc, #72]	; (200010c8 <main+0x130>)
-2000107e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001082:	f7ff ff29 	bl	20000ed8 <burstError>
-20001086:	6138      	str	r0, [r7, #16]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:193
-    count10 = burstError(ENCODER, DECODER, 10, 32);
-20001088:	2320      	movs	r3, #32
-2000108a:	220a      	movs	r2, #10
-2000108c:	490e      	ldr	r1, [pc, #56]	; (200010c8 <main+0x130>)
-2000108e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-20001092:	f7ff ff21 	bl	20000ed8 <burstError>
-20001096:	60f8      	str	r0, [r7, #12]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:194
-    count11 = burstError(ENCODER, DECODER, 11, 32);
-20001098:	2320      	movs	r3, #32
-2000109a:	220b      	movs	r2, #11
-2000109c:	490a      	ldr	r1, [pc, #40]	; (200010c8 <main+0x130>)
-2000109e:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-200010a2:	f7ff ff19 	bl	20000ed8 <burstError>
-200010a6:	60b8      	str	r0, [r7, #8]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:195
+
+    }
+    return count;
+}
+int main(void){
+20000e18:	b480      	push	{r7}
+20000e1a:	b089      	sub	sp, #36	; 0x24
+20000e1c:	af00      	add	r7, sp, #0
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:219
     count12 = burstError(ENCODER, DECODER, 12, 32);
-200010a8:	2320      	movs	r3, #32
-200010aa:	220c      	movs	r2, #12
-200010ac:	4906      	ldr	r1, [pc, #24]	; (200010c8 <main+0x130>)
-200010ae:	f04f 5040 	mov.w	r0, #805306368	; 0x30000000
-200010b2:	f7ff ff11 	bl	20000ed8 <burstError>
-200010b6:	6078      	str	r0, [r7, #4]
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:202
+
+    */
+
+       //CLC
+       int num = 25;
+20000e1e:	2319      	movs	r3, #25
+20000e20:	61fb      	str	r3, [r7, #28]
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:224
+       int encoded_data1,encoded_data2;
+       uint64_t encoded_data;
+       int decoded_data;
+
+       ENCODER->IN = num;
+20000e22:	f04f 5240 	mov.w	r2, #805306368	; 0x30000000
+20000e26:	69fb      	ldr	r3, [r7, #28]
+20000e28:	6013      	str	r3, [r2, #0]
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:225
+       encoded_data1 = ENCODER->OUT1;
+20000e2a:	f04f 5340 	mov.w	r3, #805306368	; 0x30000000
+20000e2e:	685b      	ldr	r3, [r3, #4]
+20000e30:	61bb      	str	r3, [r7, #24]
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:226
+       encoded_data2 =  ENCODER->OUT2;
+20000e32:	f04f 5340 	mov.w	r3, #805306368	; 0x30000000
+20000e36:	689b      	ldr	r3, [r3, #8]
+20000e38:	617b      	str	r3, [r7, #20]
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:227
+       encoded_data = encoded_data1 + (encoded_data2<<32);
+20000e3a:	2220      	movs	r2, #32
+20000e3c:	697b      	ldr	r3, [r7, #20]
+20000e3e:	fa03 f202 	lsl.w	r2, r3, r2
+20000e42:	69bb      	ldr	r3, [r7, #24]
+20000e44:	4413      	add	r3, r2
+20000e46:	461a      	mov	r2, r3
+20000e48:	ea4f 73e2 	mov.w	r3, r2, asr #31
+20000e4c:	e9c7 2302 	strd	r2, r3, [r7, #8]
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:230
 
 
-
-
+       DECODER->IN1 = encoded_data1;
+20000e50:	4a07      	ldr	r2, [pc, #28]	; (20000e70 <main+0x58>)
+20000e52:	69bb      	ldr	r3, [r7, #24]
+20000e54:	6013      	str	r3, [r2, #0]
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:231
+       DECODER->IN2 = encoded_data2;
+20000e56:	4a06      	ldr	r2, [pc, #24]	; (20000e70 <main+0x58>)
+20000e58:	697b      	ldr	r3, [r7, #20]
+20000e5a:	6053      	str	r3, [r2, #4]
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:232
+       decoded_data = DECODER->OUT;
+20000e5c:	4b04      	ldr	r3, [pc, #16]	; (20000e70 <main+0x58>)
+20000e5e:	689b      	ldr	r3, [r3, #8]
+20000e60:	607b      	str	r3, [r7, #4]
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:234
 
     return 0;
-200010b8:	2300      	movs	r3, #0
-C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:203
+20000e62:	2300      	movs	r3, #0
+C:\Users\Lesc\Documents\SoftConsoleProjects\test_github\Debug/../main.c:235
 }
-200010ba:	4618      	mov	r0, r3
-200010bc:	3740      	adds	r7, #64	; 0x40
-200010be:	46bd      	mov	sp, r7
-200010c0:	bd80      	pop	{r7, pc}
-200010c2:	bf00      	nop
-200010c4:	e0001004 	.word	0xe0001004
-200010c8:	30001000 	.word	0x30001000
+20000e64:	4618      	mov	r0, r3
+20000e66:	3724      	adds	r7, #36	; 0x24
+20000e68:	46bd      	mov	sp, r7
+20000e6a:	bc80      	pop	{r7}
+20000e6c:	4770      	bx	lr
+20000e6e:	bf00      	nop
+20000e70:	30001000 	.word	0x30001000
 
-200010cc <__libc_init_array>:
+20000e74 <__libc_init_array>:
 __libc_init_array():
-200010cc:	b570      	push	{r4, r5, r6, lr}
-200010ce:	2600      	movs	r6, #0
-200010d0:	4d0c      	ldr	r5, [pc, #48]	; (20001104 <__libc_init_array+0x38>)
-200010d2:	4c0d      	ldr	r4, [pc, #52]	; (20001108 <__libc_init_array+0x3c>)
-200010d4:	1b64      	subs	r4, r4, r5
-200010d6:	10a4      	asrs	r4, r4, #2
-200010d8:	42a6      	cmp	r6, r4
-200010da:	d109      	bne.n	200010f0 <__libc_init_array+0x24>
-200010dc:	f000 f90a 	bl	200012f4 <_init>
-200010e0:	2600      	movs	r6, #0
-200010e2:	4d0a      	ldr	r5, [pc, #40]	; (2000110c <__libc_init_array+0x40>)
-200010e4:	4c0a      	ldr	r4, [pc, #40]	; (20001110 <__libc_init_array+0x44>)
-200010e6:	1b64      	subs	r4, r4, r5
-200010e8:	10a4      	asrs	r4, r4, #2
-200010ea:	42a6      	cmp	r6, r4
-200010ec:	d105      	bne.n	200010fa <__libc_init_array+0x2e>
-200010ee:	bd70      	pop	{r4, r5, r6, pc}
-200010f0:	f855 3b04 	ldr.w	r3, [r5], #4
-200010f4:	4798      	blx	r3
-200010f6:	3601      	adds	r6, #1
-200010f8:	e7ee      	b.n	200010d8 <__libc_init_array+0xc>
-200010fa:	f855 3b04 	ldr.w	r3, [r5], #4
-200010fe:	4798      	blx	r3
-20001100:	3601      	adds	r6, #1
-20001102:	e7f2      	b.n	200010ea <__libc_init_array+0x1e>
-20001104:	2000130c 	.word	0x2000130c
-20001108:	2000130c 	.word	0x2000130c
-2000110c:	2000130c 	.word	0x2000130c
-20001110:	20001310 	.word	0x20001310
+20000e74:	b570      	push	{r4, r5, r6, lr}
+20000e76:	2600      	movs	r6, #0
+20000e78:	4d0c      	ldr	r5, [pc, #48]	; (20000eac <__libc_init_array+0x38>)
+20000e7a:	4c0d      	ldr	r4, [pc, #52]	; (20000eb0 <__libc_init_array+0x3c>)
+20000e7c:	1b64      	subs	r4, r4, r5
+20000e7e:	10a4      	asrs	r4, r4, #2
+20000e80:	42a6      	cmp	r6, r4
+20000e82:	d109      	bne.n	20000e98 <__libc_init_array+0x24>
+20000e84:	f000 f81a 	bl	20000ebc <_init>
+20000e88:	2600      	movs	r6, #0
+20000e8a:	4d0a      	ldr	r5, [pc, #40]	; (20000eb4 <__libc_init_array+0x40>)
+20000e8c:	4c0a      	ldr	r4, [pc, #40]	; (20000eb8 <__libc_init_array+0x44>)
+20000e8e:	1b64      	subs	r4, r4, r5
+20000e90:	10a4      	asrs	r4, r4, #2
+20000e92:	42a6      	cmp	r6, r4
+20000e94:	d105      	bne.n	20000ea2 <__libc_init_array+0x2e>
+20000e96:	bd70      	pop	{r4, r5, r6, pc}
+20000e98:	f855 3b04 	ldr.w	r3, [r5], #4
+20000e9c:	4798      	blx	r3
+20000e9e:	3601      	adds	r6, #1
+20000ea0:	e7ee      	b.n	20000e80 <__libc_init_array+0xc>
+20000ea2:	f855 3b04 	ldr.w	r3, [r5], #4
+20000ea6:	4798      	blx	r3
+20000ea8:	3601      	adds	r6, #1
+20000eaa:	e7f2      	b.n	20000e92 <__libc_init_array+0x1e>
+20000eac:	20000ed4 	.word	0x20000ed4
+20000eb0:	20000ed4 	.word	0x20000ed4
+20000eb4:	20000ed4 	.word	0x20000ed4
+20000eb8:	20000ed8 	.word	0x20000ed8
 
-20001114 <malloc>:
-malloc():
-20001114:	4b02      	ldr	r3, [pc, #8]	; (20001120 <malloc+0xc>)
-20001116:	4601      	mov	r1, r0
-20001118:	6818      	ldr	r0, [r3, #0]
-2000111a:	f000 b803 	b.w	20001124 <_malloc_r>
-2000111e:	bf00      	nop
-20001120:	20001320 	.word	0x20001320
-
-20001124 <_malloc_r>:
-_malloc_r():
-20001124:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
-20001126:	1ccd      	adds	r5, r1, #3
-20001128:	f025 0503 	bic.w	r5, r5, #3
-2000112c:	3508      	adds	r5, #8
-2000112e:	2d0c      	cmp	r5, #12
-20001130:	bf38      	it	cc
-20001132:	250c      	movcc	r5, #12
-20001134:	2d00      	cmp	r5, #0
-20001136:	4606      	mov	r6, r0
-20001138:	db01      	blt.n	2000113e <_malloc_r+0x1a>
-2000113a:	42a9      	cmp	r1, r5
-2000113c:	d903      	bls.n	20001146 <_malloc_r+0x22>
-2000113e:	230c      	movs	r3, #12
-20001140:	6033      	str	r3, [r6, #0]
-20001142:	2000      	movs	r0, #0
-20001144:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
-20001146:	f000 f8af 	bl	200012a8 <__malloc_lock>
-2000114a:	4921      	ldr	r1, [pc, #132]	; (200011d0 <_malloc_r+0xac>)
-2000114c:	680a      	ldr	r2, [r1, #0]
-2000114e:	4614      	mov	r4, r2
-20001150:	b99c      	cbnz	r4, 2000117a <_malloc_r+0x56>
-20001152:	4f20      	ldr	r7, [pc, #128]	; (200011d4 <_malloc_r+0xb0>)
-20001154:	683b      	ldr	r3, [r7, #0]
-20001156:	b923      	cbnz	r3, 20001162 <_malloc_r+0x3e>
-20001158:	4621      	mov	r1, r4
-2000115a:	4630      	mov	r0, r6
-2000115c:	f000 f894 	bl	20001288 <_sbrk_r>
-20001160:	6038      	str	r0, [r7, #0]
-20001162:	4629      	mov	r1, r5
-20001164:	4630      	mov	r0, r6
-20001166:	f000 f88f 	bl	20001288 <_sbrk_r>
-2000116a:	1c43      	adds	r3, r0, #1
-2000116c:	d123      	bne.n	200011b6 <_malloc_r+0x92>
-2000116e:	230c      	movs	r3, #12
-20001170:	4630      	mov	r0, r6
-20001172:	6033      	str	r3, [r6, #0]
-20001174:	f000 f89e 	bl	200012b4 <__malloc_unlock>
-20001178:	e7e3      	b.n	20001142 <_malloc_r+0x1e>
-2000117a:	6823      	ldr	r3, [r4, #0]
-2000117c:	1b5b      	subs	r3, r3, r5
-2000117e:	d417      	bmi.n	200011b0 <_malloc_r+0x8c>
-20001180:	2b0b      	cmp	r3, #11
-20001182:	d903      	bls.n	2000118c <_malloc_r+0x68>
-20001184:	6023      	str	r3, [r4, #0]
-20001186:	441c      	add	r4, r3
-20001188:	6025      	str	r5, [r4, #0]
-2000118a:	e004      	b.n	20001196 <_malloc_r+0x72>
-2000118c:	6863      	ldr	r3, [r4, #4]
-2000118e:	42a2      	cmp	r2, r4
-20001190:	bf0c      	ite	eq
-20001192:	600b      	streq	r3, [r1, #0]
-20001194:	6053      	strne	r3, [r2, #4]
-20001196:	4630      	mov	r0, r6
-20001198:	f000 f88c 	bl	200012b4 <__malloc_unlock>
-2000119c:	f104 000b 	add.w	r0, r4, #11
-200011a0:	1d23      	adds	r3, r4, #4
-200011a2:	f020 0007 	bic.w	r0, r0, #7
-200011a6:	1ac2      	subs	r2, r0, r3
-200011a8:	d0cc      	beq.n	20001144 <_malloc_r+0x20>
-200011aa:	1a1b      	subs	r3, r3, r0
-200011ac:	50a3      	str	r3, [r4, r2]
-200011ae:	e7c9      	b.n	20001144 <_malloc_r+0x20>
-200011b0:	4622      	mov	r2, r4
-200011b2:	6864      	ldr	r4, [r4, #4]
-200011b4:	e7cc      	b.n	20001150 <_malloc_r+0x2c>
-200011b6:	1cc4      	adds	r4, r0, #3
-200011b8:	f024 0403 	bic.w	r4, r4, #3
-200011bc:	42a0      	cmp	r0, r4
-200011be:	d0e3      	beq.n	20001188 <_malloc_r+0x64>
-200011c0:	1a21      	subs	r1, r4, r0
-200011c2:	4630      	mov	r0, r6
-200011c4:	f000 f860 	bl	20001288 <_sbrk_r>
-200011c8:	3001      	adds	r0, #1
-200011ca:	d1dd      	bne.n	20001188 <_malloc_r+0x64>
-200011cc:	e7cf      	b.n	2000116e <_malloc_r+0x4a>
-200011ce:	bf00      	nop
-200011d0:	200013fc 	.word	0x200013fc
-200011d4:	20001400 	.word	0x20001400
-
-200011d8 <srand>:
-srand():
-200011d8:	b538      	push	{r3, r4, r5, lr}
-200011da:	4b0d      	ldr	r3, [pc, #52]	; (20001210 <srand+0x38>)
-200011dc:	4604      	mov	r4, r0
-200011de:	681d      	ldr	r5, [r3, #0]
-200011e0:	6bab      	ldr	r3, [r5, #56]	; 0x38
-200011e2:	b97b      	cbnz	r3, 20001204 <srand+0x2c>
-200011e4:	2018      	movs	r0, #24
-200011e6:	f7ff ff95 	bl	20001114 <malloc>
-200011ea:	4a0a      	ldr	r2, [pc, #40]	; (20001214 <srand+0x3c>)
-200011ec:	4b0a      	ldr	r3, [pc, #40]	; (20001218 <srand+0x40>)
-200011ee:	63a8      	str	r0, [r5, #56]	; 0x38
-200011f0:	e9c0 2300 	strd	r2, r3, [r0]
-200011f4:	4b09      	ldr	r3, [pc, #36]	; (2000121c <srand+0x44>)
-200011f6:	2201      	movs	r2, #1
-200011f8:	6083      	str	r3, [r0, #8]
-200011fa:	230b      	movs	r3, #11
-200011fc:	8183      	strh	r3, [r0, #12]
-200011fe:	2300      	movs	r3, #0
-20001200:	e9c0 2304 	strd	r2, r3, [r0, #16]
-20001204:	2200      	movs	r2, #0
-20001206:	6bab      	ldr	r3, [r5, #56]	; 0x38
-20001208:	611c      	str	r4, [r3, #16]
-2000120a:	615a      	str	r2, [r3, #20]
-2000120c:	bd38      	pop	{r3, r4, r5, pc}
-2000120e:	bf00      	nop
-20001210:	20001320 	.word	0x20001320
-20001214:	abcd330e 	.word	0xabcd330e
-20001218:	e66d1234 	.word	0xe66d1234
-2000121c:	0005deec 	.word	0x0005deec
-
-20001220 <rand>:
-rand():
-20001220:	4b13      	ldr	r3, [pc, #76]	; (20001270 <rand+0x50>)
-20001222:	b510      	push	{r4, lr}
-20001224:	681c      	ldr	r4, [r3, #0]
-20001226:	6ba3      	ldr	r3, [r4, #56]	; 0x38
-20001228:	b97b      	cbnz	r3, 2000124a <rand+0x2a>
-2000122a:	2018      	movs	r0, #24
-2000122c:	f7ff ff72 	bl	20001114 <malloc>
-20001230:	4a10      	ldr	r2, [pc, #64]	; (20001274 <rand+0x54>)
-20001232:	4b11      	ldr	r3, [pc, #68]	; (20001278 <rand+0x58>)
-20001234:	63a0      	str	r0, [r4, #56]	; 0x38
-20001236:	e9c0 2300 	strd	r2, r3, [r0]
-2000123a:	4b10      	ldr	r3, [pc, #64]	; (2000127c <rand+0x5c>)
-2000123c:	2201      	movs	r2, #1
-2000123e:	6083      	str	r3, [r0, #8]
-20001240:	230b      	movs	r3, #11
-20001242:	8183      	strh	r3, [r0, #12]
-20001244:	2300      	movs	r3, #0
-20001246:	e9c0 2304 	strd	r2, r3, [r0, #16]
-2000124a:	6ba1      	ldr	r1, [r4, #56]	; 0x38
-2000124c:	480c      	ldr	r0, [pc, #48]	; (20001280 <rand+0x60>)
-2000124e:	690a      	ldr	r2, [r1, #16]
-20001250:	694b      	ldr	r3, [r1, #20]
-20001252:	4350      	muls	r0, r2
-20001254:	4c0b      	ldr	r4, [pc, #44]	; (20001284 <rand+0x64>)
-20001256:	fb04 0003 	mla	r0, r4, r3, r0
-2000125a:	fba2 3404 	umull	r3, r4, r2, r4
-2000125e:	1c5a      	adds	r2, r3, #1
-20001260:	4404      	add	r4, r0
-20001262:	f144 0000 	adc.w	r0, r4, #0
-20001266:	e9c1 2004 	strd	r2, r0, [r1, #16]
-2000126a:	f020 4000 	bic.w	r0, r0, #2147483648	; 0x80000000
-2000126e:	bd10      	pop	{r4, pc}
-20001270:	20001320 	.word	0x20001320
-20001274:	abcd330e 	.word	0xabcd330e
-20001278:	e66d1234 	.word	0xe66d1234
-2000127c:	0005deec 	.word	0x0005deec
-20001280:	5851f42d 	.word	0x5851f42d
-20001284:	4c957f2d 	.word	0x4c957f2d
-
-20001288 <_sbrk_r>:
-_sbrk_r():
-20001288:	b538      	push	{r3, r4, r5, lr}
-2000128a:	2300      	movs	r3, #0
-2000128c:	4d05      	ldr	r5, [pc, #20]	; (200012a4 <_sbrk_r+0x1c>)
-2000128e:	4604      	mov	r4, r0
-20001290:	4608      	mov	r0, r1
-20001292:	602b      	str	r3, [r5, #0]
-20001294:	f7ff fd74 	bl	20000d80 <_sbrk>
-20001298:	1c43      	adds	r3, r0, #1
-2000129a:	d102      	bne.n	200012a2 <_sbrk_r+0x1a>
-2000129c:	682b      	ldr	r3, [r5, #0]
-2000129e:	b103      	cbz	r3, 200012a2 <_sbrk_r+0x1a>
-200012a0:	6023      	str	r3, [r4, #0]
-200012a2:	bd38      	pop	{r3, r4, r5, pc}
-200012a4:	20001404 	.word	0x20001404
-
-200012a8 <__malloc_lock>:
-__malloc_lock():
-200012a8:	4801      	ldr	r0, [pc, #4]	; (200012b0 <__malloc_lock+0x8>)
-200012aa:	f000 b809 	b.w	200012c0 <__retarget_lock_acquire_recursive>
-200012ae:	bf00      	nop
-200012b0:	2000140c 	.word	0x2000140c
-
-200012b4 <__malloc_unlock>:
-__malloc_unlock():
-200012b4:	4801      	ldr	r0, [pc, #4]	; (200012bc <__malloc_unlock+0x8>)
-200012b6:	f000 b804 	b.w	200012c2 <__retarget_lock_release_recursive>
-200012ba:	bf00      	nop
-200012bc:	2000140c 	.word	0x2000140c
-
-200012c0 <__retarget_lock_acquire_recursive>:
-__retarget_lock_acquire_recursive():
-200012c0:	4770      	bx	lr
-
-200012c2 <__retarget_lock_release_recursive>:
-__retarget_lock_release_recursive():
-200012c2:	4770      	bx	lr
-200012c4:	70616548 	.word	0x70616548
-200012c8:	646e6120 	.word	0x646e6120
-200012cc:	61747320 	.word	0x61747320
-200012d0:	63206b63 	.word	0x63206b63
-200012d4:	696c6c6f 	.word	0x696c6c6f
-200012d8:	6e6f6973 	.word	0x6e6f6973
-200012dc:	0000000a 	.word	0x0000000a
-200012e0:	2074754f 	.word	0x2074754f
-200012e4:	6820666f 	.word	0x6820666f
-200012e8:	20706165 	.word	0x20706165
-200012ec:	6f6d656d 	.word	0x6f6d656d
-200012f0:	000a7972 	.word	0x000a7972
-
-200012f4 <_init>:
+20000ebc <_init>:
 _init():
-200012f4:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
-200012f6:	bf00      	nop
-200012f8:	bcf8      	pop	{r3, r4, r5, r6, r7}
-200012fa:	bc08      	pop	{r3}
-200012fc:	469e      	mov	lr, r3
-200012fe:	4770      	bx	lr
+20000ebc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+20000ebe:	bf00      	nop
+20000ec0:	bcf8      	pop	{r3, r4, r5, r6, r7}
+20000ec2:	bc08      	pop	{r3}
+20000ec4:	469e      	mov	lr, r3
+20000ec6:	4770      	bx	lr
 
-20001300 <_fini>:
+20000ec8 <_fini>:
 _fini():
-20001300:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
-20001302:	bf00      	nop
-20001304:	bcf8      	pop	{r3, r4, r5, r6, r7}
-20001306:	bc08      	pop	{r3}
-20001308:	469e      	mov	lr, r3
-2000130a:	4770      	bx	lr
+20000ec8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+20000eca:	bf00      	nop
+20000ecc:	bcf8      	pop	{r3, r4, r5, r6, r7}
+20000ece:	bc08      	pop	{r3}
+20000ed0:	469e      	mov	lr, r3
+20000ed2:	4770      	bx	lr
 
-2000130c <__frame_dummy_init_array_entry>:
+20000ed4 <__frame_dummy_init_array_entry>:
 __preinit_array_start():
-2000130c:	04d5 2000                                   ... 
+20000ed4:	04d5 2000                                   ... 
 
-20001310 <__do_global_dtors_aux_fini_array_entry>:
+20000ed8 <__do_global_dtors_aux_fini_array_entry>:
 __init_array_end():
-20001310:	04b1 2000 0000 0000 0000 0000 0000 0000     ... ............
+20000ed8:	04b1 2000 0000 0000                         ... ....

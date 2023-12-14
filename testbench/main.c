@@ -5,7 +5,7 @@
  *      Author: Lesc
  */
 
-/*
+/*//teste leds piscando
 #include "firmware/drivers/mss_gpio/mss_gpio.h"
 #include "firmware/CMSIS/system_m2sxxx.h"
 
@@ -61,16 +61,34 @@ int main(void)
 
 
 #include <stdlib.h>
+#include <stdint.h>
 #include "firmware/drivers/mss_gpio/mss_gpio.h"
 #include "firmware/CMSIS/system_m2sxxx.h"
 
+//para o TBEC-RSC
 typedef struct{
     __IO uint32_t IN1;
     __IO uint32_t OUT;
 }base_t;
 
-#define ENCODER ((base_t *) 0x30000000)
-#define DECODER ((base_t *) 0x30001000)
+//#define ENCODER ((base_t *) 0x30000000)
+//#define DECODER ((base_t *) 0x30001000)
+
+//para o CLC
+typedef struct{
+    __IO uint32_t IN;
+    __IO uint32_t OUT1;
+    __IO uint32_t OUT2;
+}clc_encoder;
+
+typedef struct{
+    __IO uint32_t IN1;
+    __IO uint32_t IN2;
+    __IO uint32_t OUT;
+}clc_decoder;
+
+#define ENCODER ((clc_encoder *) 0x30000000)
+#define DECODER ((clc_decoder *) 0x30001000)
 
 int jaEstaNoVetor(int vetor[], int tamanho, int numero)
 {
@@ -154,12 +172,13 @@ int burstError(base_t* encoder,base_t* decoder,int erros,int wordSize)
     return count;
 }
 int main(void){
+    /*
     int num = 25;
     int encoded_data;
     int decoded_data;
     srand(*((volatile unsigned int*)0xE0001004));
 
-
+    //TBEC-RSC
     ENCODER->IN1 = num;
     encoded_data = ENCODER->OUT;
 
@@ -194,10 +213,23 @@ int main(void){
     count11 = burstError(ENCODER, DECODER, 11, 32);
     count12 = burstError(ENCODER, DECODER, 12, 32);
 
+    */
+
+       //CLC
+       int num = 25;
+       int encoded_data1,encoded_data2;
+       uint64_t encoded_data;
+       int decoded_data;
+
+       ENCODER->IN = num;
+       encoded_data1 = ENCODER->OUT1;
+       encoded_data2 =  ENCODER->OUT2;
+       encoded_data = encoded_data1 + (encoded_data2<<32);
 
 
-
-
+       DECODER->IN1 = encoded_data1;
+       DECODER->IN2 = encoded_data2;
+       decoded_data = DECODER->OUT;
 
     return 0;
 }

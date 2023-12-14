@@ -1,0 +1,153 @@
+Resource Report
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+Date: Mon Dec 11 11:43:51 2023
+
+Device Selection
++--------------------------------+----------------+
+| Family                         | SmartFusion2   |
+| Device                         | M2S010         |
+| Package                        | 144 TQ         |
+| Speed Grade                    | STD            |
+| Temp                           | 0:25:85        |
+| Voltage                        | 1.26:1.20:1.14 |
+| Core Voltage                   | 1.2V           |
+| Ramp Rate                      | 100ms Minimum  |
+| System Controller Suspend Mode | No             |
+| PLL Supply Voltage             | 2.5V           |
+| Default I/O technology         | LVCMOS 2.5V    |
+| Restrict Probe Pins            | Yes            |
+| Restrict SPI Pins              | No             |
++--------------------------------+----------------+
+
+Source Files
++---------+-----------------------------------------------------------------------------------+
+| Topcell | led_blink_mss2                                                                    |
+| Format  | Verilog                                                                           |
+| Source  | C:\Users\Lesc\Documents\LiberoProjects\led_blink_mss2\synthesis\led_blink_mss2.vm |
++---------+-----------------------------------------------------------------------------------+
+
+Options
++----------------------------------------------------+-------+
+| Enable Single Event Transient mitigation           | false |
+| Enable Design Separation Methodology               | false |
+| Limit the number of high fanout nets to display to | 10    |
++----------------------------------------------------+-------+
+
+Resource Usage
++---------------------------+------+-------+------------+
+| Type                      | Used | Total | Percentage |
++---------------------------+------+-------+------------+
+| 4LUT                      | 1    | 12084 | 0.01       |
+| DFF                       | 0    | 12084 | 0.00       |
+| I/O Register              | 0    | 252   | 0.00       |
+| User I/O                  | 1    | 84    | 1.19       |
+| -- Single-ended I/O       | 1    | 84    | 1.19       |
+| -- Differential I/O Pairs | 0    | 37    | 0.00       |
+| RAM64x18                  | 0    | 22    | 0.00       |
+| RAM1K18                   | 0    | 21    | 0.00       |
+| MACC                      | 0    | 22    | 0.00       |
+| Chip Globals              | 1    | 8     | 12.50      |
+| CCC                       | 1    | 2     | 50.00      |
+| RCOSC_25_50MHZ            | 1    | 1     | 100.00     |
+| RCOSC_1MHZ                | 0    | 1     | 0.00       |
+| XTLOSC                    | 0    | 1     | 0.00       |
+| MSS                       | 1    | 1     | 100.00     |
++---------------------------+------+-------+------------+
+
+Detailed Logic Resource Usage
++--------------------------+------+-----+
+| Type                     | 4LUT | DFF |
++--------------------------+------+-----+
+| Fabric Logic             | 1    | 0   |
+| RAM64x18 Interface Logic | 0    | 0   |
+| RAM1K18 Interface Logic  | 0    | 0   |
+| MACC Interface Logic     | 0    | 0   |
+| Total Used               | 1    | 0   |
++--------------------------+------+-----+
+
+MSS Resource Usage
++---------------+------+-------+
+| Type          | Used | Total |
++---------------+------+-------+
+| Cortex-M3*    | 1    | 1     |
+| eNVM (256KB)* | 1    | 1     |
+| eSRAM*        | 2    | 2     |
+| TIMER*        | 2    | 2     |
+| CAN           | 0    | 1     |
+| SPI           | 0    | 2     |
+| I2C           | 0    | 2     |
+| UART          | 0    | 2     |
+| USB           | 0    | 1     |
+| MAC           | 0    | 1     |
+| MDDR          | 0    | 1     |
+| HPDMA         | 1    | 1     |
+| PDMA          | 1    | 1     |
++---------------+------+-------+
+
+* These resources are always marked as used when you are using the MSS
+
+I/O Function
++-------------------------------+--------------+-------------+-----------------+
+| Type                          | w/o register | w/ register | w/ DDR register |
++-------------------------------+--------------+-------------+-----------------+
+| Input I/O                     | 0            | 0           | 0               |
+| Output I/O                    | 1            | 0           | 0               |
+| Bidirectional I/O             | 0            | 0           | 0               |
+| Differential Input I/O Pairs  | 0            | 0           | 0               |
+| Differential Output I/O Pairs | 0            | 0           | 0               |
++-------------------------------+--------------+-------------+-----------------+
+
+I/O Technology
++--------------+--------+------+-------+--------+---------------+
+| I/O Standard | Vddi   | Vref | Input | Output | Bidirectional |
++--------------+--------+------+-------+--------+---------------+
+| LVCMOS25     |  2.50v |  N/A |  0    |  1     |  0            |
++--------------+--------+------+-------+--------+---------------+
+
+Nets assigned to chip global resources
++--------+---------+----------------------------------------------------+
+| Fanout | Type    | Name                                               |
++--------+---------+----------------------------------------------------+
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0/GL0_INST               |
+|        |         | Driver: led_blink_mss2_sb_0/CCC_0/GL0_INST/U0_RGB1 |
+|        |         | Source: NETLIST                                    |
++--------+---------+----------------------------------------------------+
+
+Nets assigned to row global resources
++--------+------+------+
+| Fanout | Type | Name |
++--------+------+------+
++--------+------+------+
+
+High fanout nets
++--------+---------+------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                               |
++--------+---------+------------------------------------------------------------------------------------+
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0_GPIO_7_M2F_i                                           |
+|        |         | Driver: led_blink_mss2_sb_0/led_blink_mss2_sb_MSS_0/MSS_ADLIB_INST_RNIFLR5         |
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0/LOCK                                                   |
+|        |         | Driver: led_blink_mss2_sb_0/CCC_0/CCC_INST                                         |
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0/CCC_0/GL0_INST/U0_YNn                                  |
+|        |         | Driver: led_blink_mss2_sb_0/CCC_0/GL0_INST                                         |
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0/led_blink_mss2_sb_MSS_0/led_blink_mss2_sb_0_GPIO_7_M2F |
+|        |         | Driver: led_blink_mss2_sb_0/led_blink_mss2_sb_MSS_0/MSS_ADLIB_INST                 |
+| 1      | INT_NET | Net   : ff_to_start_net                                                            |
+|        |         | Driver: flash_freeze_inst/INST_FLASH_FREEZE_IP                                     |
++--------+---------+------------------------------------------------------------------------------------+
+
+High fanout nets (through buffer trees)
++--------+---------+------------------------------------------------------------------------------------+
+| Fanout | Type    | Name                                                                               |
++--------+---------+------------------------------------------------------------------------------------+
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0_GPIO_7_M2F_i                                           |
+|        |         | Driver: led_blink_mss2_sb_0/led_blink_mss2_sb_MSS_0/MSS_ADLIB_INST_RNIFLR5         |
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0/LOCK                                                   |
+|        |         | Driver: led_blink_mss2_sb_0/CCC_0/CCC_INST                                         |
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0/CCC_0/GL0_INST/U0_YNn                                  |
+|        |         | Driver: led_blink_mss2_sb_0/CCC_0/GL0_INST                                         |
+| 1      | INT_NET | Net   : led_blink_mss2_sb_0/led_blink_mss2_sb_MSS_0/led_blink_mss2_sb_0_GPIO_7_M2F |
+|        |         | Driver: led_blink_mss2_sb_0/led_blink_mss2_sb_MSS_0/MSS_ADLIB_INST                 |
+| 1      | INT_NET | Net   : ff_to_start_net                                                            |
+|        |         | Driver: flash_freeze_inst/INST_FLASH_FREEZE_IP                                     |
++--------+---------+------------------------------------------------------------------------------------+
+

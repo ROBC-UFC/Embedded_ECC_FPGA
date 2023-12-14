@@ -1,0 +1,231 @@
+
+Copyright (C) 1994-2022 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: T-2022.09M-SP2-1
+Install: C:\Microchip\Libero_SoC_v2023.2\SynplifyPro
+OS: Windows 10 or later
+Hostname: DESKTOP-OUF4AF5
+
+Implementation : synthesis
+
+#### START OF AREA REPORT #####[
+
+Part:			M2S010VF400STD (Microchip)
+
+-------------------------------------------------------------------------------
+########   Utilization report for  Top level view:   prj_hamming_apb   ########
+===============================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      163                100 %                
+=================================================
+Total SEQUENTIAL ELEMENTS in the block prj_hamming_apb:	163 (33.61 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           292                100 %                
+BLACK BOX     4                  100 %                
+======================================================
+Total COMBINATIONAL LOGIC in the block prj_hamming_apb:	296 (61.03 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  100 %                
+===================================================
+Total GLOBAL BUFFERS in the block prj_hamming_apb:	1 (0.21 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+IO       1                  100 %                
+=================================================
+Total IO PADS in the block prj_hamming_apb:	1 (0.21 % Utilization)
+
+----------------------------------------------------------------
+########   Utilization report for  cell:   Decoder_ip   ########
+Instance path:   prj_hamming_apb.Decoder_ip                     
+================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      96                 58.9 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block prj_hamming_apb.Decoder_ip:	96 (19.79 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      184                63 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block prj_hamming_apb.Decoder_ip:	184 (37.94 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   decodificador   ########
+Instance path:   Decoder_ip.decodificador                          
+===================================================================
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      100                34.2 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block Decoder_ip.decodificador:	100 (20.62 % Utilization)
+
+--------------------------------------------------------------
+########   Utilization report for  cell:   adder_ip   ########
+Instance path:   prj_hamming_apb.adder_ip                     
+==============================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      64                 39.3 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block prj_hamming_apb.adder_ip:	64 (13.20 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      73                 25 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block prj_hamming_apb.adder_ip:	73 (15.05 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   codificador   ########
+Instance path:   adder_ip.codificador                            
+=================================================================
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      18                 6.16 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block adder_ip.codificador:	18 (3.71 % Utilization)
+
+------------------------------------------------------------------------
+########   Utilization report for  cell:   prj_hamming_apb_sb   ########
+Instance path:   prj_hamming_apb.prj_hamming_apb_sb                     
+========================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      3                  1.84 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block prj_hamming_apb.prj_hamming_apb_sb:	3 (0.62 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           35                 12 %                 
+BLACK BOX     4                  100 %                
+======================================================
+Total COMBINATIONAL LOGIC in the block prj_hamming_apb.prj_hamming_apb_sb:	39 (8.04 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  100 %                
+===================================================
+Total GLOBAL BUFFERS in the block prj_hamming_apb.prj_hamming_apb_sb:	1 (0.21 % Utilization)
+
+-----------------------------------------------------------------
+########   Utilization report for  cell:   CoreAPB3_Z1   ########
+Instance path:   prj_hamming_apb_sb.CoreAPB3_Z1                  
+=================================================================
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      32                 11 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block prj_hamming_apb_sb.CoreAPB3_Z1:	32 (6.60 % Utilization)
+
+-----------------------------------------------------------------------
+########   Utilization report for  cell:   COREAPB3_MUXPTOB3   ########
+Instance path:   CoreAPB3_Z1.COREAPB3_MUXPTOB3                         
+=======================================================================
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+CFG      32                 11 %                 
+=================================================
+Total COMBINATIONAL LOGIC in the block CoreAPB3_Z1.COREAPB3_MUXPTOB3:	32 (6.60 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   CoreResetP_Z2   ########
+Instance path:   prj_hamming_apb_sb.CoreResetP_Z2                  
+===================================================================
+
+SEQUENTIAL ELEMENTS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+SLE      3                  1.84 %               
+=================================================
+Total SEQUENTIAL ELEMENTS in the block prj_hamming_apb_sb.CoreResetP_Z2:	3 (0.62 % Utilization)
+
+-----------------------------------------------------------------------------------
+########   Utilization report for  cell:   prj_hamming_apb_sb_CCC_0_FCCC   ########
+Instance path:   prj_hamming_apb_sb.prj_hamming_apb_sb_CCC_0_FCCC                  
+===================================================================================
+
+COMBINATIONAL LOGIC
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+BLACK BOX     1                  25 %                 
+======================================================
+Total COMBINATIONAL LOGIC in the block prj_hamming_apb_sb.prj_hamming_apb_sb_CCC_0_FCCC:	1 (0.21 % Utilization)
+
+
+GLOBAL BUFFERS
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+GLOBAL     1                  100 %                
+===================================================
+Total GLOBAL BUFFERS in the block prj_hamming_apb_sb.prj_hamming_apb_sb_CCC_0_FCCC:	1 (0.21 % Utilization)
+
+-------------------------------------------------------------------------------------
+########   Utilization report for  cell:   prj_hamming_apb_sb_FABOSC_0_OSC   ########
+Instance path:   prj_hamming_apb_sb.prj_hamming_apb_sb_FABOSC_0_OSC                  
+=====================================================================================
+
+COMBINATIONAL LOGIC
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+BLACK BOX     1                  25 %                 
+======================================================
+Total COMBINATIONAL LOGIC in the block prj_hamming_apb_sb.prj_hamming_apb_sb_FABOSC_0_OSC:	1 (0.21 % Utilization)
+
+----------------------------------------------------------------------------
+########   Utilization report for  cell:   prj_hamming_apb_sb_MSS   ########
+Instance path:   prj_hamming_apb_sb.prj_hamming_apb_sb_MSS                  
+============================================================================
+
+COMBINATIONAL LOGIC
+Name          Total elements     Utilization     Notes
+------------------------------------------------------
+CFG           3                  1.03 %               
+BLACK BOX     1                  25 %                 
+======================================================
+Total COMBINATIONAL LOGIC in the block prj_hamming_apb_sb.prj_hamming_apb_sb_MSS:	4 (0.82 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

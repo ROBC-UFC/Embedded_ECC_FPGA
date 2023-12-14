@@ -1,0 +1,13 @@
+Software Version: 2023.2.0.8
+Opened 'C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - CLC\designer\prj_hamming_apb\prj_hamming_apb_fp\prj_hamming_apb.pro'
+PDB file 'C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - CLC\designer\prj_hamming_apb\prj_hamming_apb.pdb' has been loaded successfully.
+DESIGN : prj_hamming_apb;  CHECKSUM : 49A2;  PDB_VERSION : 1.9
+Info: Programming Interface selected is JTAG.
+File/Folder 'C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - CLC\designer\prj_hamming_apb\prj_hamming_apb.ppd' will be overwritten.
+Successfully exported PPD file for currently secured device: 'C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - CLC\designer\prj_hamming_apb\prj_hamming_apb.ppd'; file programs Fabric.
+Fabric component bitstream digest: 83016bdbcb7dfbfd280d7e70350bb1f21fc7884eb17dc181726fcc8375000a89
+Entire bitstream digest: e9fce9441e0b7e796bde4a721f56243eea1dca0af7e91ec4613aed027407023f
+Finished: Wed Dec 13 21:31:12 2023 (Elapsed time 00:00:07)
+
+Project saved.
+Project closed.

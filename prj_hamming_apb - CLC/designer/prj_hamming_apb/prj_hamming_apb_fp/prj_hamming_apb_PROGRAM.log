@@ -1,0 +1,42 @@
+Software Version: 2023.2.0.8
+Programmer 'E20026I87K' : JTAG TCK / SPI SCK frequency = 1 MHz
+programmer 'E20026I87K' : FlashPro5
+Opened 'C:\Users\Lesc\Documents\LiberoProjects\prj_hamming_apb - CLC\designer\prj_hamming_apb\prj_hamming_apb_fp\prj_hamming_apb.pro'
+The 'open_project' command succeeded.
+Info: Programming is already enabled for device 'M2S010'.
+The 'enable_device' command succeeded.
+PPD file 'C:/Users/Lesc/Documents/LiberoProjects/prj_hamming_apb - CLC/designer/prj_hamming_apb/prj_hamming_apb.ppd' has been loaded successfully.
+DESIGN : prj_hamming_apb;  CHECKSUM : 49A2;  PDB_VERSION : 1.0
+The 'set_programming_file' command succeeded.
+The 'set_programming_action' command succeeded.
+programmer 'E20026I87K' : Scan Chain...
+Programmer 'E20026I87K' : JTAG TCK / SPI SCK frequency = 1 MHz
+programmer 'E20026I87K' : Check Chain...
+programmer 'E20026I87K' : Scan and Check Chain PASSED.
+programmer 'E20026I87K' : device 'M2S010' : Executing action PROGRAM
+Programmer 'E20026I87K' : JTAG TCK / SPI SCK frequency = 4 MHz
+programmer 'E20026I87K' : device 'M2S010' : Family: Igloo2
+programmer 'E20026I87K' : device 'M2S010' : Product:      M2GL005
+programmer 'E20026I87K' : device 'M2S010' : Cortex-M3 Disabled (M3_ALLOWED = 0)
+programmer 'E20026I87K' : device 'M2S010' : Programming Interface Protocol: JTAG
+programmer 'E20026I87K' : device 'M2S010' : EXPORT ISC_ENABLE_RESULT[32] = 00776644
+programmer 'E20026I87K' : device 'M2S010' : EXPORT CRCERR[1] = 0
+programmer 'E20026I87K' : device 'M2S010' : EXPORT EDCERR[1] = 0
+programmer 'E20026I87K' : device 'M2S010' : Programming FPGA Array...
+programmer 'E20026I87K' : device 'M2S010' : EXPORT Fabric component digest[256] = 83016bdbcb7dfbfd280d7e70350bb1f21fc7884eb17dc181726fcc8375000a89
+programmer 'E20026I87K' : device 'M2S010' : ===================================================================================
+programmer 'E20026I87K' : device 'M2S010' : EXPORT DSN[128] = 15e3aeb211de80e03edd43116bd0e693
+programmer 'E20026I87K' : device 'M2S010' : ===================================================================================
+programmer 'E20026I87K' : device 'M2S010' : Finished: Wed Dec 13 21:31:54 2023 (Elapsed time 00:00:25)
+programmer 'E20026I87K' : device 'M2S010' : Executing action PROGRAM PASSED.
+programmer 'E20026I87K' : Chain programming PASSED.
+Chain Programming Finished: Wed Dec 13 21:31:54 2023 (Elapsed time 00:00:25)
+
+                        o - o - o - o - o - o
+
+The 'run_selected_actions' command succeeded.
+Project saved.
+The 'save_project' command succeeded.
+Project closed.
+The 'close_project' command succeeded.
+The Execute Script command succeeded.
