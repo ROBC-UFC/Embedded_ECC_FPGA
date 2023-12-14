@@ -90,13 +90,8 @@ typedef struct{
 #define ENCODER_CLC ((clc_encoder *) 0x30000000)
 #define DECODER_CLC ((clc_decoder *) 0x30001000)
 
-void delay()
-{
-    int d = SystemCoreClock / 2;
 
-    while (d-- > 0)
-        ;
-}
+/*
 int jaEstaNoVetor(int vetor[], int tamanho, int numero)
 {
     for (int i = 0; i < tamanho; ++i)
@@ -142,7 +137,7 @@ int randomError(int num,int in,base_t* decoder,int erros, int wordSize)
     free(posicoes);
     return count;
 }
-
+*/
 
 int burstErrorRSC(base_t* encoder,base_t* decoder,int erros)
 {
@@ -161,7 +156,7 @@ int burstErrorRSC(base_t* encoder,base_t* decoder,int erros)
        num = rand() % (1<<16);
        encoder->IN1 = num;
        encoded_data = encoder->OUT;
-       posicao = rand() % (32-erros) + 1;
+       posicao = rand() % (32-erros+1);
        encoded_data = encoded_data^(bin<<posicao);
        decoder->IN1 = encoded_data;
        decoded_data = decoder->OUT;
@@ -196,7 +191,7 @@ int burstErrorCLC(clc_encoder* encoder,clc_decoder* decoder,int erros)
        encoded_data2 =  encoder->OUT2;
        encoded_data = ((uint64_t)encoded_data2 << 32) | encoded_data1;
 
-       posicao = rand() % (40-erros) + 1;
+       posicao = rand() % (40-erros+1);
        encoded_data = encoded_data^(bin<<posicao);
 
        encoded_data1 = (uint32_t)(encoded_data & 0xFFFFFFFF);
