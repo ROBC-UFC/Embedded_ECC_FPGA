@@ -71,8 +71,8 @@ typedef struct{
     __IO uint32_t OUT;
 }base_t;
 
-//#define ENCODER ((base_t *) 0x30000000)
-//#define DECODER ((base_t *) 0x30001000)
+#define ENCODER_RSC ((base_t *) 0x30000000)
+#define DECODER_RSC ((base_t *) 0x30001000)
 
 //para o CLC
 typedef struct{
@@ -87,9 +87,16 @@ typedef struct{
     __IO uint32_t OUT;
 }clc_decoder;
 
-#define ENCODER ((clc_encoder *) 0x30000000)
-#define DECODER ((clc_decoder *) 0x30001000)
+#define ENCODER_CLC ((clc_encoder *) 0x30000000)
+#define DECODER_CLC ((clc_decoder *) 0x30001000)
 
+void delay()
+{
+    int d = SystemCoreClock / 2;
+
+    while (d-- > 0)
+        ;
+}
 int jaEstaNoVetor(int vetor[], int tamanho, int numero)
 {
     for (int i = 0; i < tamanho; ++i)
@@ -137,28 +144,24 @@ int randomError(int num,int in,base_t* decoder,int erros, int wordSize)
 }
 
 
-int burstError(base_t* encoder,base_t* decoder,int erros,int wordSize)
+int burstErrorRSC(base_t* encoder,base_t* decoder,int erros)
 {
 
     int count = 0;
     int posicao;
     int decoded_data;
-    int done,j;
     int encoded_data;
     int num;
 
     int bin = 0b1;
-    for(int i=0;i<erros-1;i++)
-    {
-        bin = (bin << 1) + 1;
-    }
+    bin = (bin<<erros)-1;
 
     for(int i=0;i<1000;i++)
     {
-       num = rand() % (2<<(wordSize/2)-1);
+       num = rand() % (1<<16);
        encoder->IN1 = num;
        encoded_data = encoder->OUT;
-       posicao = rand() % (wordSize-erros);
+       posicao = rand() % (32-erros) + 1;
        encoded_data = encoded_data^(bin<<posicao);
        decoder->IN1 = encoded_data;
        decoded_data = decoder->OUT;
@@ -171,19 +174,58 @@ int burstError(base_t* encoder,base_t* decoder,int erros,int wordSize)
     }
     return count;
 }
+
+
+int burstErrorCLC(clc_encoder* encoder,clc_decoder* decoder,int erros)
+{
+
+    int count = 0;
+    int posicao;
+    uint32_t num;
+    uint32_t encoded_data1,encoded_data2;
+    uint64_t encoded_data;
+    uint32_t decoded_data;
+
+    uint64_t bin = (1ULL << erros) - 1;
+
+    for(int i=0;i<1000;i++)
+    {
+       num = rand() % (1<<16);
+       encoder->IN = num;
+       encoded_data1 = encoder->OUT1;
+       encoded_data2 =  encoder->OUT2;
+       encoded_data = ((uint64_t)encoded_data2 << 32) | encoded_data1;
+
+       posicao = rand() % (40-erros) + 1;
+       encoded_data = encoded_data^(bin<<posicao);
+
+       encoded_data1 = (uint32_t)(encoded_data & 0xFFFFFFFF);
+       encoded_data2 =  (uint32_t)(encoded_data>>32);
+       decoder->IN1 = encoded_data1;
+       decoder->IN2 = encoded_data2;
+       decoded_data = decoder->OUT;
+       if(decoded_data == num)
+       {
+           count++;
+       }
+
+
+    }
+    return count;
+}
 int main(void){
-    /*
+/*
     int num = 25;
     int encoded_data;
     int decoded_data;
-    srand(*((volatile unsigned int*)0xE0001004));
+    srand(10);
 
     //TBEC-RSC
-    ENCODER->IN1 = num;
-    encoded_data = ENCODER->OUT;
+    ENCODER_RSC->IN1 = num;
+    encoded_data = ENCODER_RSC->OUT;
 
-    DECODER->IN1 = encoded_data;
-    decoded_data = DECODER->OUT;
+    DECODER_RSC->IN1 = encoded_data;
+    decoded_data = DECODER_RSC->OUT;
 
     int count;
 
@@ -200,36 +242,70 @@ int main(void){
     int count11 = 0;
     int count12 = 0;
 
-    count1 = burstError(ENCODER, DECODER, 1, 32);
-    count2 = burstError(ENCODER, DECODER, 2, 32);
-    count3 = burstError(ENCODER, DECODER, 3, 32);
-    count4 = burstError(ENCODER, DECODER, 4, 32);
-    count5 = burstError(ENCODER, DECODER, 5, 32);
-    count6 = burstError(ENCODER, DECODER, 6, 32);
-    count7 = burstError(ENCODER, DECODER, 7, 32);
-    count8 = burstError(ENCODER, DECODER, 8, 32);
-    count9 = burstError(ENCODER, DECODER, 9, 32);
-    count10 = burstError(ENCODER, DECODER, 10, 32);
-    count11 = burstError(ENCODER, DECODER, 11, 32);
-    count12 = burstError(ENCODER, DECODER, 12, 32);
+    count1 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 1);
+    count2 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 2);
+    count3 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 3);
+    count4 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 4);
+    count5 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 5);
+    count6 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 6);
+    count7 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 7);
+    count8 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 8);
+    count9 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 9);
+    count10 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 10);
+    count11 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 11);
+    count12 = burstErrorRSC(ENCODER_RSC, DECODER_RSC, 12);
 
     */
 
        //CLC
-       int num = 25;
-       int encoded_data1,encoded_data2;
+       uint32_t num = 43885;
+       uint32_t encoded_data1,encoded_data2;
        uint64_t encoded_data;
-       int decoded_data;
+       uint32_t decoded_data;
+       srand(35);
 
-       ENCODER->IN = num;
-       encoded_data1 = ENCODER->OUT1;
-       encoded_data2 =  ENCODER->OUT2;
-       encoded_data = encoded_data1 + (encoded_data2<<32);
+       ENCODER_CLC->IN = num;
+       encoded_data1 = ENCODER_CLC->OUT1;
+       encoded_data2 =  ENCODER_CLC->OUT2;
+       encoded_data = (((uint64_t)encoded_data2 << 32)) | encoded_data1;
+
+       encoded_data = encoded_data^((uint64_t)0b11<<33);
 
 
-       DECODER->IN1 = encoded_data1;
-       DECODER->IN2 = encoded_data2;
-       decoded_data = DECODER->OUT;
+       encoded_data1 = (uint32_t)(encoded_data & 0xFFFFFFFF);
+       encoded_data2 =  (uint32_t)(encoded_data>>32);
+       DECODER_CLC->IN1 = encoded_data1;
+       DECODER_CLC->IN2 = encoded_data2;
+       decoded_data = DECODER_CLC->OUT;
+
+       int count1 = 0;
+       int count2 = 0;
+       int count3 = 0;
+       int count4 = 0;
+       int count5 = 0;
+       int count6 = 0;
+       int count7 = 0;
+       int count8 = 0;
+       int count9 = 0;
+       int count10 = 0;
+       int count11 = 0;
+       int count12 = 0;
+
+
+       count1 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 1);
+       count2 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 2);
+       count3 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 3);
+       count4 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 4);
+       count5 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 5);
+       count6 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 6);
+       count7 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 7);
+       count8 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 8);
+       count9 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 9);
+       count10 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 10);
+       count11 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 11);
+       count12 = burstErrorCLC(ENCODER_CLC, DECODER_CLC, 12);
+
+
 
     return 0;
 }
